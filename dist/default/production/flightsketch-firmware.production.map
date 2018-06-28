@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\flightsketch-firmware.production.sym \
   --cmf=dist/default/production\flightsketch-firmware.production.cmf -z \
-  -Q16F15325 -oC:\Users\russ\AppData\Local\Temp\s8ug.2 \
+  -Q16F15325 -oC:\Users\russ\AppData\Local\Temp\s5rg.2 \
   -Mdist/default/production/flightsketch-firmware.production.map -E1 \
   -ver=XC8 -ASTACK=020D6h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -42,7 +42,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=08007h-0800Bh -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 -DCODE=2 -DSTRCODE=2 \
   -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\russ\AppData\Local\Temp\s8ug.obj \
+  C:\Users\russ\AppData\Local\Temp\s5rg.obj \
   dist/default/production\flightsketch-firmware.production.obj 
 
 Object code version is 3.11
@@ -52,101 +52,108 @@ Machine type is 16F15325
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\russ\AppData\Local\Temp\s8ug.obj
+C:\Users\russ\AppData\Local\Temp\s5rg.obj
                 end_init                             1B       1B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        5    1000E       0
 dist/default/production\flightsketch-firmware.production.obj
-                cinit                                1D       1D       2B        8       0
+                cinit                                1D       1D       34        8       0
                 intentry                              4        4       17        8       0
-                text26                              447      447        7      7F0       0
-                text25                              32E      32E       25        8       0
-                text24                              477      477        1      8E2       0
-                text23                              422      422        B      7F0       0
-                text22                              40A      40A        D      7F0       0
-                text20                              43F      43F        8      7F0       0
-                text19                              460      460        6      7F0       0
-                text18                              3CC      3CC       18        8       0
-                text17                              42D      42D        A      7F0       0
-                text16                              308      308       26        8       0
-                text15                              437      437        8      7F0       0
-                text14                              45A      45A        6      7F0       0
-                text13                              3B3      3B3       19        8       0
-                text12                              3F8      3F8       12      7F0       0
-                text11                              471      471        3      8E2       0
-                text10                              476      476        1      8E2       0
-                text9                               417      417        B      7F0       0
-                text8                               2DA      2DA       2E        8       0
-                text7                               353      353       22        8       0
-                text6                               173      173       93        8       0
-                text5                               29F      29F       3B        8       0
-                text4                               206      206       53        8       0
-                text3                               259      259       46        8       0
-                text2                                DF       DF       94        8       0
-                text1                                48       48       97        8       0
-                maintext                            375      375       20        8       0
-                cstackBANK0                          20       20       50       20       1
-                cstackCOMMON                         70       70        8       70       1
-                cstackBANK1                          E2       E2        5       A0       1
-                clrtext                             454      454        6      7F0       0
-                inittext                            44E      44E        6      7F0       0
+                text28                              49B      49B        7      89E       0
+                text27                              35B      35B       25        8       0
+                text26                              40C      40C       18        8       0
+                text25                              3F3      3F3       19        8       0
+                text24                              4C5      4C5        1      97E       0
+                text23                              46C      46C        B      89E       0
+                text22                              424      424       17        8       0
+                text20                              48A      48A        9      89E       0
+                text19                              481      481        9      89E       0
+                text18                              3DA      3DA       19        8       0
+                text17                              477      477        A      89E       0
+                text16                              335      335       26        8       0
+                text15                              493      493        8      89E       0
+                text14                              4AE      4AE        6      89E       0
+                text13                              3C1      3C1       19        8       0
+                text12                              44F      44F       12      89E       0
+                text11                              4BF      4BF        3      97E       0
+                text10                              4C4      4C4        1      97E       0
+                text9                               461      461        B      89E       0
+                text8                               2DF      2DF       2E        8       0
+                text7                               380      380       23        8       0
+                text6                                EC       EC       93        8       0
+                text5                               2A4      2A4       3B        8       0
+                text4                               20B      20B       53        8       0
+                text3                               25E      25E       46        8       0
+                text2                                51       51       9B        8       0
+                text1                               17F      17F       8C        8       0
+                maintext                            30D      30D       28        8       0
+                cstackBANK0                          20       20       3F       20       1
+                cstackCOMMON                         70       70        7       70       1
+                cstackBANK1                          D0       D0       1A       A0       1
+                clrtext                             4A8      4A8        6      89E       0
+                inittext                            4A2      4A2        6      89E       0
                 dataBANK2                           120      120       1E      120       1
                 bssBANK2                            13E      13E       18      120       1
-                dataBANK1                            E7       E7        2       A0       1
-                bssBANK1                             A0       A0       3C       A0       1
-                bssCOMMON                            78       78        3       70       1
-                nvBANK1                              DC       DC        6       A0       1
-                stringtext4                         46E      46E        3      8CC       0
-                stringtext3                         46A      46A        4      8CC       0
-                stringtext2                         466      466        4      8CC       0
-                stringtext1                         3E4      3E4       14      7C8       0
-                idataBANK2                          395      395       1E        8       0
-                idataBANK1                          474      474        2      8E2       0
+                bssBANK1                             A0       A0       30       A0       1
+                dataBANK0                            6D       6D        2       20       1
+                bssBANK0                             5F       5F        C       20       1
+                bssCOMMON                            77       77        5       70       1
+                nvBANK1                              EA       EA        2       A0       1
+                nvBANK0                              6B       6B        2       20       1
+                nvCOMMON                             7C       7C        2       70       1
+                stringtext4                         4BC      4BC        3      968       0
+                stringtext3                         4B8      4B8        4      968       0
+                stringtext2                         4B4      4B4        4      968       0
+                stringtext1                         43B      43B       14      876       0
+                idataBANK2                          3A3      3A3       1E        8       0
+                idataBANK0                          4C2      4C2        2      97E       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                             1B       1B        2         0
-                cinit                                1D       1D       2B         0
+                cinit                                1D       1D       34         0
                 intentry                              4        4       17         0
                 reset_vec                             0        0        2         0
-                text26                              447      447        7         0
-                text25                              32E      32E       25         0
-                text24                              477      477        1         0
-                text23                              422      422        B         0
-                text22                              40A      40A        D         0
-                text20                              43F      43F        8         0
-                text19                              460      460        6         0
-                text18                              3CC      3CC       18         0
-                text17                              42D      42D        A         0
-                text16                              308      308       26         0
-                text15                              437      437        8         0
-                text14                              45A      45A        6         0
-                text13                              3B3      3B3       19         0
-                text12                              3F8      3F8       12         0
-                text11                              471      471        3         0
-                text10                              476      476        1         0
-                text9                               417      417        B         0
-                text8                               2DA      2DA       2E         0
-                text7                               353      353       22         0
-                text6                               173      173       93         0
-                text5                               29F      29F       3B         0
-                text4                               206      206       53         0
-                text3                               259      259       46         0
-                text2                                DF       DF       94         0
-                text1                                48       48       97         0
-                maintext                            375      375       20         0
-                clrtext                             454      454        6         0
-                inittext                            44E      44E        6         0
-                idataBANK2                          395      395       1E         0
-                idataBANK1                          474      474        2         0
+                text28                              49B      49B        7         0
+                text27                              35B      35B       25         0
+                text26                              40C      40C       18         0
+                text25                              3F3      3F3       19         0
+                text24                              4C5      4C5        1         0
+                text23                              46C      46C        B         0
+                text22                              424      424       17         0
+                text20                              48A      48A        9         0
+                text19                              481      481        9         0
+                text18                              3DA      3DA       19         0
+                text17                              477      477        A         0
+                text16                              335      335       26         0
+                text15                              493      493        8         0
+                text14                              4AE      4AE        6         0
+                text13                              3C1      3C1       19         0
+                text12                              44F      44F       12         0
+                text11                              4BF      4BF        3         0
+                text10                              4C4      4C4        1         0
+                text9                               461      461        B         0
+                text8                               2DF      2DF       2E         0
+                text7                               380      380       23         0
+                text6                                EC       EC       93         0
+                text5                               2A4      2A4       3B         0
+                text4                               20B      20B       53         0
+                text3                               25E      25E       46         0
+                text2                                51       51       9B         0
+                text1                               17F      17F       8C         0
+                maintext                            30D      30D       28         0
+                clrtext                             4A8      4A8        6         0
+                inittext                            4A2      4A2        6         0
+                idataBANK2                          3A3      3A3       1E         0
+                idataBANK0                          4C2      4C2        2         0
 
         CLASS   STRCODE        
-                stringtext4                         46E      46E        3         0
-                stringtext3                         46A      46A        4         0
-                stringtext2                         466      466        4         0
-                stringtext1                         3E4      3E4       14         0
+                stringtext4                         4BC      4BC        3         0
+                stringtext3                         4B8      4B8        4         0
+                stringtext2                         4B4      4B4        4         0
+                stringtext1                         43B      43B       14         0
 
         CLASS   STRING         
 
@@ -155,17 +162,20 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        8         1
-                bssCOMMON                            78       78        3         1
+                cstackCOMMON                         70       70        7         1
+                bssCOMMON                            77       77        5         1
+                nvCOMMON                             7C       7C        2         1
 
         CLASS   BANK0          
-                cstackBANK0                          20       20       50         1
+                cstackBANK0                          20       20       3F         1
+                dataBANK0                            6D       6D        2         1
+                bssBANK0                             5F       5F        C         1
+                nvBANK0                              6B       6B        2         1
 
         CLASS   BANK1          
-                cstackBANK1                          E2       E2        5         1
-                dataBANK1                            E7       E7        2         1
-                bssBANK1                             A0       A0       3C         1
-                nvBANK1                              DC       DC        6         1
+                cstackBANK1                          D0       D0       1A         1
+                bssBANK1                             A0       A0       30         1
+                nvBANK1                              EA       EA        2         1
 
         CLASS   BANK2          
                 dataBANK2                           120      120       1E         1
@@ -440,22 +450,23 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0003E0  0003E4         8       0  CODE        2
-                cstackBANK0                    000020  000050  000070        20       1  BANK0       1
-                cstackCOMMON                   000070  00000B  00007B        70       1  COMMON      1
-                bssBANK1                       0000A0  000049  0000E9        A0       1  BANK1       1
+                intentry                       000004  000437  00043B         8       0  CODE        2
+                cstackBANK0                    000020  00004F  00006F        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                bssBANK1                       0000A0  00004C  0000EC        A0       1  BANK1       1
                 dataBANK2                      000120  000036  000156       120       1  BANK2       1
-                stringtext1                    0003E4  000014  0003F8       7C8       0  STRCODE     2
-                text12                         0003F8  00006E  000466       7F0       0  CODE        2
-                stringtext2                    000466  00000B  000471       8CC       0  STRCODE     2
-                text11                         000471  000007  000478       8E2       0  CODE        2
+                stringtext1                    00043B  000014  00044F       876       0  STRCODE     2
+                text12                         00044F  000065  0004B4       89E       0  CODE        2
+                stringtext2                    0004B4  00000B  0004BF       968       0  STRCODE     2
+                text11                         0004BF  000007  0004C6       97E       0  CODE        2
                 config                         008007  000005  00800C     1000E       0  CONFIG      2
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK1            000E9-000EF               7           1
+        BANK0            0006F-0006F               1           1
+        BANK1            000EC-000EF               4           1
         BANK10           00520-0056F              50           1
         BANK11           005A0-005EF              50           1
         BANK12           00620-0064F              30           1
@@ -469,14 +480,14 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         00478-01FFF             800
-        COMMON           0007B-0007D               3           1
+                         004C6-01FFF             800
         CONST            00002-00003               2           2
-                         00478-01FFF             100
+                         004C6-01FFF             100
         ENTRY            00002-00003               2           2
-                         00478-01FFF             100
+                         004C6-01FFF             100
         IDLOC            08000-08003               4           2
-        RAM              000E9-000EF               7           1
+        RAM              0006F-0006F               1           1
+                         000EC-000EF               4
                          00156-0016F              1A
                          001A0-001EF              50
                          00220-0026F              50
@@ -554,50 +565,54 @@ UNUSED ADDRESS RANGES
         SFR9             00480-0049F              20           1
         STACK            020D6-023EF             31A           1
         STRCODE          00002-00003               2           2
-                         00478-01FFF            1B88
+                         004C6-01FFF            1B3A
         STRING           00002-00003               2           2
-                         00478-01FFF             100
+                         004C6-01FFF             100
 
                                   Symbol Table
 
+?_ADC_GetConversion                              cstackCOMMON 00070
+ADC_GetConversion@channel                        cstackCOMMON 00073
 BMP280_SPI_bus_read@F6557                        dataBANK2    00120
-BMP280_SPI_bus_read@array                        cstackBANK0  00022
-BMP280_SPI_bus_read@cnt                          cstackCOMMON 00076
-BMP280_SPI_bus_read@dev_addr                     cstackCOMMON 00073
-BMP280_SPI_bus_read@i                            cstackBANK0  00044
-BMP280_SPI_bus_read@iError                       cstackBANK0  00040
-BMP280_SPI_bus_read@reg_addr                     cstackCOMMON 00074
-BMP280_SPI_bus_read@reg_data                     cstackCOMMON 00075
-BMP280_SPI_bus_read@stringpos                    cstackBANK0  00045
-BMP280_SPI_bus_write@cnt                         cstackCOMMON 00076
-BMP280_SPI_bus_write@dev_addr                    cstackCOMMON 00073
-BMP280_SPI_bus_write@iError                      cstackBANK0  00020
-BMP280_SPI_bus_write@reg_addr                    cstackCOMMON 00074
-BMP280_SPI_bus_write@reg_data                    cstackCOMMON 00075
-BMP280_delay_msek@msek                           cstackCOMMON 00073
+BMP280_SPI_bus_read@array                        cstackBANK0  00026
+BMP280_SPI_bus_read@cnt                          cstackBANK0  00023
+BMP280_SPI_bus_read@dev_addr                     cstackBANK0  00020
+BMP280_SPI_bus_read@i                            cstackBANK0  00048
+BMP280_SPI_bus_read@iError                       cstackBANK0  00044
+BMP280_SPI_bus_read@reg_addr                     cstackBANK0  00021
+BMP280_SPI_bus_read@reg_data                     cstackBANK0  00022
+BMP280_SPI_bus_read@stringpos                    cstackBANK0  00049
+BMP280_SPI_bus_write@cnt                         cstackBANK0  00023
+BMP280_SPI_bus_write@dev_addr                    cstackBANK0  00020
+BMP280_SPI_bus_write@iError                      cstackBANK0  00024
+BMP280_SPI_bus_write@reg_addr                    cstackBANK0  00021
+BMP280_SPI_bus_write@reg_data                    cstackBANK0  00022
+BMP280_delay_msek@msek                           cstackBANK0  00020
 EUSART1_Receive_ISR@a                            cstackCOMMON 00072
-EUSART1_SetRxInterruptHandler@interruptHandler   cstackCOMMON 00073
+EUSART1_SetRxInterruptHandler@interruptHandler   cstackBANK0  00020
 EUSART1_Write@txData                             cstackCOMMON 00070
-TMR0_SetInterruptHandler@InterruptHandler        cstackCOMMON 00073
+TMR0_ISR@CountCallBack                           bssCOMMON    00077
+TMR0_SetInterruptHandler@InterruptHandler        cstackBANK0  00020
 _ADACT                                           (abs)        0009F
 _ADCON0                                          (abs)        0009D
 _ADCON0bits                                      (abs)        0009D
 _ADCON1                                          (abs)        0009E
-_ADC_Initialize                                  text20       0043F
+_ADC_GetConversion                               text26       0040C
+_ADC_Initialize                                  text20       0048A
 _ADRESH                                          (abs)        0009C
 _ADRESL                                          (abs)        0009B
 _ANSELA                                          (abs)        01F38
 _ANSELC                                          (abs)        01F4E
 _BAUD1CON                                        (abs)        0011F
-_BMP280_SPI_bus_read                             text4        00206
-_BMP280_SPI_bus_write                            text9        00417
-_BMP280_delay_msek                               text10       00476
-_EUSART1_Initialize                              text18       003CC
+_BMP280_SPI_bus_read                             text4        0020B
+_BMP280_SPI_bus_write                            text9        00461
+_BMP280_delay_msek                               text10       004C4
+_EUSART1_Initialize                              text18       003DA
 _EUSART1_Read                                    (abs)        00000
-_EUSART1_Receive_ISR                             text25       0032E
-_EUSART1_RxDefaultInterruptHandler               nvBANK1      000E0
-_EUSART1_SetRxInterruptHandler                   text19       00460
-_EUSART1_Write                                   text26       00447
+_EUSART1_Receive_ISR                             text27       0035B
+_EUSART1_RxDefaultInterruptHandler               nvBANK1      000EA
+_EUSART1_SetRxInterruptHandler                   text19       00481
+_EUSART1_Write                                   text28       0049B
 _EUSART1_is_rx_ready                             (abs)        00000
 _EUSART1_is_tx_done                              (abs)        00000
 _EUSART1_is_tx_ready                             (abs)        00000
@@ -611,12 +626,12 @@ _OSCCON1                                         (abs)        0088D
 _OSCCON3                                         (abs)        0088F
 _OSCEN                                           (abs)        00891
 _OSCFRQ                                          (abs)        00893
-_OSCILLATOR_Initialize                           text17       0042D
+_OSCILLATOR_Initialize                           text17       00477
 _OSCSTAT                                         (abs)        00890
 _OSCTUNE                                         (abs)        00892
 _PIE0bits                                        (abs)        00716
 _PIE3bits                                        (abs)        00719
-_PIN_MANAGER_Initialize                          text16       00308
+_PIN_MANAGER_Initialize                          text16       00335
 _PIR0bits                                        (abs)        0070C
 _PIR3bits                                        (abs)        0070F
 _PMD0                                            (abs)        00796
@@ -625,7 +640,7 @@ _PMD2                                            (abs)        00798
 _PMD3                                            (abs)        00799
 _PMD4                                            (abs)        0079A
 _PMD5                                            (abs)        0079B
-_PMD_Initialize                                  text15       00437
+_PMD_Initialize                                  text15       00493
 _RC0PPS                                          (abs)        01F20
 _RC1REG                                          (abs)        00119
 _RC1STA                                          (abs)        0011D
@@ -644,19 +659,19 @@ _SSP1CON1bits                                    (abs)        00190
 _SSP1CON2                                        (abs)        00191
 _SSP1DATPPSbits                                  (abs)        01EC6
 _SSP1STAT                                        (abs)        0018F
-_SYSTEM_Initialize                               text12       003F8
+_SYSTEM_Initialize                               text12       0044F
 _T0CON0                                          (abs)        0059E
 _T0CON0bits                                      (abs)        0059E
 _T0CON1                                          (abs)        0059F
 _TMR0H                                           (abs)        0059D
 _TMR0L                                           (abs)        0059C
-_TMR0_CallBack                                   text23       00422
-_TMR0_DefaultInterruptHandler                    text24       00477
-_TMR0_ISR                                        text22       0040A
-_TMR0_Initialize                                 text13       003B3
-_TMR0_InterruptHandler                           nvBANK1      000DC
-_TMR0_SetInterruptHandler                        text14       0045A
-_TMR0_StartTimer                                 text11       00471
+_TMR0_CallBack                                   text23       0046C
+_TMR0_DefaultInterruptHandler                    text24       004C5
+_TMR0_ISR                                        text22       00424
+_TMR0_Initialize                                 text13       003C1
+_TMR0_InterruptHandler                           nvBANK0      0006B
+_TMR0_SetInterruptHandler                        text14       004AE
+_TMR0_StartTimer                                 text11       004BF
 _TRISA                                           (abs)        00012
 _TRISC                                           (abs)        00014
 _TRISCbits                                       (abs)        00014
@@ -757,10 +772,11 @@ __Hbank7                                         bank7        00000
 __Hbank8                                         bank8        00000
 __Hbank9                                         bank9        00000
 __Hbigram                                        bigram       00000
+__HbssBANK0                                      bssBANK0     00000
 __HbssBANK1                                      bssBANK1     00000
 __HbssBANK2                                      bssBANK2     00000
 __HbssCOMMON                                     bssCOMMON    00000
-__Hcinit                                         cinit        00048
+__Hcinit                                         cinit        00051
 __Hclrtext                                       clrtext      00000
 __Hcode                                          code         00000
 __Hcommon                                        common       00000
@@ -768,19 +784,21 @@ __Hconfig                                        config       0800C
 __HcstackBANK0                                   cstackBANK0  00000
 __HcstackBANK1                                   cstackBANK1  00000
 __HcstackCOMMON                                  cstackCOMMON 00000
-__HdataBANK1                                     dataBANK1    00000
+__HdataBANK0                                     dataBANK0    00000
 __HdataBANK2                                     dataBANK2    00000
 __Heeprom_data                                   eeprom_data  00000
 __Hend_init                                      end_init     0001D
 __Hfunctab                                       functab      00000
-__HidataBANK1                                    idataBANK1   00000
+__HidataBANK0                                    idataBANK0   00000
 __HidataBANK2                                    idataBANK2   00000
 __Hidloc                                         idloc        00000
 __Hinit                                          init         0001B
 __Hinittext                                      inittext     00000
 __Hintentry                                      intentry     0001B
 __Hmaintext                                      maintext     00000
+__HnvBANK0                                       nvBANK0      00000
 __HnvBANK1                                       nvBANK1      00000
+__HnvCOMMON                                      nvCOMMON     00000
 __Hpowerup                                       powerup      00000
 __Hram                                           ram          00000
 __Hreset_vec                                     reset_vec    00002
@@ -925,6 +943,7 @@ __Lbank7                                         bank7        00000
 __Lbank8                                         bank8        00000
 __Lbank9                                         bank9        00000
 __Lbigram                                        bigram       00000
+__LbssBANK0                                      bssBANK0     00000
 __LbssBANK1                                      bssBANK1     00000
 __LbssBANK2                                      bssBANK2     00000
 __LbssCOMMON                                     bssCOMMON    00000
@@ -936,19 +955,21 @@ __Lconfig                                        config       08007
 __LcstackBANK0                                   cstackBANK0  00000
 __LcstackBANK1                                   cstackBANK1  00000
 __LcstackCOMMON                                  cstackCOMMON 00000
-__LdataBANK1                                     dataBANK1    00000
+__LdataBANK0                                     dataBANK0    00000
 __LdataBANK2                                     dataBANK2    00000
 __Leeprom_data                                   eeprom_data  00000
 __Lend_init                                      end_init     0001B
 __Lfunctab                                       functab      00000
-__LidataBANK1                                    idataBANK1   00000
+__LidataBANK0                                    idataBANK0   00000
 __LidataBANK2                                    idataBANK2   00000
 __Lidloc                                         idloc        00000
 __Linit                                          init         0001B
 __Linittext                                      inittext     00000
 __Lintentry                                      intentry     00004
 __Lmaintext                                      maintext     00000
+__LnvBANK0                                       nvBANK0      00000
 __LnvBANK1                                       nvBANK1      00000
+__LnvCOMMON                                      nvCOMMON     00000
 __Lpowerup                                       powerup      00000
 __Lram                                           ram          00000
 __Lreset_vec                                     reset_vec    00000
@@ -1033,81 +1054,89 @@ __S2                                             (abs)        00000
 ___int_sp                                        stack        00000
 ___latbits                                       (abs)        00002
 ___sp                                            stack        00000
-__end_of_ADC_Initialize                          text20       00447
-__end_of_BMP280_SPI_bus_read                     text4        00259
-__end_of_BMP280_SPI_bus_write                    text9        00422
-__end_of_BMP280_delay_msek                       text10       00477
-__end_of_EUSART1_Initialize                      text18       003E4
-__end_of_EUSART1_Receive_ISR                     text25       00353
-__end_of_EUSART1_SetRxInterruptHandler           text19       00466
-__end_of_EUSART1_Write                           text26       0044E
+__end_of_ADC_GetConversion                       text26       00424
+__end_of_ADC_Initialize                          text20       00493
+__end_of_BMP280_SPI_bus_read                     text4        0025E
+__end_of_BMP280_SPI_bus_write                    text9        0046C
+__end_of_BMP280_delay_msek                       text10       004C5
+__end_of_EUSART1_Initialize                      text18       003F3
+__end_of_EUSART1_Receive_ISR                     text27       00380
+__end_of_EUSART1_SetRxInterruptHandler           text19       0048A
+__end_of_EUSART1_Write                           text28       004A2
 __end_of_INTERRUPT_InterruptManager              intentry     0001B
-__end_of_OSCILLATOR_Initialize                   text17       00437
-__end_of_PIN_MANAGER_Initialize                  text16       0032E
-__end_of_PMD_Initialize                          text15       0043F
-__end_of_SYSTEM_Initialize                       text12       0040A
-__end_of_TMR0_CallBack                           text23       0042D
-__end_of_TMR0_DefaultInterruptHandler            text24       00478
-__end_of_TMR0_ISR                                text22       00417
-__end_of_TMR0_Initialize                         text13       003CC
-__end_of_TMR0_SetInterruptHandler                text14       00460
-__end_of_TMR0_StartTimer                         text11       00474
-__end_of__initialization                         cinit        00044
-__end_of_bmp280_get_regs                         text3        0029F
-__end_of_bmp280_init                             text1        000DF
-__end_of_bmp280_set_regs                         text6        00206
-__end_of_bmp280_soft_reset                       text5        002DA
-__end_of_get_calib_param                         text2        00173
-__end_of_interleave_data                         text8        00308
-__end_of_main                                    maintext     00395
-__end_of_null_ptr_check                          text7        00375
-__end_of_spi1_configuration                      stringtext4  00471
-__end_of_uart                                    stringtext1  003F8
-__end_ofbmp280_compute_meas_time@period_per_osrs stringtext2  0046A
-__end_ofbmp280_compute_meas_time@startup         stringtext3  0046E
+__end_of_OSCILLATOR_Initialize                   text17       00481
+__end_of_PIN_MANAGER_Initialize                  text16       0035B
+__end_of_PMD_Initialize                          text15       0049B
+__end_of_SYSTEM_Initialize                       text12       00461
+__end_of_TMR0_CallBack                           text23       00477
+__end_of_TMR0_DefaultInterruptHandler            text24       004C6
+__end_of_TMR0_ISR                                text22       0043B
+__end_of_TMR0_Initialize                         text13       003DA
+__end_of_TMR0_SetInterruptHandler                text14       004B4
+__end_of_TMR0_StartTimer                         text11       004C2
+__end_of__initialization                         cinit        0004D
+__end_of_bmp280_get_regs                         text3        002A4
+__end_of_bmp280_init                             text1        0020B
+__end_of_bmp280_set_regs                         text6        0017F
+__end_of_bmp280_soft_reset                       text5        002DF
+__end_of_get_calib_param                         text2        000EC
+__end_of_interleave_data                         text8        0030D
+__end_of_main                                    maintext     00335
+__end_of_null_ptr_check                          text7        003A3
+__end_of_spi1_configuration                      stringtext4  004BF
+__end_of_tmr_fire                                text25       0040C
+__end_of_uart                                    stringtext1  0044F
+__end_ofbmp280_compute_meas_time@period_per_osrs stringtext2  004B8
+__end_ofbmp280_compute_meas_time@startup         stringtext3  004BC
 __initialization                                 cinit        0001D
+__pbssBANK0                                      bssBANK0     0005F
 __pbssBANK1                                      bssBANK1     000A0
 __pbssBANK2                                      bssBANK2     0013E
-__pbssCOMMON                                     bssCOMMON    00078
+__pbssCOMMON                                     bssCOMMON    00077
 __pcstackBANK0                                   cstackBANK0  00020
-__pcstackBANK1                                   cstackBANK1  000E2
+__pcstackBANK1                                   cstackBANK1  000D0
 __pcstackCOMMON                                  cstackCOMMON 00070
-__pdataBANK1                                     dataBANK1    000E7
+__pdataBANK0                                     dataBANK0    0006D
 __pdataBANK2                                     dataBANK2    00120
-__pidataBANK1                                    idataBANK1   00474
-__pidataBANK2                                    idataBANK2   00395
+__pidataBANK0                                    idataBANK0   004C2
+__pidataBANK2                                    idataBANK2   003A3
 __pintentry                                      intentry     00004
-__pmaintext                                      maintext     00375
-__pnvBANK1                                       nvBANK1      000DC
-__pstringtext1                                   stringtext1  003E4
-__pstringtext2                                   stringtext2  00466
-__pstringtext3                                   stringtext3  0046A
-__pstringtext4                                   stringtext4  0046E
-__ptext1                                         text1        00048
-__ptext10                                        text10       00476
-__ptext11                                        text11       00471
-__ptext12                                        text12       003F8
-__ptext13                                        text13       003B3
-__ptext14                                        text14       0045A
-__ptext15                                        text15       00437
-__ptext16                                        text16       00308
-__ptext17                                        text17       0042D
-__ptext18                                        text18       003CC
-__ptext19                                        text19       00460
-__ptext2                                         text2        000DF
-__ptext20                                        text20       0043F
-__ptext22                                        text22       0040A
-__ptext23                                        text23       00422
-__ptext24                                        text24       00477
-__ptext25                                        text25       0032E
-__ptext26                                        text26       00447
-__ptext3                                         text3        00259
-__ptext4                                         text4        00206
-__ptext5                                         text5        0029F
-__ptext6                                         text6        00173
-__ptext7                                         text7        00353
-__ptext8                                         text8        002DA
-__ptext9                                         text9        00417
+__pmaintext                                      maintext     0030D
+__pnvBANK0                                       nvBANK0      0006B
+__pnvBANK1                                       nvBANK1      000EA
+__pnvCOMMON                                      nvCOMMON     0007C
+__pstringtext1                                   stringtext1  0043B
+__pstringtext2                                   stringtext2  004B4
+__pstringtext3                                   stringtext3  004B8
+__pstringtext4                                   stringtext4  004BC
+__ptext1                                         text1        0017F
+__ptext10                                        text10       004C4
+__ptext11                                        text11       004BF
+__ptext12                                        text12       0044F
+__ptext13                                        text13       003C1
+__ptext14                                        text14       004AE
+__ptext15                                        text15       00493
+__ptext16                                        text16       00335
+__ptext17                                        text17       00477
+__ptext18                                        text18       003DA
+__ptext19                                        text19       00481
+__ptext2                                         text2        00051
+__ptext20                                        text20       0048A
+__ptext22                                        text22       00424
+__ptext23                                        text23       0046C
+__ptext24                                        text24       004C5
+__ptext25                                        text25       003F3
+__ptext26                                        text26       0040C
+__ptext27                                        text27       0035B
+__ptext28                                        text28       0049B
+__ptext3                                         text3        0025E
+__ptext4                                         text4        0020B
+__ptext5                                         text5        002A4
+__ptext6                                         text6        000EC
+__ptext7                                         text7        00380
+__ptext8                                         text8        002DF
+__ptext9                                         text9        00461
+__size_of_ADC_GetConversion                      (abs)        00000
 __size_of_ADC_Initialize                         (abs)        00000
 __size_of_BMP280_SPI_bus_read                    (abs)        00000
 __size_of_BMP280_SPI_bus_write                   (abs)        00000
@@ -1135,75 +1164,78 @@ __size_of_get_calib_param                        (abs)        00000
 __size_of_interleave_data                        (abs)        00000
 __size_of_main                                   (abs)        00000
 __size_of_null_ptr_check                         (abs)        00000
-_bmp                                             bssBANK1     000B2
-_bmp280_get_regs                                 text3        00259
-_bmp280_init                                     text1        00048
-_bmp280_set_regs                                 text6        00173
-_bmp280_soft_reset                               text5        0029F
-_eusart1RxBuffer                                 bssBANK1     000A0
-_eusart1RxCount                                  bssCOMMON    00078
-_eusart1RxHead                                   bssCOMMON    0007A
-_eusart1RxTail                                   bssCOMMON    00079
-_get_calib_param                                 text2        000DF
-_interleave_data                                 text8        002DA
-_main                                            maintext     00375
-_null_ptr_check                                  text7        00353
-_spi1_configuration                              stringtext4  0046E
-_timer0ReloadVal16bit                            nvBANK1      000DE
-bmp280_compute_meas_time@period_per_osrs         stringtext2  00466
-bmp280_compute_meas_time@startup                 stringtext3  0046A
-bmp280_get_config@F6430                          bssBANK1     000B0
-bmp280_get_regs@dev                              cstackBANK0  00048
-bmp280_get_regs@len                              cstackBANK0  00047
-bmp280_get_regs@reg_addr                         cstackBANK0  0004D
-bmp280_get_regs@reg_data                         cstackBANK0  00046
-bmp280_get_regs@rslt                             cstackBANK0  0004E
-bmp280_get_uncomp_data@F6465                     bssBANK1     000A8
-bmp280_init@dev                                  cstackBANK1  000E4
-bmp280_init@rslt                                 cstackBANK1  000E3
-bmp280_init@try_count                            cstackBANK1  000E2
-bmp280_set_regs@dev                              cstackBANK0  00026
-bmp280_set_regs@len                              cstackBANK0  00025
-bmp280_set_regs@reg_addr                         cstackBANK0  00037
-bmp280_set_regs@reg_addr_cnt                     cstackBANK0  00035
-bmp280_set_regs@reg_data                         cstackBANK0  00024
-bmp280_set_regs@rslt                             cstackBANK0  00036
-bmp280_set_regs@temp_buff                        cstackBANK0  0002B
-bmp280_set_regs@temp_len                         cstackBANK0  00033
-bmp280_soft_reset@dev                            cstackBANK0  0003E
-bmp280_soft_reset@reg_addr                       cstackBANK0  0003D
-bmp280_soft_reset@rslt                           cstackBANK0  0003C
-bmp280_soft_reset@soft_rst_cmd                   cstackBANK0  0003B
+__size_of_tmr_fire                               (abs)        00000
+_bmp                                             bssBANK1     000A6
+_bmp280_get_regs                                 text3        0025E
+_bmp280_init                                     text1        0017F
+_bmp280_set_regs                                 text6        000EC
+_bmp280_soft_reset                               text5        002A4
+_eusart1RxBuffer                                 bssBANK0     0005F
+_eusart1RxCount                                  bssCOMMON    00079
+_eusart1RxHead                                   bssCOMMON    0007B
+_eusart1RxTail                                   bssCOMMON    0007A
+_get_calib_param                                 text2        00051
+_interleave_data                                 text8        002DF
+_main                                            maintext     0030D
+_null_ptr_check                                  text7        00380
+_spi1_configuration                              stringtext4  004BC
+_timer0ReloadVal16bit                            nvCOMMON     0007C
+_tmr_fire                                        text25       003F3
+bmp280_compute_meas_time@period_per_osrs         stringtext2  004B4
+bmp280_compute_meas_time@startup                 stringtext3  004B8
+bmp280_get_config@F6430                          bssBANK0     00069
+bmp280_get_regs@dev                              cstackBANK0  0004C
+bmp280_get_regs@len                              cstackBANK0  0004B
+bmp280_get_regs@reg_addr                         cstackBANK0  00051
+bmp280_get_regs@reg_data                         cstackBANK0  0004A
+bmp280_get_regs@rslt                             cstackBANK0  00052
+bmp280_get_uncomp_data@F6465                     bssBANK1     000A0
+bmp280_init@dev                                  cstackBANK0  0005C
+bmp280_init@rslt                                 cstackBANK0  0005B
+bmp280_init@try_count                            cstackBANK0  0005A
+bmp280_set_regs@dev                              cstackBANK0  0002A
+bmp280_set_regs@len                              cstackBANK0  00029
+bmp280_set_regs@reg_addr                         cstackBANK0  0003B
+bmp280_set_regs@reg_addr_cnt                     cstackBANK0  00039
+bmp280_set_regs@reg_data                         cstackBANK0  00028
+bmp280_set_regs@rslt                             cstackBANK0  0003A
+bmp280_set_regs@temp_buff                        cstackBANK0  0002F
+bmp280_set_regs@temp_len                         cstackBANK0  00037
+bmp280_soft_reset@dev                            cstackBANK0  00042
+bmp280_soft_reset@reg_addr                       cstackBANK0  00041
+bmp280_soft_reset@rslt                           cstackBANK0  00040
+bmp280_soft_reset@soft_rst_cmd                   cstackBANK0  0003F
 btemp                                            (abs)        0007E
-clear_ram0                                       clrtext      00454
-conf_sensor@F6602                                bssBANK1     000AE
-conf_sensor@F6604                                dataBANK1    000E7
-end_of_initialization                            cinit        00044
+clear_ram0                                       clrtext      004A8
+conf_sensor@F6602                                bssBANK0     00067
+conf_sensor@F6604                                dataBANK0    0006D
+end_of_initialization                            cinit        0004D
 get_calib_param@F6534                            bssBANK2     0013E
-get_calib_param@dev                              cstackBANK0  0006C
-get_calib_param@rslt                             cstackBANK0  0006B
-get_calib_param@temp                             cstackBANK0  00053
-init_ram                                         inittext     0044E
+get_calib_param@dev                              cstackBANK1  000E9
+get_calib_param@rslt                             cstackBANK1  000E8
+get_calib_param@temp                             cstackBANK1  000D0
+init_ram                                         inittext     004A2
 int$flags                                        (abs)        0007E
-interleave_data@index                            cstackCOMMON 00077
-interleave_data@len                              cstackCOMMON 00075
-interleave_data@reg_addr                         cstackCOMMON 00076
-interleave_data@reg_data                         cstackCOMMON 00074
-interleave_data@temp_buff                        cstackCOMMON 00073
+interleave_data@index                            cstackBANK0  00027
+interleave_data@len                              cstackBANK0  00022
+interleave_data@reg_addr                         cstackBANK0  00026
+interleave_data@reg_data                         cstackBANK0  00021
+interleave_data@temp_buff                        cstackBANK0  00020
 intlevel0                                        functab      00000
 intlevel1                                        functab      00000
 intlevel2                                        functab      00000
 intlevel3                                        functab      00000
 intlevel4                                        functab      00000
 intlevel5                                        functab      00000
-main@rslt                                        cstackBANK1  000E6
-null_ptr_check@dev                               cstackCOMMON 00076
-null_ptr_check@rslt                              cstackCOMMON 00075
+main@rslt                                        cstackBANK0  0005E
+null_ptr_check@dev                               cstackBANK0  00023
+null_ptr_check@rslt                              cstackBANK0  00022
 reset_vec                                        reset_vec    00000
 stackhi                                          (abs)        023EF
 stacklo                                          (abs)        020D6
 start                                            init         0001B
 start_initialization                             cinit        0001D
+tmr_fire@a                                       cstackCOMMON 00075
 wtemp0                                           (abs)        0007E
 
 
@@ -1211,11 +1243,11 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 76 in file "main.c"
+		line 80 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  rslt            1    4[BANK1 ] char 
+  rslt            1   62[BANK0 ] char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1226,13 +1258,14 @@ FUNCTION INFORMATION:
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       1       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       1       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       2       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       1       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
- Hardware stack levels required when called:    8
+ Hardware stack levels required when called:    9
  This function calls:
 		_SYSTEM_Initialize
+		_TMR0_SetInterruptHandler
 		_TMR0_StartTimer
 		_bmp280_init
  This function is called by:
@@ -1247,10 +1280,10 @@ Total ram usage:        2 bytes
   dev             1    wreg     PTR struct bmp280_dev
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  dev             1    2[BANK1 ] PTR struct bmp280_dev
+  dev             1   60[BANK0 ] PTR struct bmp280_dev
 		 -> bmp(42), 
-  rslt            1    1[BANK1 ] char 
-  try_count       1    0[BANK1 ] unsigned char 
+  rslt            1   59[BANK0 ] char 
+  try_count       1   58[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1261,12 +1294,12 @@ Total ram usage:        2 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       3       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       3       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       3       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       3       3       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       6       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        6 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    7
+ Hardware stack levels required when called:    8
  This function calls:
 		_BMP280_delay_msek
 		_bmp280_get_regs
@@ -1285,10 +1318,10 @@ Total ram usage:        6 bytes
   dev             1    wreg     PTR struct bmp280_dev
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  dev             1   76[BANK0 ] PTR struct bmp280_dev
+  dev             1   25[BANK1 ] PTR struct bmp280_dev
 		 -> bmp(42), 
-  temp           24   51[BANK0 ] unsigned char [24]
-  rslt            1   75[BANK0 ] char 
+  temp           24    0[BANK1 ] unsigned char [24]
+  rslt            1   24[BANK1 ] char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1299,12 +1332,12 @@ Total ram usage:        6 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0      26       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0      26       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       4       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0      30       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       4      26       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       30 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    6
+ Hardware stack levels required when called:    7
  This function calls:
 		_bmp280_get_regs
 		_null_ptr_check
@@ -1318,15 +1351,15 @@ Total ram usage:       30 bytes
 		line 114 in file "bmp280.c"
  Parameters:    Size  Location     Type
   reg_addr        1    wreg     unsigned char 
-  reg_data        1   38[BANK0 ] PTR unsigned char 
+  reg_data        1   42[BANK0 ] PTR unsigned char 
 		 -> conf_sensor@temp(2), get_calib_param@temp(24), bmp280_get_uncomp_data@temp(6), bmp280_get_power_mode@temp(1), 
 		 -> bmp280_get_status@temp(1), bmp280_get_config@temp(2), bmp(42), 
-  len             1   39[BANK0 ] unsigned char 
-  dev             1   40[BANK0 ] PTR const struct bmp280_
+  len             1   43[BANK0 ] unsigned char 
+  dev             1   44[BANK0 ] PTR const struct bmp280_
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  reg_addr        1   45[BANK0 ] unsigned char 
-  rslt            1   46[BANK0 ] char 
+  reg_addr        1   49[BANK0 ] unsigned char 
+  rslt            1   50[BANK0 ] char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1342,7 +1375,7 @@ Total ram usage:       30 bytes
       Totals:         0       9       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        9 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_BMP280_SPI_bus_read
 		_null_ptr_check
@@ -1361,17 +1394,17 @@ Total ram usage:        9 bytes
  Defined at:
 		line 35 in file "main.c"
  Parameters:    Size  Location     Type
-  dev_addr        1    3[COMMON] unsigned char 
-  reg_addr        1    4[COMMON] unsigned char 
-  reg_data        1    5[COMMON] PTR unsigned char 
+  dev_addr        1    0[BANK0 ] unsigned char 
+  reg_addr        1    1[BANK0 ] unsigned char 
+  reg_data        1    2[BANK0 ] PTR unsigned char 
 		 -> conf_sensor@temp(2), get_calib_param@temp(24), bmp280_get_uncomp_data@temp(6), bmp280_get_power_mode@temp(1), 
 		 -> bmp280_get_status@temp(1), bmp280_get_config@temp(2), bmp(42), 
-  cnt             1    6[COMMON] unsigned char 
+  cnt             1    3[BANK0 ] unsigned char 
  Auto vars:     Size  Location     Type
-  array          30    2[BANK0 ] char [30]
-  iError          4   32[BANK0 ] long 
-  stringpos       1   37[BANK0 ] unsigned char 
-  i               1   36[BANK0 ] unsigned char 
+  array          30    6[BANK0 ] char [30]
+  iError          4   36[BANK0 ] long 
+  stringpos       1   41[BANK0 ] unsigned char 
+  i               1   40[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1381,13 +1414,13 @@ Total ram usage:        9 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0      36       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4      38       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0      42       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       42 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1403,11 +1436,11 @@ Total ram usage:       42 bytes
   dev             1    wreg     PTR const struct bmp280_
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  dev             1   30[BANK0 ] PTR const struct bmp280_
+  dev             1   34[BANK0 ] PTR const struct bmp280_
 		 -> bmp(42), 
-  reg_addr        1   29[BANK0 ] unsigned char 
-  rslt            1   28[BANK0 ] char 
-  soft_rst_cmd    1   27[BANK0 ] unsigned char 
+  reg_addr        1   33[BANK0 ] unsigned char 
+  rslt            1   32[BANK0 ] char 
+  soft_rst_cmd    1   31[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1423,7 +1456,7 @@ Total ram usage:       42 bytes
       Totals:         0       7       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        7 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    6
+ Hardware stack levels required when called:    7
  This function calls:
 		_BMP280_delay_msek
 		_bmp280_set_regs
@@ -1440,18 +1473,18 @@ Total ram usage:        7 bytes
  Parameters:    Size  Location     Type
   reg_addr        1    wreg     PTR unsigned char 
 		 -> conf_sensor@reg_addr(2), bmp280_soft_reset@reg_addr(1), 
-  reg_data        1    4[BANK0 ] PTR const unsigned char 
+  reg_data        1    8[BANK0 ] PTR const unsigned char 
 		 -> conf_sensor@temp(2), bmp280_soft_reset@soft_rst_cmd(1), 
-  len             1    5[BANK0 ] unsigned char 
-  dev             1    6[BANK0 ] PTR const struct bmp280_
+  len             1    9[BANK0 ] unsigned char 
+  dev             1   10[BANK0 ] PTR const struct bmp280_
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  reg_addr        1   23[BANK0 ] PTR unsigned char 
+  reg_addr        1   27[BANK0 ] PTR unsigned char 
 		 -> conf_sensor@reg_addr(2), bmp280_soft_reset@reg_addr(1), 
-  temp_buff       8   11[BANK0 ] unsigned char [8]
-  temp_len        2   19[BANK0 ] unsigned int 
-  rslt            1   22[BANK0 ] char 
-  reg_addr_cnt    1   21[BANK0 ] unsigned char 
+  temp_buff       8   15[BANK0 ] unsigned char [8]
+  temp_len        2   23[BANK0 ] unsigned int 
+  rslt            1   26[BANK0 ] char 
+  reg_addr_cnt    1   25[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1467,7 +1500,7 @@ Total ram usage:        7 bytes
       Totals:         0      20       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       20 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_BMP280_SPI_bus_write
 		_interleave_data
@@ -1485,9 +1518,9 @@ Total ram usage:       20 bytes
   dev             1    wreg     PTR const struct bmp280_
 		 -> bmp(42), 
  Auto vars:     Size  Location     Type
-  dev             1    6[COMMON] PTR const struct bmp280_
+  dev             1    3[BANK0 ] PTR const struct bmp280_
 		 -> bmp(42), 
-  rslt            1    5[COMMON] char 
+  rslt            1    2[BANK0 ] char 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1498,12 +1531,12 @@ Total ram usage:       20 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        4 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1530,15 +1563,15 @@ Total ram usage:        4 bytes
  Parameters:    Size  Location     Type
   reg_addr        1    wreg     PTR const unsigned char 
 		 -> conf_sensor@reg_addr(2), bmp280_soft_reset@reg_addr(1), 
-  temp_buff       1    3[COMMON] PTR unsigned char 
+  temp_buff       1    0[BANK0 ] PTR unsigned char 
 		 -> bmp280_set_regs@temp_buff(8), 
-  reg_data        1    4[COMMON] PTR const unsigned char 
+  reg_data        1    1[BANK0 ] PTR const unsigned char 
 		 -> conf_sensor@temp(2), bmp280_soft_reset@soft_rst_cmd(1), 
-  len             1    5[COMMON] unsigned char 
+  len             1    2[BANK0 ] unsigned char 
  Auto vars:     Size  Location     Type
-  reg_addr        1    6[COMMON] PTR const unsigned char 
+  reg_addr        1    6[BANK0 ] PTR const unsigned char 
 		 -> conf_sensor@reg_addr(2), bmp280_soft_reset@reg_addr(1), 
-  index           1    7[COMMON] unsigned char 
+  index           1    7[BANK0 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1548,13 +1581,13 @@ Total ram usage:        4 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         3       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       3       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       3       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         5       3       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       8       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        8 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1566,13 +1599,13 @@ Total ram usage:        8 bytes
  Defined at:
 		line 56 in file "main.c"
  Parameters:    Size  Location     Type
-  dev_addr        1    3[COMMON] unsigned char 
-  reg_addr        1    4[COMMON] unsigned char 
-  reg_data        1    5[COMMON] PTR unsigned char 
+  dev_addr        1    0[BANK0 ] unsigned char 
+  reg_addr        1    1[BANK0 ] unsigned char 
+  reg_data        1    2[BANK0 ] PTR unsigned char 
 		 -> bmp280_set_regs@temp_buff(8), 
-  cnt             1    6[COMMON] unsigned char 
+  cnt             1    3[BANK0 ] unsigned char 
  Auto vars:     Size  Location     Type
-  iError          4    0[BANK0 ] long 
+  iError          4    4[BANK0 ] long 
  Return value:  Size  Location     Type
                   1    wreg      char 
  Registers used:
@@ -1582,13 +1615,13 @@ Total ram usage:        8 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4       4       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       8       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        8 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1601,7 +1634,7 @@ Total ram usage:        8 bytes
  Defined at:
 		line 30 in file "main.c"
  Parameters:    Size  Location     Type
-  msek            4    3[COMMON] unsigned long 
+  msek            4    0[BANK0 ] unsigned long 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1613,13 +1646,13 @@ Total ram usage:        8 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       4       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        4 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1651,7 +1684,7 @@ Total ram usage:        4 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1681,7 +1714,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    6
+ Hardware stack levels required when called:    7
  This function calls:
 		_ADC_Initialize
 		_EUSART1_Initialize
@@ -1716,7 +1749,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_TMR0_SetInterruptHandler
  This function is called by:
@@ -1726,10 +1759,10 @@ Total ram usage:        0 bytes
 
  *************** function _TMR0_SetInterruptHandler *****************
  Defined at:
-		line 159 in file "mcc_generated_files/tmr0.c"
+		line 167 in file "mcc_generated_files/tmr0.c"
  Parameters:    Size  Location     Type
-  InterruptHan    2    3[COMMON] PTR FTN()void 
-		 -> TMR0_DefaultInterruptHandler(1), 
+  InterruptHan    2    0[BANK0 ] PTR FTN()void 
+		 -> TMR0_DefaultInterruptHandler(1), tmr_fire(1), 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1741,16 +1774,17 @@ Total ram usage:        0 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
+		_main
 		_TMR0_Initialize
  This function uses a non-reentrant model
 
@@ -1777,7 +1811,7 @@ Total ram usage:        2 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1807,7 +1841,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1837,7 +1871,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1867,7 +1901,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_EUSART1_SetRxInterruptHandler
  This function is called by:
@@ -1879,7 +1913,7 @@ Total ram usage:        0 bytes
  Defined at:
 		line 173 in file "mcc_generated_files/eusart1.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    3[COMMON] PTR FTN()void 
+  interruptHan    2    0[BANK0 ] PTR FTN()void 
 		 -> EUSART1_Receive_ISR(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1892,13 +1926,13 @@ Total ram usage:        0 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1928,7 +1962,7 @@ Total ram usage:        2 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1958,7 +1992,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    3
+ Hardware stack levels required when called:    4
  This function calls:
 		Absolute function
 		_EUSART1_Receive_ISR
@@ -1990,7 +2024,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    2
+ Hardware stack levels required when called:    3
  This function calls:
 		_TMR0_CallBack
  This function is called by:
@@ -2000,7 +2034,7 @@ Total ram usage:        0 bytes
 
  *************** function _TMR0_CallBack *****************
  Defined at:
-		line 149 in file "mcc_generated_files/tmr0.c"
+		line 157 in file "mcc_generated_files/tmr0.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2020,10 +2054,11 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    1
+ Hardware stack levels required when called:    2
  This function calls:
 		Absolute function
 		_TMR0_DefaultInterruptHandler
+		_tmr_fire
  This function is called by:
 		_TMR0_ISR
  This function uses a non-reentrant model
@@ -2031,7 +2066,7 @@ Total ram usage:        0 bytes
 
  *************** function _TMR0_DefaultInterruptHandler *****************
  Defined at:
-		line 163 in file "mcc_generated_files/tmr0.c"
+		line 171 in file "mcc_generated_files/tmr0.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2056,6 +2091,67 @@ Total ram usage:        0 bytes
  This function is called by:
 		_TMR0_Initialize
 		_TMR0_CallBack
+ This function uses a non-reentrant model
+
+
+ *************** function _tmr_fire *****************
+ Defined at:
+		line 72 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  a               2    5[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_ADC_GetConversion
+		_EUSART1_Write
+ This function is called by:
+		_main
+		_TMR0_CallBack
+ This function uses a non-reentrant model
+
+
+ *************** function _ADC_GetConversion *****************
+ Defined at:
+		line 112 in file "mcc_generated_files/adc.c"
+ Parameters:    Size  Location     Type
+  channel         1    wreg     enum E6288
+ Auto vars:     Size  Location     Type
+  channel         1    3[COMMON] enum E6288
+ Return value:  Size  Location     Type
+                  2    0[COMMON] unsigned int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_tmr_fire
  This function uses a non-reentrant model
 
 
@@ -2116,6 +2212,7 @@ Total ram usage:        1 bytes
 		Nothing
  This function is called by:
 		_EUSART1_Receive_ISR
+		_tmr_fire
  This function uses a non-reentrant model
 
 
@@ -2129,65 +2226,67 @@ mcc_generated_files/interrupt_manager.c
 mcc_generated_files/interrupt_manager.c estimated size: 24
 
 bmp280.c
-		_interleave_data		CODE           	02DA	0000	47
-		_bmp280_init   		CODE           	0048	0000	152
-		_bmp280_soft_reset		CODE           	029F	0000	60
-		_null_ptr_check		CODE           	0353	0000	35
-		_bmp280_get_regs		CODE           	0259	0000	71
-		_bmp280_set_regs		CODE           	0173	0000	148
-		_get_calib_param		CODE           	00DF	0000	149
+		_interleave_data		CODE           	02DF	0000	47
+		_bmp280_init   		CODE           	017F	0000	141
+		_bmp280_soft_reset		CODE           	02A4	0000	60
+		_null_ptr_check		CODE           	0380	0000	36
+		_bmp280_get_regs		CODE           	025E	0000	71
+		_bmp280_set_regs		CODE           	00EC	0000	148
+		_get_calib_param		CODE           	0051	0000	156
 
-bmp280.c estimated size: 662
+bmp280.c estimated size: 659
 
 mcc_generated_files/tmr0.c
-		_TMR0_SetInterruptHandler		CODE           	045A	0000	7
-		_TMR0_DefaultInterruptHandler		CODE           	0477	0000	2
-		_TMR0_CallBack 		CODE           	0422	0000	12
-		_TMR0_StartTimer		CODE           	0471	0000	4
-		_TMR0_ISR      		CODE           	040A	0000	14
-		_TMR0_Initialize		CODE           	03B3	0000	26
+		_TMR0_SetInterruptHandler		CODE           	04AE	0000	7
+		_TMR0_DefaultInterruptHandler		CODE           	04C5	0000	2
+		_TMR0_CallBack 		CODE           	046C	0000	12
+		_TMR0_StartTimer		CODE           	04BF	0000	4
+		_TMR0_ISR      		CODE           	0424	0000	24
+		_TMR0_Initialize		CODE           	03C1	0000	26
 
-mcc_generated_files/tmr0.c estimated size: 65
+mcc_generated_files/tmr0.c estimated size: 75
 
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	0308	0000	39
+		_PIN_MANAGER_Initialize		CODE           	0335	0000	39
 
 mcc_generated_files/pin_manager.c estimated size: 39
 
 mcc_generated_files/adc.c
-		_ADC_Initialize		CODE           	043F	0000	9
+		_ADC_Initialize		CODE           	048A	0000	10
+		_ADC_GetConversion		CODE           	040C	0000	25
 
-mcc_generated_files/adc.c estimated size: 9
+mcc_generated_files/adc.c estimated size: 35
 
 shared
-		bmp280_compute_meas_time@startup		STRCODE        	046A	0000	5
+		bmp280_compute_meas_time@startup		STRCODE        	04B8	0000	5
 		_uart          		STRCODE        	0000	0000	0
-		__initialization		CODE           	001D	0000	40
-		bmp280_compute_meas_time@period_per_osrs		STRCODE        	0466	0000	5
-		_spi1_configuration		STRCODE        	046E	0000	4
+		__initialization		CODE           	001D	0000	49
+		bmp280_compute_meas_time@period_per_osrs		STRCODE        	04B4	0000	5
+		_spi1_configuration		STRCODE        	04BC	0000	4
 
-shared estimated size: 54
+shared estimated size: 63
 
 mcc_generated_files/eusart1.c
-		_EUSART1_SetRxInterruptHandler		CODE           	0460	0000	7
-		_EUSART1_Initialize		CODE           	03CC	0000	25
-		_EUSART1_Write 		CODE           	0447	0000	8
-		_EUSART1_Receive_ISR		CODE           	032E	0000	38
+		_EUSART1_SetRxInterruptHandler		CODE           	0481	0000	10
+		_EUSART1_Initialize		CODE           	03DA	0000	26
+		_EUSART1_Write 		CODE           	049B	0000	8
+		_EUSART1_Receive_ISR		CODE           	035B	0000	38
 
-mcc_generated_files/eusart1.c estimated size: 78
+mcc_generated_files/eusart1.c estimated size: 82
 
 mcc_generated_files/mcc.c
-		_PMD_Initialize		CODE           	0437	0000	9
-		_OSCILLATOR_Initialize		CODE           	042D	0000	11
-		_SYSTEM_Initialize		CODE           	03F8	0000	19
+		_PMD_Initialize		CODE           	0493	0000	9
+		_OSCILLATOR_Initialize		CODE           	0477	0000	11
+		_SYSTEM_Initialize		CODE           	044F	0000	19
 
 mcc_generated_files/mcc.c estimated size: 39
 
 main.c
-		_BMP280_SPI_bus_write		CODE           	0417	0000	12
-		_main          		CODE           	0375	0000	33
-		_BMP280_SPI_bus_read		CODE           	0206	0000	84
-		_BMP280_delay_msek		CODE           	0476	0000	2
+		_BMP280_SPI_bus_write		CODE           	0461	0000	12
+		_main          		CODE           	030D	0000	41
+		_BMP280_SPI_bus_read		CODE           	020B	0000	84
+		_tmr_fire      		CODE           	03F3	0000	26
+		_BMP280_delay_msek		CODE           	04C4	0000	2
 
-main.c estimated size: 131
+main.c estimated size: 165
 

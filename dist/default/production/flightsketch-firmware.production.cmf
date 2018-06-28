@@ -12,52 +12,57 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\flightsketch-firmware.production.obj
-cinit CODE 0 1D 1D 2B 2
-text1 CODE 0 48 48 97 2
-text2 CODE 0 DF DF 94 2
-text3 CODE 0 259 259 46 2
-text4 CODE 0 206 206 53 2
-text5 CODE 0 29F 29F 3B 2
-text6 CODE 0 173 173 93 2
-text7 CODE 0 353 353 22 2
-text8 CODE 0 2DA 2DA 2E 2
-text9 CODE 0 417 417 B 2
-text10 CODE 0 476 476 1 2
-text11 CODE 0 471 471 3 2
-text12 CODE 0 3F8 3F8 12 2
-text13 CODE 0 3B3 3B3 19 2
-text14 CODE 0 45A 45A 6 2
-text15 CODE 0 437 437 8 2
-text16 CODE 0 308 308 26 2
-text17 CODE 0 42D 42D A 2
-text18 CODE 0 3CC 3CC 18 2
-text19 CODE 0 460 460 6 2
-text20 CODE 0 43F 43F 8 2
-text22 CODE 0 40A 40A D 2
-text23 CODE 0 422 422 B 2
-text24 CODE 0 477 477 1 2
-text25 CODE 0 32E 32E 25 2
-text26 CODE 0 447 447 7 2
-nvBANK1 BANK1 1 DC DC 6 1
-maintext CODE 0 375 375 20 2
-cstackCOMMON COMMON 1 70 70 8 1
-cstackBANK0 BANK0 1 20 20 50 1
-cstackBANK1 BANK1 1 E2 E2 5 1
-inittext CODE 0 44E 44E 6 2
-stringtext1 STRCODE 0 3E4 3E4 14 2
-stringtext2 STRCODE 0 466 466 4 2
-stringtext3 STRCODE 0 46A 46A 4 2
-stringtext4 STRCODE 0 46E 46E 3 2
+cinit CODE 0 1D 1D 34 2
+text1 CODE 0 17F 17F 8C 2
+text2 CODE 0 51 51 9B 2
+text3 CODE 0 25E 25E 46 2
+text4 CODE 0 20B 20B 53 2
+text5 CODE 0 2A4 2A4 3B 2
+text6 CODE 0 EC EC 93 2
+text7 CODE 0 380 380 23 2
+text8 CODE 0 2DF 2DF 2E 2
+text9 CODE 0 461 461 B 2
+nvCOMMON COMMON 1 7C 7C 2 1
+text10 CODE 0 4C4 4C4 1 2
+text11 CODE 0 4BF 4BF 3 2
+text12 CODE 0 44F 44F 12 2
+text13 CODE 0 3C1 3C1 19 2
+text14 CODE 0 4AE 4AE 6 2
+text15 CODE 0 493 493 8 2
+text16 CODE 0 335 335 26 2
+text17 CODE 0 477 477 A 2
+text18 CODE 0 3DA 3DA 19 2
+text19 CODE 0 481 481 9 2
+text20 CODE 0 48A 48A 9 2
+text22 CODE 0 424 424 17 2
+text23 CODE 0 46C 46C B 2
+text24 CODE 0 4C5 4C5 1 2
+text25 CODE 0 3F3 3F3 19 2
+text26 CODE 0 40C 40C 18 2
+text27 CODE 0 35B 35B 25 2
+text28 CODE 0 49B 49B 7 2
+nvBANK0 BANK0 1 6B 6B 2 1
+nvBANK1 BANK1 1 EA EA 2 1
+maintext CODE 0 30D 30D 28 2
+cstackCOMMON COMMON 1 70 70 7 1
+cstackBANK0 BANK0 1 20 20 3F 1
+cstackBANK1 BANK1 1 D0 D0 1A 1
+inittext CODE 0 4A2 4A2 6 2
+stringtext1 STRCODE 0 43B 43B 14 2
+stringtext2 STRCODE 0 4B4 4B4 4 2
+stringtext3 STRCODE 0 4B8 4B8 4 2
+stringtext4 STRCODE 0 4BC 4BC 3 2
 intentry CODE 0 4 4 17 2
-bssBANK1 BANK1 1 A0 A0 3C 1
+bssBANK0 BANK0 1 5F 5F C 1
+bssBANK1 BANK1 1 A0 A0 30 1
 bssBANK2 BANK2 1 13E 13E 18 1
-idataBANK1 CODE 0 474 474 2 2
-idataBANK2 CODE 0 395 395 1E 2
-dataBANK1 BANK1 1 E7 E7 2 1
+idataBANK0 CODE 0 4C2 4C2 2 2
+idataBANK2 CODE 0 3A3 3A3 1E 2
+dataBANK0 BANK0 1 6D 6D 2 1
 dataBANK2 BANK2 1 120 120 1E 1
-clrtext CODE 0 454 454 6 2
-bssCOMMON COMMON 1 78 78 3 1
-$C:\Users\russ\AppData\Local\Temp\s8ug.obj
+clrtext CODE 0 4A8 4A8 6 2
+bssCOMMON COMMON 1 77 77 5 1
+$C:\Users\russ\AppData\Local\Temp\s5rg.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 1B 1B 2 2
 config CONFIG 0 8007 8007 5 2
@@ -67,7 +72,8 @@ config CONFIG 0 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM E9-EF 1
+RAM 6F-6F 1
+RAM EC-EF 1
 RAM 156-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
@@ -79,7 +85,8 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK1 E9-EF 1
+BANK0 6F-6F 1
+BANK1 EC-EF 1
 BANK2 156-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
@@ -89,9 +96,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 478-1FFF 2
+CONST 4C6-1FFF 2
 ENTRY 2-3 2
-ENTRY 478-1FFF 2
+ENTRY 4C6-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -149,7 +156,7 @@ SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
 STACK 20D6-23EF 1
 CODE 2-3 2
-CODE 478-1FFF 2
+CODE 4C6-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -164,11 +171,10 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-COMMON 7B-7D 1
 STRCODE 2-3 2
-STRCODE 478-1FFF 2
+STRCODE 4C6-1FFF 2
 STRING 2-3 2
-STRING 478-1FFF 2
+STRING 4C6-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -183,42 +189,49 @@ STRING 478-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\flightsketch-firmware.production.obj
-1D cinit CODE >6611:C:\Users\russ\AppData\Local\Temp\s8ug.
-1D cinit CODE >6614:C:\Users\russ\AppData\Local\Temp\s8ug.
-1D cinit CODE >6682:C:\Users\russ\AppData\Local\Temp\s8ug.
-1E cinit CODE >6683:C:\Users\russ\AppData\Local\Temp\s8ug.
-21 cinit CODE >6684:C:\Users\russ\AppData\Local\Temp\s8ug.
-22 cinit CODE >6685:C:\Users\russ\AppData\Local\Temp\s8ug.
-25 cinit CODE >6686:C:\Users\russ\AppData\Local\Temp\s8ug.
-26 cinit CODE >6690:C:\Users\russ\AppData\Local\Temp\s8ug.
-27 cinit CODE >6691:C:\Users\russ\AppData\Local\Temp\s8ug.
-28 cinit CODE >6692:C:\Users\russ\AppData\Local\Temp\s8ug.
-29 cinit CODE >6693:C:\Users\russ\AppData\Local\Temp\s8ug.
-2A cinit CODE >6694:C:\Users\russ\AppData\Local\Temp\s8ug.
-2B cinit CODE >6695:C:\Users\russ\AppData\Local\Temp\s8ug.
-2C cinit CODE >6696:C:\Users\russ\AppData\Local\Temp\s8ug.
-2D cinit CODE >6697:C:\Users\russ\AppData\Local\Temp\s8ug.
-2E cinit CODE >6698:C:\Users\russ\AppData\Local\Temp\s8ug.
-2F cinit CODE >6699:C:\Users\russ\AppData\Local\Temp\s8ug.
-32 cinit CODE >6716:C:\Users\russ\AppData\Local\Temp\s8ug.
-33 cinit CODE >6717:C:\Users\russ\AppData\Local\Temp\s8ug.
-34 cinit CODE >6718:C:\Users\russ\AppData\Local\Temp\s8ug.
-35 cinit CODE >6722:C:\Users\russ\AppData\Local\Temp\s8ug.
-36 cinit CODE >6723:C:\Users\russ\AppData\Local\Temp\s8ug.
-37 cinit CODE >6724:C:\Users\russ\AppData\Local\Temp\s8ug.
-38 cinit CODE >6725:C:\Users\russ\AppData\Local\Temp\s8ug.
-39 cinit CODE >6726:C:\Users\russ\AppData\Local\Temp\s8ug.
-3A cinit CODE >6727:C:\Users\russ\AppData\Local\Temp\s8ug.
-3D cinit CODE >6731:C:\Users\russ\AppData\Local\Temp\s8ug.
-3E cinit CODE >6732:C:\Users\russ\AppData\Local\Temp\s8ug.
-3F cinit CODE >6733:C:\Users\russ\AppData\Local\Temp\s8ug.
-40 cinit CODE >6734:C:\Users\russ\AppData\Local\Temp\s8ug.
-41 cinit CODE >6735:C:\Users\russ\AppData\Local\Temp\s8ug.
-42 cinit CODE >6736:C:\Users\russ\AppData\Local\Temp\s8ug.
-44 cinit CODE >6742:C:\Users\russ\AppData\Local\Temp\s8ug.
-44 cinit CODE >6744:C:\Users\russ\AppData\Local\Temp\s8ug.
-45 cinit CODE >6745:C:\Users\russ\AppData\Local\Temp\s8ug.
-46 cinit CODE >6746:C:\Users\russ\AppData\Local\Temp\s8ug.
+1D cinit CODE >6622:C:\Users\russ\AppData\Local\Temp\s5rg.
+1D cinit CODE >6625:C:\Users\russ\AppData\Local\Temp\s5rg.
+1D cinit CODE >6699:C:\Users\russ\AppData\Local\Temp\s5rg.
+20 cinit CODE >6700:C:\Users\russ\AppData\Local\Temp\s5rg.
+21 cinit CODE >6701:C:\Users\russ\AppData\Local\Temp\s5rg.
+24 cinit CODE >6702:C:\Users\russ\AppData\Local\Temp\s5rg.
+25 cinit CODE >6706:C:\Users\russ\AppData\Local\Temp\s5rg.
+26 cinit CODE >6707:C:\Users\russ\AppData\Local\Temp\s5rg.
+27 cinit CODE >6708:C:\Users\russ\AppData\Local\Temp\s5rg.
+28 cinit CODE >6709:C:\Users\russ\AppData\Local\Temp\s5rg.
+29 cinit CODE >6710:C:\Users\russ\AppData\Local\Temp\s5rg.
+2A cinit CODE >6711:C:\Users\russ\AppData\Local\Temp\s5rg.
+2B cinit CODE >6712:C:\Users\russ\AppData\Local\Temp\s5rg.
+2C cinit CODE >6713:C:\Users\russ\AppData\Local\Temp\s5rg.
+2D cinit CODE >6714:C:\Users\russ\AppData\Local\Temp\s5rg.
+2E cinit CODE >6715:C:\Users\russ\AppData\Local\Temp\s5rg.
+31 cinit CODE >6732:C:\Users\russ\AppData\Local\Temp\s5rg.
+32 cinit CODE >6733:C:\Users\russ\AppData\Local\Temp\s5rg.
+33 cinit CODE >6734:C:\Users\russ\AppData\Local\Temp\s5rg.
+34 cinit CODE >6735:C:\Users\russ\AppData\Local\Temp\s5rg.
+35 cinit CODE >6736:C:\Users\russ\AppData\Local\Temp\s5rg.
+36 cinit CODE >6740:C:\Users\russ\AppData\Local\Temp\s5rg.
+37 cinit CODE >6741:C:\Users\russ\AppData\Local\Temp\s5rg.
+38 cinit CODE >6742:C:\Users\russ\AppData\Local\Temp\s5rg.
+39 cinit CODE >6743:C:\Users\russ\AppData\Local\Temp\s5rg.
+3A cinit CODE >6744:C:\Users\russ\AppData\Local\Temp\s5rg.
+3B cinit CODE >6745:C:\Users\russ\AppData\Local\Temp\s5rg.
+3E cinit CODE >6749:C:\Users\russ\AppData\Local\Temp\s5rg.
+3F cinit CODE >6750:C:\Users\russ\AppData\Local\Temp\s5rg.
+40 cinit CODE >6751:C:\Users\russ\AppData\Local\Temp\s5rg.
+41 cinit CODE >6752:C:\Users\russ\AppData\Local\Temp\s5rg.
+42 cinit CODE >6753:C:\Users\russ\AppData\Local\Temp\s5rg.
+43 cinit CODE >6754:C:\Users\russ\AppData\Local\Temp\s5rg.
+46 cinit CODE >6758:C:\Users\russ\AppData\Local\Temp\s5rg.
+47 cinit CODE >6759:C:\Users\russ\AppData\Local\Temp\s5rg.
+48 cinit CODE >6760:C:\Users\russ\AppData\Local\Temp\s5rg.
+49 cinit CODE >6761:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A cinit CODE >6762:C:\Users\russ\AppData\Local\Temp\s5rg.
+4B cinit CODE >6763:C:\Users\russ\AppData\Local\Temp\s5rg.
+4D cinit CODE >6769:C:\Users\russ\AppData\Local\Temp\s5rg.
+4D cinit CODE >6771:C:\Users\russ\AppData\Local\Temp\s5rg.
+4E cinit CODE >6772:C:\Users\russ\AppData\Local\Temp\s5rg.
+4F cinit CODE >6773:C:\Users\russ\AppData\Local\Temp\s5rg.
 4 intentry CODE >52:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
 A intentry CODE >57:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
@@ -227,250 +240,266 @@ E intentry CODE >59:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_fi
 F intentry CODE >61:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
 13 intentry CODE >63:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
 19 intentry CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/interrupt_manager.c
-447 text26 CODE >138:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-447 text26 CODE >140:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-447 text26 CODE >142:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-44A text26 CODE >144:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-44D text26 CODE >145:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-32E text25 CODE >149:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-32E text25 CODE >153:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-331 text25 CODE >157:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-332 text25 CODE >158:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-333 text25 CODE >162:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-337 text25 CODE >163:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-343 text25 CODE >164:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-34A text25 CODE >165:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-34D text25 CODE >167:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-34E text25 CODE >169:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-352 text25 CODE >170:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-477 text24 CODE >163:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-477 text24 CODE >166:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-422 text23 CODE >149:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-422 text23 CODE >153:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-427 text23 CODE >155:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-40A text22 CODE >134:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-40A text22 CODE >137:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-40C text22 CODE >139:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-410 text22 CODE >140:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-414 text22 CODE >144:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-416 text22 CODE >147:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-43F text20 CODE >64:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-43F text20 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-442 text20 CODE >72:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-443 text20 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-444 text20 CODE >78:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-445 text20 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-446 text20 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
-460 text19 CODE >173:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-460 text19 CODE >174:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-465 text19 CODE >175:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3CC text18 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3CC text18 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3CE text18 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3D4 text18 CODE >79:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3D7 text18 CODE >82:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3D9 text18 CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3DB text18 CODE >88:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3DD text18 CODE >91:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3DE text18 CODE >95:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3DF text18 CODE >96:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3E0 text18 CODE >97:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3E1 text18 CODE >100:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-3E3 text18 CODE >101:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
-42D text17 CODE >60:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-42D text17 CODE >63:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-430 text17 CODE >65:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-431 text17 CODE >67:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-432 text17 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-434 text17 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-435 text17 CODE >73:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-436 text17 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-308 text16 CODE >57:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-308 text16 CODE >62:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-30A text16 CODE >63:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-30B text16 CODE >68:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-30D text16 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-30F text16 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-312 text16 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-314 text16 CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-315 text16 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-316 text16 CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-317 text16 CODE >87:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-318 text16 CODE >96:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-31A text16 CODE >97:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-31F text16 CODE >98:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-323 text16 CODE >99:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-326 text16 CODE >100:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-328 text16 CODE >101:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-32D text16 CODE >102:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
-437 text15 CODE >76:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-437 text15 CODE >79:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-439 text15 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-43A text15 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-43B text15 CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-43C text15 CODE >87:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-43D text15 CODE >89:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-43E text15 CODE >90:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-45A text14 CODE >159:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-45A text14 CODE >160:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-45F text14 CODE >161:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3B3 text13 CODE >66:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3B3 text13 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3B6 text13 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3B7 text13 CODE >77:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3B8 text13 CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3BF text13 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3C1 text13 CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3C2 text13 CODE >89:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3C8 text13 CODE >92:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3CB text13 CODE >93:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-3F8 text12 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-3F8 text12 CODE >52:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-3FB text12 CODE >53:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-3FE text12 CODE >54:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-401 text12 CODE >55:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-404 text12 CODE >56:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-407 text12 CODE >57:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-409 text12 CODE >58:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
-471 text11 CODE >95:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-471 text11 CODE >98:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-473 text11 CODE >99:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
-476 text10 CODE >30:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-476 text10 CODE >33:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-417 text9 CODE >56:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-417 text9 CODE >58:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-420 text9 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-2DA text8 CODE >605:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2DB text8 CODE >609:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2E1 text8 CODE >610:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2F3 text8 CODE >611:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-303 text8 CODE >609:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-353 text7 CODE >587:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-354 text7 CODE >591:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-36F text7 CODE >593:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-371 text7 CODE >594:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-372 text7 CODE >595:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-373 text7 CODE >598:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-173 text6 CODE >140:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-175 text6 CODE >147:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-179 text6 CODE >148:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-17D text6 CODE >150:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-185 text6 CODE >152:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-18E text6 CODE >153:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-191 text6 CODE >154:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-198 text6 CODE >156:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-19F text6 CODE >159:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1A4 text6 CODE >160:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1B5 text6 CODE >159:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1BA text6 CODE >164:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1BE text6 CODE >166:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1CE text6 CODE >167:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1DA text6 CODE >169:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1E1 text6 CODE >172:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1F8 text6 CODE >174:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1FB text6 CODE >175:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-1FD text6 CODE >177:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-201 text6 CODE >179:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-202 text6 CODE >180:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-204 text6 CODE >183:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-29F text5 CODE >189:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2A1 text5 CODE >192:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2A5 text5 CODE >193:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2A9 text5 CODE >195:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2B1 text5 CODE >197:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2B4 text5 CODE >198:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2C6 text5 CODE >201:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-2D7 text5 CODE >204:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-206 text4 CODE >35:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-206 text4 CODE >37:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-20A text4 CODE >38:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-213 text4 CODE >39:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-221 text4 CODE >41:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-226 text4 CODE >45:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-23D text4 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-243 text4 CODE >51:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-252 text4 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-257 text4 CODE >53:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-259 text3 CODE >114:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-25B text3 CODE >118:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-263 text3 CODE >120:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-269 text3 CODE >122:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-270 text3 CODE >123:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-275 text3 CODE >125:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-293 text3 CODE >127:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-296 text3 CODE >128:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-29A text3 CODE >129:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-29B text3 CODE >130:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-29D text3 CODE >133:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-DF text2 CODE >619:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-E1 text2 CODE >622:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-EF text2 CODE >624:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-F7 text2 CODE >626:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-FA text2 CODE >627:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-10E text2 CODE >629:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-111 text2 CODE >631:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-119 text2 CODE >633:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-121 text2 CODE >635:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-129 text2 CODE >637:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-131 text2 CODE >639:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-139 text2 CODE >641:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-141 text2 CODE >643:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-149 text2 CODE >645:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-151 text2 CODE >647:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-159 text2 CODE >649:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-161 text2 CODE >651:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-169 text2 CODE >653:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-171 text2 CODE >657:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-48 text1 CODE >211:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-4A text1 CODE >215:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-50 text1 CODE >217:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-59 text1 CODE >219:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-5D text1 CODE >221:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-73 text1 CODE >226:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-8B text1 CODE >228:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-94 text1 CODE >230:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-97 text1 CODE >231:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-A0 text1 CODE >232:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-A1 text1 CODE >236:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-B2 text1 CODE >237:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-B5 text1 CODE >220:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-B8 text1 CODE >241:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-BB text1 CODE >242:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-C1 text1 CODE >244:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-C4 text1 CODE >246:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-C9 text1 CODE >247:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-CE text1 CODE >248:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-D3 text1 CODE >249:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-D8 text1 CODE >250:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-DD text1 CODE >254:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
-375 maintext CODE >76:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-375 maintext CODE >78:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-378 maintext CODE >79:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-379 maintext CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-37A maintext CODE >82:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-37D maintext CODE >84:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-37F maintext CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-380 maintext CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-384 maintext CODE >87:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-388 maintext CODE >88:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-38C maintext CODE >90:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-394 maintext CODE >92:C:\Users\russ\Desktop\flightsketch-firmware\main.c
-454 clrtext CODE >6705:C:\Users\russ\AppData\Local\Temp\s8ug.
-454 clrtext CODE >6706:C:\Users\russ\AppData\Local\Temp\s8ug.
-455 clrtext CODE >6707:C:\Users\russ\AppData\Local\Temp\s8ug.
-455 clrtext CODE >6708:C:\Users\russ\AppData\Local\Temp\s8ug.
-456 clrtext CODE >6709:C:\Users\russ\AppData\Local\Temp\s8ug.
-457 clrtext CODE >6710:C:\Users\russ\AppData\Local\Temp\s8ug.
-458 clrtext CODE >6711:C:\Users\russ\AppData\Local\Temp\s8ug.
-459 clrtext CODE >6712:C:\Users\russ\AppData\Local\Temp\s8ug.
-44E inittext CODE >6671:C:\Users\russ\AppData\Local\Temp\s8ug.
-44E inittext CODE >6672:C:\Users\russ\AppData\Local\Temp\s8ug.
-44F inittext CODE >6673:C:\Users\russ\AppData\Local\Temp\s8ug.
-44F inittext CODE >6674:C:\Users\russ\AppData\Local\Temp\s8ug.
-450 inittext CODE >6675:C:\Users\russ\AppData\Local\Temp\s8ug.
-451 inittext CODE >6676:C:\Users\russ\AppData\Local\Temp\s8ug.
-452 inittext CODE >6677:C:\Users\russ\AppData\Local\Temp\s8ug.
-453 inittext CODE >6678:C:\Users\russ\AppData\Local\Temp\s8ug.
+49B text28 CODE >138:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+49B text28 CODE >140:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+49B text28 CODE >142:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+49E text28 CODE >144:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+4A1 text28 CODE >145:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+35B text27 CODE >149:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+35B text27 CODE >153:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+35E text27 CODE >157:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+35F text27 CODE >158:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+360 text27 CODE >162:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+364 text27 CODE >163:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+370 text27 CODE >164:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+377 text27 CODE >165:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+37A text27 CODE >167:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+37B text27 CODE >169:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+37F text27 CODE >170:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+40C text26 CODE >112:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+40D text26 CODE >115:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+417 text26 CODE >118:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+418 text26 CODE >120:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+41B text26 CODE >123:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+41D text26 CODE >126:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+41D text26 CODE >128:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+41F text26 CODE >130:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+3F3 text25 CODE >72:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+3F3 text25 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+3F6 text25 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+3FE text25 CODE >76:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+405 text25 CODE >77:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+40B text25 CODE >78:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+4C5 text24 CODE >171:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4C5 text24 CODE >174:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+46C text23 CODE >157:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+46C text23 CODE >161:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+471 text23 CODE >163:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+424 text22 CODE >134:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+424 text22 CODE >139:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+426 text22 CODE >141:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+429 text22 CODE >142:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+42B text22 CODE >145:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+436 text22 CODE >148:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+438 text22 CODE >151:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+48A text20 CODE >64:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+48A text20 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+48D text20 CODE >72:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+48F text20 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+490 text20 CODE >78:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+491 text20 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+492 text20 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+481 text19 CODE >173:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+481 text19 CODE >174:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+489 text19 CODE >175:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3DA text18 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3DA text18 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3DC text18 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3E3 text18 CODE >79:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3E6 text18 CODE >82:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3E8 text18 CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3EA text18 CODE >88:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3EC text18 CODE >91:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3ED text18 CODE >95:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3EE text18 CODE >96:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3EF text18 CODE >97:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3F0 text18 CODE >100:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+3F2 text18 CODE >101:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
+477 text17 CODE >60:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+477 text17 CODE >63:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+47A text17 CODE >65:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+47B text17 CODE >67:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+47C text17 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+47E text17 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+47F text17 CODE >73:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+480 text17 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+335 text16 CODE >57:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+335 text16 CODE >62:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+337 text16 CODE >63:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+338 text16 CODE >68:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+33A text16 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+33C text16 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+33F text16 CODE >75:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+341 text16 CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+342 text16 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+343 text16 CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+344 text16 CODE >87:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+345 text16 CODE >96:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+347 text16 CODE >97:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+34C text16 CODE >98:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+350 text16 CODE >99:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+353 text16 CODE >100:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+355 text16 CODE >101:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+35A text16 CODE >102:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/pin_manager.c
+493 text15 CODE >76:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+493 text15 CODE >79:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+495 text15 CODE >81:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+496 text15 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+497 text15 CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+498 text15 CODE >87:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+499 text15 CODE >89:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+49A text15 CODE >90:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+4AE text14 CODE >167:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4AE text14 CODE >168:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4B3 text14 CODE >169:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3C1 text13 CODE >66:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3C1 text13 CODE >71:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3C4 text13 CODE >74:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3C6 text13 CODE >77:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3C8 text13 CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3CC text13 CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3CE text13 CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3CF text13 CODE >89:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3D6 text13 CODE >92:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+3D9 text13 CODE >93:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+44F text12 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+44F text12 CODE >52:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+452 text12 CODE >53:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+455 text12 CODE >54:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+458 text12 CODE >55:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+45B text12 CODE >56:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+45E text12 CODE >57:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+460 text12 CODE >58:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
+4BF text11 CODE >95:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4BF text11 CODE >98:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4C1 text11 CODE >99:C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
+4C4 text10 CODE >30:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+4C4 text10 CODE >33:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+461 text9 CODE >56:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+461 text9 CODE >58:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+46A text9 CODE >69:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+2DF text8 CODE >605:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2E1 text8 CODE >609:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2E7 text8 CODE >610:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2F8 text8 CODE >611:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+308 text8 CODE >609:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+380 text7 CODE >587:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+382 text7 CODE >591:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+39D text7 CODE >593:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+39F text7 CODE >594:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+3A0 text7 CODE >595:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+3A1 text7 CODE >598:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+EC text6 CODE >140:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+EE text6 CODE >147:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+F2 text6 CODE >148:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+F6 text6 CODE >150:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+FE text6 CODE >152:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+107 text6 CODE >153:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+10A text6 CODE >154:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+111 text6 CODE >156:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+118 text6 CODE >159:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+11D text6 CODE >160:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+12E text6 CODE >159:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+133 text6 CODE >164:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+137 text6 CODE >166:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+147 text6 CODE >167:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+153 text6 CODE >169:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+15A text6 CODE >172:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+171 text6 CODE >174:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+174 text6 CODE >175:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+176 text6 CODE >177:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+17A text6 CODE >179:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+17B text6 CODE >180:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+17D text6 CODE >183:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2A4 text5 CODE >189:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2A6 text5 CODE >192:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2AA text5 CODE >193:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2AE text5 CODE >195:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2B6 text5 CODE >197:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2B9 text5 CODE >198:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2CB text5 CODE >201:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2DC text5 CODE >204:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+20B text4 CODE >35:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+20B text4 CODE >37:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+20F text4 CODE >38:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+218 text4 CODE >39:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+226 text4 CODE >41:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+22B text4 CODE >45:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+242 text4 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+248 text4 CODE >51:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+257 text4 CODE >50:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+25C text4 CODE >53:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+25E text3 CODE >114:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+260 text3 CODE >118:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+268 text3 CODE >120:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+26E text3 CODE >122:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+275 text3 CODE >123:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+27A text3 CODE >125:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+298 text3 CODE >127:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+29B text3 CODE >128:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+29F text3 CODE >129:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2A0 text3 CODE >130:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+2A2 text3 CODE >133:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+51 text2 CODE >619:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+53 text2 CODE >622:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+62 text2 CODE >624:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+6C text2 CODE >626:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+6F text2 CODE >627:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+87 text2 CODE >629:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+8A text2 CODE >631:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+92 text2 CODE >633:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+9A text2 CODE >635:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+A2 text2 CODE >637:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+AA text2 CODE >639:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+B2 text2 CODE >641:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+BA text2 CODE >643:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+C2 text2 CODE >645:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+CA text2 CODE >647:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+D2 text2 CODE >649:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+DA text2 CODE >651:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+E2 text2 CODE >653:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+EA text2 CODE >657:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+17F text1 CODE >211:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+181 text1 CODE >215:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+185 text1 CODE >217:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+18D text1 CODE >219:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+191 text1 CODE >221:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1A3 text1 CODE >226:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1BB text1 CODE >228:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1C3 text1 CODE >230:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1C6 text1 CODE >231:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1CE text1 CODE >232:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1CF text1 CODE >236:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1E0 text1 CODE >237:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1E3 text1 CODE >220:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1E6 text1 CODE >241:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1E9 text1 CODE >242:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1ED text1 CODE >244:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1F0 text1 CODE >246:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1F5 text1 CODE >247:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1FA text1 CODE >248:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+1FF text1 CODE >249:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+204 text1 CODE >250:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+209 text1 CODE >254:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
+30D maintext CODE >80:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+30D maintext CODE >82:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+310 maintext CODE >83:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+311 maintext CODE >84:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+312 maintext CODE >85:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+31A maintext CODE >86:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+31D maintext CODE >88:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+31F maintext CODE >89:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+320 maintext CODE >90:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+324 maintext CODE >91:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+328 maintext CODE >92:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+32C maintext CODE >94:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+334 maintext CODE >96:C:\Users\russ\Desktop\flightsketch-firmware\main.c
+4A8 clrtext CODE >6721:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A8 clrtext CODE >6722:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A9 clrtext CODE >6723:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A9 clrtext CODE >6724:C:\Users\russ\AppData\Local\Temp\s5rg.
+4AA clrtext CODE >6725:C:\Users\russ\AppData\Local\Temp\s5rg.
+4AB clrtext CODE >6726:C:\Users\russ\AppData\Local\Temp\s5rg.
+4AC clrtext CODE >6727:C:\Users\russ\AppData\Local\Temp\s5rg.
+4AD clrtext CODE >6728:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A2 inittext CODE >6688:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A2 inittext CODE >6689:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A3 inittext CODE >6690:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A3 inittext CODE >6691:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A4 inittext CODE >6692:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A5 inittext CODE >6693:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A6 inittext CODE >6694:C:\Users\russ\AppData\Local\Temp\s5rg.
+4A7 inittext CODE >6695:C:\Users\russ\AppData\Local\Temp\s5rg.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -484,19 +513,20 @@ DD text1 CODE >254:C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
 __LdataBANK2 0 0 ABS 0 dataBANK2 -
 __Hspace_0 800C 0 ABS 0 - -
 __Hspace_1 156 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
-__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __HidataBANK2 0 0 ABS 0 idataBANK2 -
-_EUSART1_Initialize 798 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
-_bmp280_set_regs 2E6 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
+_EUSART1_Initialize 7B4 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
+_bmp280_set_regs 1D8 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_PMD_Initialize 86E 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
+_PMD_Initialize 926 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
+ADC_GetConversion@channel 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
 __Hstrings 0 0 ABS 0 strings -
 __CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _LATA 18 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -509,103 +539,111 @@ _PMD4 79A 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _PMD5 79B 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _WPUA 1F39 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _WPUC 1F4F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-___sp 0 0 STACK 2 stack C:\Users\russ\AppData\Local\Temp\s8ug.obj
-_main 6EA 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
+___sp 0 0 STACK 2 stack C:\Users\russ\AppData\Local\Temp\s5rg.obj
+_main 61A 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-start 36 0 CODE 0 init C:\Users\russ\AppData\Local\Temp\s8ug.obj
-_TMR0_InterruptHandler DC 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
+__end_of_ADC_GetConversion 848 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
+start 36 0 CODE 0 init C:\Users\russ\AppData\Local\Temp\s5rg.obj
+_TMR0_InterruptHandler 6B 0 BANK0 1 nvBANK0 dist/default/production\flightsketch-firmware.production.obj
+_tmr_fire 7E6 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_TMR0_SetInterruptHandler 8C0 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_SetInterruptHandler 968 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
 __size_of_null_ptr_check 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_EUSART1_Receive_ISR 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_bmp280_init 1BE 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
-__LidataBANK1 0 0 ABS 0 idataBANK1 -
+__end_of_bmp280_init 416 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
+__end_of_tmr_fire 818 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
 __LidataBANK2 0 0 ABS 0 idataBANK2 -
-bmp280_get_regs@dev 48 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-bmp280_get_regs@len 47 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_regs@dev 4C 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_regs@len 4B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_spi1_configuration 8E2 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
+__end_of_spi1_configuration 97E 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
+__LnvCOMMON 0 0 ABS 0 nvCOMMON -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@reg_addr 74 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@reg_data 75 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-TMR0_SetInterruptHandler@InterruptHandler 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-intlevel0 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s8ug.obj
+BMP280_SPI_bus_read@reg_addr 21 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@reg_data 22 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+TMR0_SetInterruptHandler@InterruptHandler 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\russ\AppData\Local\Temp\s5rg.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_bmp280_get_regs 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
-__end_ofbmp280_compute_meas_time@period_per_osrs 8D4 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
+__end_ofbmp280_compute_meas_time@period_per_osrs 970 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
 _RC1STAbits 11D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_PMD_Initialize 87E 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
+__end_of_PMD_Initialize 936 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
 EUSART1_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
 __size_of_interleave_data 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __size_of_get_calib_param 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_ofbmp280_compute_meas_time@startup 8DC 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
-_EUSART1_Receive_ISR 65C 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
-_timer0ReloadVal16bit DE 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
+__end_ofbmp280_compute_meas_time@startup 978 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
+_EUSART1_Receive_ISR 6B6 0 CODE 0 text27 dist/default/production\flightsketch-firmware.production.obj
+_timer0ReloadVal16bit 7C 0 COMMON 1 nvCOMMON dist/default/production\flightsketch-firmware.production.obj
 _ADCON0 9D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ADCON1 9E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ADRESH 9C 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ADRESL 9B 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_spi1_configuration 8DC 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
+_spi1_configuration 978 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
 _ANSELA 1F38 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ANSELC 1F4E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_TMR0_DefaultInterruptHandler 8EE 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
-__end_of_BMP280_delay_msek 8EE 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
+_TMR0_DefaultInterruptHandler 98A 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
+__end_of_BMP280_delay_msek 98A 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
 __end_of_INTERRUPT_InterruptManager 36 0 CODE 0 intentry dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@iError 40 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@iError 44 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __size_of_bmp280_set_regs 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_bmp280_soft_reset 5B4 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
-__end_of_EUSART1_SetRxInterruptHandler 8CC 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@rslt 36 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__end_of_bmp280_soft_reset 5BE 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
+__end_of_EUSART1_SetRxInterruptHandler 914 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@rslt 3A 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
-_BMP280_SPI_bus_write 82E 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
+_BMP280_SPI_bus_write 8C2 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
+_ADC_GetConversion 818 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
 __LnvBANK1 0 0 ABS 0 nvBANK1 -
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __CFG_SAFEN$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-bmp280_soft_reset@dev 3E 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-interleave_data@temp_buff 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-bmp280_soft_reset@soft_rst_cmd 3B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-_PIN_MANAGER_Initialize 610 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
+bmp280_soft_reset@dev 42 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+interleave_data@temp_buff 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_soft_reset@soft_rst_cmd 3F 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__HnvCOMMON 0 0 ABS 0 nvCOMMON -
+_PIN_MANAGER_Initialize 66A 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
 start_initialization 3A 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
 _ODCONA 1F3A 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ODCONC 1F50 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _OSCFRQ 893 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TRISCbits 14 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_write@iError 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@dev_addr 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_write@iError 24 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@dev_addr 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 _RC0PPS 1F20 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _RC1REG 119 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _RC1STA 11D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _RC2PPS 1F22 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _RC4PPS 1F24 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_SYSTEM_Initialize 814 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
-clear_ram0 8A8 0 CODE 0 clrtext dist/default/production\flightsketch-firmware.production.obj
+__end_of_SYSTEM_Initialize 8C2 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
+clear_ram0 950 0 CODE 0 clrtext dist/default/production\flightsketch-firmware.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-__pcstackBANK1 E2 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
+__pcstackBANK1 D0 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
 _T0CON0 59E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _T0CON1 59F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_bmp280_init 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TX1REG 11A 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TX1STA 11E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_EUSART1_Receive_ISR 6A6 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
-_BMP280_delay_msek 8EC 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
-bmp280_soft_reset@rslt 3C 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+tmr_fire@a 75 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+__end_of_EUSART1_Receive_ISR 700 0 CODE 0 text27 dist/default/production\flightsketch-firmware.production.obj
+_BMP280_delay_msek 988 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
+bmp280_soft_reset@rslt 40 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-bmp280_init@try_count E2 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\russ\AppData\Local\Temp\s8ug.obj
-bmp280_set_regs@dev 26 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@len 25 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-_EUSART1_Write 88E 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
+bmp280_init@try_count 5A 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\russ\AppData\Local\Temp\s5rg.obj
+bmp280_set_regs@dev 2A 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@len 29 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_EUSART1_Write 936 0 CODE 0 text28 dist/default/production\flightsketch-firmware.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -616,9 +654,9 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 90 0 CODE 0 cinit -
+__Hcinit A2 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
-_bmp280_soft_reset 53E 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
+_bmp280_soft_reset 548 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -675,7 +713,7 @@ __Hsfr61 0 0 ABS 0 sfr61 -
 __Hsfr62 0 0 ABS 0 sfr62 -
 __Hsfr63 0 0 ABS 0 sfr63 -
 __Hstack 0 0 STACK 2 stack -
-bmp280_soft_reset@reg_addr 3D 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_soft_reset@reg_addr 41 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -735,10 +773,10 @@ __Hmaintext 0 0 ABS 0 maintext -
 _BAUD1CON 11F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10018 0 CONFIG 0 config -
-bmp280_get_uncomp_data@F6465 A8 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_write@reg_addr 74 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_write@reg_data 75 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@temp_len 33 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_uncomp_data@F6465 A0 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_write@reg_addr 21 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_write@reg_data 22 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@temp_len 37 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -807,8 +845,8 @@ __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 _RX1DTPPSbits 1ECB 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Lstack 0 0 STACK 2 stack -
-init_ram 89C 0 CODE 0 inittext dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@i 44 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+init_ram 944 0 CODE 0 inittext dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@i 48 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Linittext 0 0 ABS 0 inittext -
 _INTCONbits B 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Habs1 0 0 ABS 0 abs1 -
@@ -839,11 +877,12 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 7C8 0 STRCODE 0 stringtext1 dist/default/production\flightsketch-firmware.production.obj
-__pstringtext2 8CC 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
-__pstringtext3 8D4 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
-__pstringtext4 8DC 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
-__pnvBANK1 DC 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
+__pstringtext1 876 0 STRCODE 0 stringtext1 dist/default/production\flightsketch-firmware.production.obj
+__pstringtext2 968 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
+__pstringtext3 970 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
+__pstringtext4 978 0 STRCODE 0 stringtext4 dist/default/production\flightsketch-firmware.production.obj
+__pnvBANK0 6B 0 BANK0 1 nvBANK0 dist/default/production\flightsketch-firmware.production.obj
+__pnvBANK1 EA 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
 _SSP1CON1 190 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _SSP1CON2 191 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _SSP1STAT 18F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -853,37 +892,40 @@ __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 int$flags 7E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_EUSART1_RxDefaultInterruptHandler E0 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
+_EUSART1_RxDefaultInterruptHandler EA 0 BANK1 1 nvBANK1 dist/default/production\flightsketch-firmware.production.obj
 _RC5 75 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __S0 800C 0 ABS 0 - -
 __S1 156 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_bmp B2 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
+_bmp A6 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
 __size_of_TMR0_ISR 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_TMR0_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_EUSART1_SetRxInterruptHandler 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-interleave_data@reg_addr 76 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-interleave_data@reg_data 74 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+interleave_data@reg_addr 26 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+interleave_data@reg_data 21 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__pnvCOMMON 7C 0 COMMON 1 nvCOMMON dist/default/production\flightsketch-firmware.production.obj
 BMP280_SPI_bus_read@F6557 120 0 BANK2 1 dataBANK2 dist/default/production\flightsketch-firmware.production.obj
-__end_of_TMR0_DefaultInterruptHandler 8F0 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
-bmp280_init@rslt E3 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
-bmp280_get_regs@rslt 4E 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@temp_buff 2B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@array 22 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-_TMR0_CallBack 844 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_DefaultInterruptHandler 98C 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
+bmp280_init@rslt 5B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_regs@rslt 52 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@temp_buff 2F 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@array 26 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_TMR0_CallBack 8D8 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
 __CFG_BBEN$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_null_ptr_check 6A6 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@reg_addr 37 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@reg_data 24 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-_SYSTEM_Initialize 7F0 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
+_null_ptr_check 700 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@reg_addr 3B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@reg_data 28 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_SYSTEM_Initialize 89E 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-BMP280_delay_msek@msek 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+BMP280_delay_msek@msek 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 8 0 CODE 0 intentry -
-bmp280_compute_meas_time@startup 8D4 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\russ\AppData\Local\Temp\s8ug.obj
-__pdataBANK1 E7 0 BANK1 1 dataBANK1 dist/default/production\flightsketch-firmware.production.obj
+bmp280_compute_meas_time@startup 970 0 STRCODE 0 stringtext3 dist/default/production\flightsketch-firmware.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\russ\AppData\Local\Temp\s5rg.obj
+__pdataBANK0 6D 0 BANK0 1 dataBANK0 dist/default/production\flightsketch-firmware.production.obj
 __pdataBANK2 120 0 BANK2 1 dataBANK2 dist/default/production\flightsketch-firmware.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbssBANK2 0 0 ABS 0 bssBANK2 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -892,35 +934,38 @@ __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
 __Lstringtext4 0 0 ABS 0 stringtext4 -
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\flightsketch-firmware.production.obj
-_ADC_Initialize 87E 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
+_ADC_Initialize 914 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _PIE0bits 716 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _PIE3bits 719 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-get_calib_param@rslt 6B 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-get_calib_param@temp 53 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+?_ADC_GetConversion 70 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+get_calib_param@rslt E8 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
+get_calib_param@temp D0 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
 __size_of_EUSART1_Write 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_eusart1RxHead 7A 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
-_eusart1RxTail 79 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
-_TMR0_ISR 814 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
-__ptext10 8EC 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
-__ptext11 8E2 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
-__ptext12 7F0 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
-__ptext13 766 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
-__ptext14 8B4 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
-__ptext15 86E 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
-__ptext16 610 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
-__ptext17 85A 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
-__ptext18 798 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
-__ptext19 8C0 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
-__ptext20 87E 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
-__ptext22 814 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
-__ptext23 844 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
-__ptext24 8EE 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
-__ptext25 65C 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
-__ptext26 88E 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
-__end_of_PIN_MANAGER_Initialize 65C 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
-__end_of_TMR0_Initialize 798 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
-__end_of_TMR0_StartTimer 8E8 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
+_eusart1RxHead 7B 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
+_eusart1RxTail 7A 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
+_TMR0_ISR 848 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
+__ptext10 988 0 CODE 0 text10 dist/default/production\flightsketch-firmware.production.obj
+__ptext11 97E 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
+__ptext12 89E 0 CODE 0 text12 dist/default/production\flightsketch-firmware.production.obj
+__ptext13 782 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
+__ptext14 95C 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
+__ptext15 926 0 CODE 0 text15 dist/default/production\flightsketch-firmware.production.obj
+__ptext16 66A 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
+__ptext17 8EE 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
+__ptext18 7B4 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
+__ptext19 902 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
+__ptext20 914 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
+__ptext22 848 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
+__ptext23 8D8 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
+__ptext24 98A 0 CODE 0 text24 dist/default/production\flightsketch-firmware.production.obj
+__ptext25 7E6 0 CODE 0 text25 dist/default/production\flightsketch-firmware.production.obj
+__ptext26 818 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
+__ptext27 6B6 0 CODE 0 text27 dist/default/production\flightsketch-firmware.production.obj
+__ptext28 936 0 CODE 0 text28 dist/default/production\flightsketch-firmware.production.obj
+__end_of_PIN_MANAGER_Initialize 6B6 0 CODE 0 text16 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_Initialize 7B4 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_StartTimer 984 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -976,7 +1021,7 @@ __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
 _SSP1CLKPPSbits 1EC5 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__pmaintext 6EA 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
+__pmaintext 61A 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -984,34 +1029,35 @@ __CFG_BBSIZE$BB512 0 0 ABS 0 - dist/default/production\flightsketch-firmware.pro
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_TMR0_ISR 82E 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_ISR 876 0 CODE 0 text22 dist/default/production\flightsketch-firmware.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 __CFG_WRTAPP$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_null_ptr_check 6EA 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
+__end_of_null_ptr_check 746 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
+TMR0_ISR@CountCallBack 77 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
 _EUSART1_Read 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-bmp280_get_regs@reg_addr 4D 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-bmp280_get_regs@reg_data 46 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_write@dev_addr 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-main@rslt E6 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
-_TMR0_SetInterruptHandler 8B4 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\russ\AppData\Local\Temp\s8ug.obj
-stacklo 20D6 0 ABS 0 - C:\Users\russ\AppData\Local\Temp\s8ug.obj
-__end_of_EUSART1_Write 89C 0 CODE 0 text26 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_regs@reg_addr 51 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_regs@reg_data 4A 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_write@dev_addr 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+main@rslt 5E 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_TMR0_SetInterruptHandler 95C 0 CODE 0 text14 dist/default/production\flightsketch-firmware.production.obj
+stackhi 23EF 0 ABS 0 - C:\Users\russ\AppData\Local\Temp\s5rg.obj
+stacklo 20D6 0 ABS 0 - C:\Users\russ\AppData\Local\Temp\s5rg.obj
+__end_of_EUSART1_Write 944 0 CODE 0 text28 dist/default/production\flightsketch-firmware.production.obj
 _OSCCON1 88D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _OSCCON3 88F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _OSCSTAT 890 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _OSCTUNE 892 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _ADCON0bits 9D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __size_of_BMP280_SPI_bus_read 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_bmp280_init 90 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
+_bmp280_init 2FE 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_ADC_Initialize 88E 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
+__end_of_ADC_Initialize 926 0 CODE 0 text20 dist/default/production\flightsketch-firmware.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 _PIR0bits 70C 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -1024,79 +1070,81 @@ __CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.product
 __size_of_TMR0_CallBack 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-end_of_initialization 88 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
-_TMR0_Initialize 766 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
-_TMR0_StartTimer 8E2 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
-null_ptr_check@rslt 75 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+end_of_initialization 9A 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
+_TMR0_Initialize 782 0 CODE 0 text13 dist/default/production\flightsketch-firmware.production.obj
+_TMR0_StartTimer 97E 0 CODE 0 text11 dist/default/production\flightsketch-firmware.production.obj
+null_ptr_check@rslt 22 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Hintentry 36 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TX1STAbits 11E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-bmp280_init@dev E4 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
+bmp280_init@dev 5C 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __Lstrings 0 0 ABS 0 strings -
-get_calib_param@dev 6C 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+get_calib_param@dev E9 0 BANK1 1 cstackBANK1 dist/default/production\flightsketch-firmware.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
-EUSART1_SetRxInterruptHandler@interruptHandler 73 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-interleave_data@index 77 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+EUSART1_SetRxInterruptHandler@interruptHandler 20 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+interleave_data@index 27 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __HbssBANK2 0 0 ABS 0 bssBANK2 -
-conf_sensor@F6602 AE 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
-conf_sensor@F6604 E7 0 BANK1 1 dataBANK1 dist/default/production\flightsketch-firmware.production.obj
+conf_sensor@F6602 67 0 BANK0 1 bssBANK0 dist/default/production\flightsketch-firmware.production.obj
+conf_sensor@F6604 6D 0 BANK0 1 dataBANK0 dist/default/production\flightsketch-firmware.production.obj
 __size_of_BMP280_SPI_bus_write 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__ptext1 90 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
-__ptext2 1BE 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
-__ptext3 4B2 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
-__ptext4 40C 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
-__ptext5 53E 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
-__ptext6 2E6 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
-__ptext7 6A6 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
-__ptext8 5B4 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
-__ptext9 82E 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@stringpos 45 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
-_BMP280_SPI_bus_read 40C 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
-__end_of_TMR0_CallBack 85A 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
+__ptext1 2FE 0 CODE 0 text1 dist/default/production\flightsketch-firmware.production.obj
+__ptext2 A2 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
+__ptext3 4BC 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
+__ptext4 416 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
+__ptext5 548 0 CODE 0 text5 dist/default/production\flightsketch-firmware.production.obj
+__ptext6 1D8 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
+__ptext7 700 0 CODE 0 text7 dist/default/production\flightsketch-firmware.production.obj
+__ptext8 5BE 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
+__ptext9 8C2 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@stringpos 49 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_BMP280_SPI_bus_read 416 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
+__end_of_TMR0_CallBack 8EE 0 CODE 0 text23 dist/default/production\flightsketch-firmware.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-interleave_data@len 75 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+interleave_data@len 22 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 get_calib_param@F6534 13E 0 BANK2 1 bssBANK2 dist/default/production\flightsketch-firmware.production.obj
-__end_of_BMP280_SPI_bus_write 844 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
+__end_of_BMP280_SPI_bus_write 8D8 0 CODE 0 text9 dist/default/production\flightsketch-firmware.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __Hstringtext3 0 0 ABS 0 stringtext3 -
 __Hstringtext4 0 0 ABS 0 stringtext4 -
-bmp280_get_config@F6430 B0 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
+__size_of_ADC_GetConversion 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
+bmp280_get_config@F6430 69 0 BANK0 1 bssBANK0 dist/default/production\flightsketch-firmware.production.obj
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of__initialization 88 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
-__end_of_bmp280_get_regs 53E 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
+__end_of__initialization 9A 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
+__end_of_bmp280_get_regs 548 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
 __Lfunctab 0 0 ENTRY 0 functab -
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-bmp280_compute_meas_time@period_per_osrs 8CC 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
-__pidataBANK1 8E8 0 CODE 0 idataBANK1 dist/default/production\flightsketch-firmware.production.obj
-__pidataBANK2 72A 0 CODE 0 idataBANK2 dist/default/production\flightsketch-firmware.production.obj
+bmp280_compute_meas_time@period_per_osrs 968 0 STRCODE 0 stringtext2 dist/default/production\flightsketch-firmware.production.obj
+__pidataBANK0 984 0 CODE 0 idataBANK0 dist/default/production\flightsketch-firmware.production.obj
+__pidataBANK2 746 0 CODE 0 idataBANK2 dist/default/production\flightsketch-firmware.production.obj
 _SP1BRGH 11C 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _SP1BRGL 11B 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON1bits 190 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_interleave_data 610 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
-_EUSART1_SetRxInterruptHandler 8C0 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
+__end_of_interleave_data 61A 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
+_EUSART1_SetRxInterruptHandler 902 0 CODE 0 text19 dist/default/production\flightsketch-firmware.production.obj
 _EUSART1_is_rx_ready 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_get_calib_param 2E6 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_read@cnt 76 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-_eusart1RxBuffer A0 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
+__end_of_get_calib_param 1D8 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_read@cnt 23 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_eusart1RxBuffer 5F 0 BANK0 1 bssBANK0 dist/default/production\flightsketch-firmware.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
 _T0CON0bits 59E 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _SSP1ADD 18D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _SSP1BUF 18C 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hend_init 3A 0 CODE 0 end_init -
 __size_of_TMR0_SetInterruptHandler 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__end_of_main 72A 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
-__end_of_uart 7F0 0 STRCODE 0 stringtext1 dist/default/production\flightsketch-firmware.production.obj
-BMP280_SPI_bus_write@cnt 76 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+__end_of_main 66A 0 CODE 0 maintext dist/default/production\flightsketch-firmware.production.obj
+__end_of_uart 89E 0 STRCODE 0 stringtext1 dist/default/production\flightsketch-firmware.production.obj
+BMP280_SPI_bus_write@cnt 23 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 _ADACT 9F 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __CFG_WRTSAF$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 EUSART1_Receive_ISR@a 72 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
-__end_of_bmp280_set_regs 40C 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
+__end_of_bmp280_set_regs 2FE 0 CODE 0 text6 dist/default/production\flightsketch-firmware.production.obj
 _OSCEN 891 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TMR0H 59D 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 _TMR0L 59C 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
@@ -1106,28 +1154,30 @@ __size_of_TMR0_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmw
 __size_of_TMR0_StartTimer 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-null_ptr_check@dev 76 0 COMMON 1 cstackCOMMON dist/default/production\flightsketch-firmware.production.obj
+null_ptr_check@dev 23 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_eusart1RxCount 78 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
+_eusart1RxCount 79 0 COMMON 1 bssCOMMON dist/default/production\flightsketch-firmware.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\flightsketch-firmware.production.obj
 _SSP1DATPPSbits 1EC6 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
 __HdataBANK2 0 0 ABS 0 dataBANK2 -
-__end_of_EUSART1_Initialize 7C8 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
-__end_of_OSCILLATOR_Initialize 86E 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
+__size_of_tmr_fire 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
+__end_of_EUSART1_Initialize 7E6 0 CODE 0 text18 dist/default/production\flightsketch-firmware.production.obj
+__end_of_OSCILLATOR_Initialize 902 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
 __initialization 3A 0 CODE 0 cinit dist/default/production\flightsketch-firmware.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_bmp280_get_regs 4B2 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
-bmp280_set_regs@reg_addr_cnt 35 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+_bmp280_get_regs 4BC 0 CODE 0 text3 dist/default/production\flightsketch-firmware.production.obj
+bmp280_set_regs@reg_addr_cnt 39 0 BANK0 1 cstackBANK0 dist/default/production\flightsketch-firmware.production.obj
+__pbssBANK0 5F 0 BANK0 1 bssBANK0 dist/default/production\flightsketch-firmware.production.obj
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\flightsketch-firmware.production.obj
 __pbssBANK2 13E 0 BANK2 1 bssBANK2 dist/default/production\flightsketch-firmware.production.obj
 __size_of_BMP280_delay_msek 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_interleave_data 5B4 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
-_get_calib_param 1BE 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
-__end_of_BMP280_SPI_bus_read 4B2 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
+_interleave_data 5BE 0 CODE 0 text8 dist/default/production\flightsketch-firmware.production.obj
+_get_calib_param A2 0 CODE 0 text2 dist/default/production\flightsketch-firmware.production.obj
+__end_of_BMP280_SPI_bus_read 4BC 0 CODE 0 text4 dist/default/production\flightsketch-firmware.production.obj
 __size_of_bmp280_soft_reset 0 0 ABS 0 - dist/default/production\flightsketch-firmware.production.obj
-_OSCILLATOR_Initialize 85A 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
+_OSCILLATOR_Initialize 8EE 0 CODE 0 text17 dist/default/production\flightsketch-firmware.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1153,14 +1203,14 @@ _OSCILLATOR_Initialize 85A 0 CODE 0 text17 dist/default/production\flightsketch-
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text11 0 471 8E2 7 2
-text12 0 3F8 7F0 6E 2
-cstackCOMMON 1 70 70 B 1
-cstackBANK0 1 20 20 50 1
-stringtext1 0 3E4 7C8 14 2
-stringtext2 0 466 8CC B 2
-intentry 0 4 8 3E0 2
+text11 0 4BF 97E 7 2
+text12 0 44F 89E 65 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 4F 1
+stringtext1 0 43B 876 14 2
+stringtext2 0 4B4 968 B 2
+intentry 0 4 8 437 2
 reset_vec 0 0 0 2 2
-bssBANK1 1 A0 A0 49 1
+bssBANK1 1 A0 A0 4C 1
 dataBANK2 1 120 120 36 1
 config 0 8007 1000E 5 2

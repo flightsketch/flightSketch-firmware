@@ -67,14 +67,14 @@ void TMR0_Initialize(void)
 {
     // Set TMR0 to the options selected in the User Interface
 
-    // T0CS FOSC/4; T0CKPS 1:1; T0ASYNC not_synchronised; 
-    T0CON1 = 0x50;
+    // T0CS FOSC/4; T0CKPS 1:2; T0ASYNC not_synchronised; 
+    T0CON1 = 0x51;
 
-    // TMR0H 0; 
-    TMR0H = 0x00;
+    // TMR0H 60; 
+    TMR0H = 0x3C;
 
-    // TMR0L 0; 
-    TMR0L = 0x00;
+    // TMR0L 176; 
+    TMR0L = 0xB0;
 
     // Load TMR0 value to the 16-bit reload variable
     timer0ReloadVal16bit = (TMR0H << 8) | TMR0L;
@@ -133,15 +133,23 @@ void TMR0_Reload(void)
 
 void TMR0_ISR(void)
 {
+    static volatile uint16_t CountCallBack = 0;
+
     // clear the TMR0 interrupt flag
     PIR0bits.TMR0IF = 0;
     // Write to the Timer0 register
     TMR0H = timer0ReloadVal16bit >> 8;
     TMR0L = (uint8_t) timer0ReloadVal16bit;
 
-    // ticker function call;
-    // ticker is 1 -> Callback function gets called every time this ISR executes
-    TMR0_CallBack();
+    // callback function - called every 10th pass
+    if (++CountCallBack >= TMR0_INTERRUPT_TICKER_FACTOR)
+    {
+        // ticker function call
+        TMR0_CallBack();
+
+        // reset ticker counter
+        CountCallBack = 0;
+    }
 
     // add your TMR0 interrupt custom code
 }

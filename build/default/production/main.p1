@@ -17,6 +17,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "21770 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
 [v _RC5 `Vb ~T0 @X0 0 e@117 ]
+"75 main.c
+[c E6473 4 5 59 60 61 62 63 .. ]
+[n E6473 . AN4 AN5 channel_AVSS channel_Temp channel_DAC1 channel_FVR_BUF1 channel_FVR_BUF2  ]
+"290 mcc_generated_files/adc.h
+[v _ADC_GetConversion `(ui ~T0 @X0 0 ef1`E6473 ]
+"294 mcc_generated_files/eusart1.h
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "73 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
@@ -28,7 +35,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S30 . . ]
 "426
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"135 mcc_generated_files/tmr0.h
+[v F6510 `(v ~T0 @X0 0 tf ]
+"332 mcc_generated_files/tmr0.h
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6510 ]
+"135
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
 "107 bmp280.h
 [v _bmp280_init `(c ~T0 @X0 0 ef1`*S5 ]
@@ -7515,68 +7525,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 72: void tmr_fire(void){
 [e :U _tmr_fire ]
 [f ]
-[; ;main.c: 73: RC5 = !RC5;
 "73
-[e = _RC5 ! _RC5 ]
-[; ;main.c: 74: }
+[v _a `i ~T0 @X0 1 a ]
+[; ;main.c: 73: int a;
+[; ;main.c: 74: RC5 = !RC5;
 "74
+[e = _RC5 ! _RC5 ]
+[; ;main.c: 75: a = ADC_GetConversion(5);
+"75
+[e = _a -> ( _ADC_GetConversion (1 -> -> 5 `i `E6473 `i ]
+[; ;main.c: 76: EUSART1_Write(a>>8);
+"76
+[e ( _EUSART1_Write (1 -> >> _a -> 8 `i `uc ]
+[; ;main.c: 77: EUSART1_Write(a);
+"77
+[e ( _EUSART1_Write (1 -> _a `uc ]
+[; ;main.c: 78: }
+"78
 [e :UE 888 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"76
+"80
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 76: void main(void) {
+[; ;main.c: 80: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 78: SYSTEM_Initialize();
-"78
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 79: INTCONbits.GIE = 1;
-"79
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 80: INTCONbits.PEIE = 1;
-"80
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 82: TMR0_StartTimer();
+[; ;main.c: 82: SYSTEM_Initialize();
 "82
-[e ( _TMR0_StartTimer ..  ]
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 83: INTCONbits.GIE = 1;
 "83
-[v _rslt `c ~T0 @X0 1 a ]
-[; ;main.c: 83: int8_t rslt;
-[; ;main.c: 84: bmp.dev_id = 0;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 84: INTCONbits.PEIE = 1;
 "84
-[e = . _bmp 1 -> -> 0 `i `uc ]
-[; ;main.c: 85: bmp.intf = (unsigned char) 0;
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 85: TMR0_SetInterruptHandler(tmr_fire);
 "85
-[e = . _bmp 2 -> -> 0 `i `uc ]
-[; ;main.c: 86: bmp.read = BMP280_SPI_bus_read;
+[e ( _TMR0_SetInterruptHandler (1 &U _tmr_fire ]
+[; ;main.c: 86: TMR0_StartTimer();
 "86
-[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
-[; ;main.c: 87: bmp.write = BMP280_SPI_bus_write;
+[e ( _TMR0_StartTimer ..  ]
 "87
-[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
-[; ;main.c: 88: bmp.delay_ms = BMP280_delay_msek;
+[v _rslt `c ~T0 @X0 1 a ]
+[; ;main.c: 87: int8_t rslt;
+[; ;main.c: 88: bmp.dev_id = 0;
 "88
-[e = . _bmp 5 &U _BMP280_delay_msek ]
-[; ;main.c: 90: rslt = bmp280_init(&bmp);
+[e = . _bmp 1 -> -> 0 `i `uc ]
+[; ;main.c: 89: bmp.intf = (unsigned char) 0;
+"89
+[e = . _bmp 2 -> -> 0 `i `uc ]
+[; ;main.c: 90: bmp.read = BMP280_SPI_bus_read;
 "90
-[e = _rslt ( _bmp280_init (1 &U _bmp ]
-[; ;main.c: 92: while(1){
+[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
+[; ;main.c: 91: bmp.write = BMP280_SPI_bus_write;
+"91
+[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
+[; ;main.c: 92: bmp.delay_ms = BMP280_delay_msek;
 "92
+[e = . _bmp 5 &U _BMP280_delay_msek ]
+[; ;main.c: 94: rslt = bmp280_init(&bmp);
+"94
+[e = _rslt ( _bmp280_init (1 &U _bmp ]
+[; ;main.c: 96: while(1){
+"96
 [e :U 891 ]
 {
-"94
+"98
 }
 [e :U 890 ]
-"92
+"96
 [e $U 891  ]
 [e :U 892 ]
-[; ;main.c: 94: }
-[; ;main.c: 97: return;
-"97
-[e $UE 889  ]
 [; ;main.c: 98: }
-"98
+[; ;main.c: 101: return;
+"101
+[e $UE 889  ]
+[; ;main.c: 102: }
+"102
 [e :UE 889 ]
 }

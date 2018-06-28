@@ -17,6 +17,16 @@ channel_DAC1 61
 channel_FVR_BUF1 62
 channel_FVR_BUF2 63
 ]
+"75 C:\Users\russ\Desktop\flightsketch-firmware\main.c
+[e E6473 . `uc
+AN4 4
+AN5 5
+channel_AVSS 59
+channel_Temp 60
+channel_DAC1 61
+channel_FVR_BUF1 62
+channel_FVR_BUF2 63
+]
 "114 C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
 [v _bmp280_get_regs bmp280_get_regs `(c  1 e 1 0 ]
 "140
@@ -49,10 +59,14 @@ channel_FVR_BUF2 63
 [v _BMP280_SPI_bus_read BMP280_SPI_bus_read `(c  1 e 1 0 ]
 "56
 [v _BMP280_SPI_bus_write BMP280_SPI_bus_write `(c  1 e 1 0 ]
-"76
+"72
+[v _tmr_fire tmr_fire `(v  1 e 1 0 ]
+"80
 [v _main main `(v  1 e 1 0 ]
 "64 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"112
+[v _ADC_GetConversion ADC_GetConversion `(ui  1 e 2 0 ]
 "71 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 "103
@@ -87,20 +101,20 @@ channel_FVR_BUF2 63
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
 "134
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
-"149
+"157
 [v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
-"159
+"167
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
-"163
+"171
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-[s S610 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S620 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "426 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
-[u S615 . 1 `S610 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES615  1 e 1 @11 ]
+[u S625 . 1 `S620 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES625  1 e 1 @11 ]
 "546
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "591
@@ -221,30 +235,30 @@ channel_FVR_BUF2 63
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "6873
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S1272 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S1286 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T016BIT 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
 "6893
-[s S1278 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S1292 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S1283 . 1 `S1272 1 . 1 0 `S1278 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES1283  1 e 1 @1438 ]
+[u S1297 . 1 `S1286 1 . 1 0 `S1292 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1297  1 e 1 @1438 ]
 "6938
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
-[s S1235 . 1 `uc 1 INTF 1 0 :1:0 
+[s S1253 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "7799
-[u S1240 . 1 `S1235 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1240  1 e 1 @1804 ]
+[u S1258 . 1 `S1253 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1258  1 e 1 @1804 ]
 [s S179 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
@@ -256,14 +270,14 @@ channel_FVR_BUF2 63
 "7907
 [u S187 . 1 `S179 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES187  1 e 1 @1807 ]
-[s S1248 . 1 `uc 1 INTE 1 0 :1:0 
+[s S1266 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "8094
-[u S1253 . 1 `S1248 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES1253  1 e 1 @1814 ]
+[u S1271 . 1 `S1266 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES1271  1 e 1 @1814 ]
 [s S348 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
@@ -377,12 +391,12 @@ channel_FVR_BUF2 63
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEui  1 e 2 0 ]
 "64
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
-"76 C:\Users\russ\Desktop\flightsketch-firmware\main.c
+"80 C:\Users\russ\Desktop\flightsketch-firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"83
-[v main@rslt rslt `c  1 a 1 4 ]
-"98
+"87
+[v main@rslt rslt `c  1 a 1 62 ]
+"102
 } 0
 "211 C:\Users\russ\Desktop\flightsketch-firmware\bmp280.c
 [v _bmp280_init bmp280_init `(c  1 e 1 0 ]
@@ -392,14 +406,14 @@ channel_FVR_BUF2 63
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
 [v bmp280_init@dev dev `*.4S579  1 a 1 wreg ]
 "213
-[v bmp280_init@rslt rslt `c  1 a 1 1 ]
+[v bmp280_init@rslt rslt `c  1 a 1 59 ]
 "215
-[v bmp280_init@try_count try_count `uc  1 a 1 0 ]
+[v bmp280_init@try_count try_count `uc  1 a 1 58 ]
 "211
 [v bmp280_init@dev dev `*.4S579  1 a 1 wreg ]
 "215
 "211
-[v bmp280_init@dev dev `*.4S579  1 a 1 2 ]
+[v bmp280_init@dev dev `*.4S579  1 a 1 60 ]
 "255
 } 0
 "619
@@ -410,15 +424,15 @@ channel_FVR_BUF2 63
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
 [v get_calib_param@dev dev `*.4S579  1 a 1 wreg ]
 "622
-[v get_calib_param@temp temp `[24]uc  1 a 24 51 ]
+[v get_calib_param@temp temp `[24]uc  1 a 24 0 ]
 "621
-[v get_calib_param@rslt rslt `c  1 a 1 75 ]
+[v get_calib_param@rslt rslt `c  1 a 1 24 ]
 "619
 [v get_calib_param@dev dev `*.4S579  1 a 1 wreg ]
 "621
 [v get_calib_param@F6534 F6534 `[24]uc  1 s 24 F6534 ]
 "619
-[v get_calib_param@dev dev `*.4S579  1 a 1 76 ]
+[v get_calib_param@dev dev `*.4S579  1 a 1 25 ]
 "658
 } 0
 "114
@@ -426,35 +440,35 @@ channel_FVR_BUF2 63
 {
 [v bmp280_get_regs@reg_addr reg_addr `uc  1 a 1 wreg ]
 "116
-[v bmp280_get_regs@rslt rslt `c  1 a 1 46 ]
+[v bmp280_get_regs@rslt rslt `c  1 a 1 50 ]
 "114
 [v bmp280_get_regs@reg_addr reg_addr `uc  1 a 1 wreg ]
-[v bmp280_get_regs@reg_data reg_data `*.4uc  1 p 1 38 ]
-[v bmp280_get_regs@len len `uc  1 p 1 39 ]
+[v bmp280_get_regs@reg_data reg_data `*.4uc  1 p 1 42 ]
+[v bmp280_get_regs@len len `uc  1 p 1 43 ]
 [s S559 bmp280_calib_param 28 `ui 1 dig_t1 2 0 `i 1 dig_t2 2 2 `i 1 dig_t3 2 4 `ui 1 dig_p1 2 6 `i 1 dig_p2 2 8 `i 1 dig_p3 2 10 `i 1 dig_p4 2 12 `i 1 dig_p5 2 14 `i 1 dig_p6 2 16 `i 1 dig_p7 2 18 `i 1 dig_p8 2 20 `i 1 dig_p9 2 22 `l 1 t_fine 4 24 ]
 [s S573 bmp280_config 5 `uc 1 os_temp 1 0 `uc 1 os_pres 1 1 `uc 1 odr 1 2 `uc 1 filter 1 3 `uc 1 spi3w_en 1 4 ]
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
-[v bmp280_get_regs@dev dev `*.4DCS579  1 p 1 40 ]
+[v bmp280_get_regs@dev dev `*.4DCS579  1 p 1 44 ]
 "118
-[v bmp280_get_regs@reg_addr reg_addr `uc  1 a 1 45 ]
+[v bmp280_get_regs@reg_addr reg_addr `uc  1 a 1 49 ]
 "134
 } 0
 "35 C:\Users\russ\Desktop\flightsketch-firmware\main.c
 [v _BMP280_SPI_bus_read BMP280_SPI_bus_read `(c  1 e 1 0 ]
 {
 "39
-[v BMP280_SPI_bus_read@array array `[30]c  1 a 30 2 ]
+[v BMP280_SPI_bus_read@array array `[30]c  1 a 30 6 ]
 "38
-[v BMP280_SPI_bus_read@iError iError `l  1 a 4 32 ]
+[v BMP280_SPI_bus_read@iError iError `l  1 a 4 36 ]
 "40
-[v BMP280_SPI_bus_read@stringpos stringpos `uc  1 a 1 37 ]
+[v BMP280_SPI_bus_read@stringpos stringpos `uc  1 a 1 41 ]
 "43
-[v BMP280_SPI_bus_read@i i `uc  1 a 1 36 ]
+[v BMP280_SPI_bus_read@i i `uc  1 a 1 40 ]
 "35
-[v BMP280_SPI_bus_read@dev_addr dev_addr `uc  1 p 1 3 ]
-[v BMP280_SPI_bus_read@reg_addr reg_addr `uc  1 p 1 4 ]
-[v BMP280_SPI_bus_read@reg_data reg_data `*.4uc  1 p 1 5 ]
-[v BMP280_SPI_bus_read@cnt cnt `uc  1 p 1 6 ]
+[v BMP280_SPI_bus_read@dev_addr dev_addr `uc  1 p 1 0 ]
+[v BMP280_SPI_bus_read@reg_addr reg_addr `uc  1 p 1 1 ]
+[v BMP280_SPI_bus_read@reg_data reg_data `*.4uc  1 p 1 2 ]
+[v BMP280_SPI_bus_read@cnt cnt `uc  1 p 1 3 ]
 "38
 [v BMP280_SPI_bus_read@F6557 F6557 `[30]c  1 s 30 F6557 ]
 "54
@@ -467,16 +481,16 @@ channel_FVR_BUF2 63
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
 [v bmp280_soft_reset@dev dev `*.4DCS579  1 a 1 wreg ]
 "192
-[v bmp280_soft_reset@reg_addr reg_addr `uc  1 a 1 29 ]
+[v bmp280_soft_reset@reg_addr reg_addr `uc  1 a 1 33 ]
 "191
-[v bmp280_soft_reset@rslt rslt `c  1 a 1 28 ]
+[v bmp280_soft_reset@rslt rslt `c  1 a 1 32 ]
 "193
-[v bmp280_soft_reset@soft_rst_cmd soft_rst_cmd `uc  1 a 1 27 ]
+[v bmp280_soft_reset@soft_rst_cmd soft_rst_cmd `uc  1 a 1 31 ]
 "189
 [v bmp280_soft_reset@dev dev `*.4DCS579  1 a 1 wreg ]
 "192
 "189
-[v bmp280_soft_reset@dev dev `*.4DCS579  1 a 1 30 ]
+[v bmp280_soft_reset@dev dev `*.4DCS579  1 a 1 34 ]
 "205
 } 0
 "140
@@ -484,23 +498,23 @@ channel_FVR_BUF2 63
 {
 [v bmp280_set_regs@reg_addr reg_addr `*.4uc  1 a 1 wreg ]
 "143
-[v bmp280_set_regs@temp_buff temp_buff `[8]uc  1 a 8 11 ]
+[v bmp280_set_regs@temp_buff temp_buff `[8]uc  1 a 8 15 ]
 "144
-[v bmp280_set_regs@temp_len temp_len `ui  1 a 2 19 ]
+[v bmp280_set_regs@temp_len temp_len `ui  1 a 2 23 ]
 "142
-[v bmp280_set_regs@rslt rslt `c  1 a 1 22 ]
+[v bmp280_set_regs@rslt rslt `c  1 a 1 26 ]
 "145
-[v bmp280_set_regs@reg_addr_cnt reg_addr_cnt `uc  1 a 1 21 ]
+[v bmp280_set_regs@reg_addr_cnt reg_addr_cnt `uc  1 a 1 25 ]
 "140
 [v bmp280_set_regs@reg_addr reg_addr `*.4uc  1 a 1 wreg ]
-[v bmp280_set_regs@reg_data reg_data `*.4DCuc  1 p 1 4 ]
-[v bmp280_set_regs@len len `uc  1 p 1 5 ]
+[v bmp280_set_regs@reg_data reg_data `*.4DCuc  1 p 1 8 ]
+[v bmp280_set_regs@len len `uc  1 p 1 9 ]
 [s S559 bmp280_calib_param 28 `ui 1 dig_t1 2 0 `i 1 dig_t2 2 2 `i 1 dig_t3 2 4 `ui 1 dig_p1 2 6 `i 1 dig_p2 2 8 `i 1 dig_p3 2 10 `i 1 dig_p4 2 12 `i 1 dig_p5 2 14 `i 1 dig_p6 2 16 `i 1 dig_p7 2 18 `i 1 dig_p8 2 20 `i 1 dig_p9 2 22 `l 1 t_fine 4 24 ]
 [s S573 bmp280_config 5 `uc 1 os_temp 1 0 `uc 1 os_pres 1 1 `uc 1 odr 1 2 `uc 1 filter 1 3 `uc 1 spi3w_en 1 4 ]
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
-[v bmp280_set_regs@dev dev `*.4DCS579  1 p 1 6 ]
+[v bmp280_set_regs@dev dev `*.4DCS579  1 p 1 10 ]
 "147
-[v bmp280_set_regs@reg_addr reg_addr `*.4uc  1 a 1 23 ]
+[v bmp280_set_regs@reg_addr reg_addr `*.4uc  1 a 1 27 ]
 "184
 } 0
 "587
@@ -511,12 +525,12 @@ channel_FVR_BUF2 63
 [s S579 bmp280_dev 42 `uc 1 chip_id 1 0 `uc 1 dev_id 1 1 `uc 1 intf 1 2 `*.37(c 1 read 2 3 `*.37(c 1 write 2 5 `*.37(v 1 delay_ms 2 7 `S559 1 calib_param 28 9 `S573 1 conf 5 37 ]
 [v null_ptr_check@dev dev `*.4DCS579  1 a 1 wreg ]
 "589
-[v null_ptr_check@rslt rslt `c  1 a 1 5 ]
+[v null_ptr_check@rslt rslt `c  1 a 1 2 ]
 "587
 [v null_ptr_check@dev dev `*.4DCS579  1 a 1 wreg ]
 "591
 "587
-[v null_ptr_check@dev dev `*.4DCS579  1 a 1 6 ]
+[v null_ptr_check@dev dev `*.4DCS579  1 a 1 3 ]
 "599
 } 0
 "605
@@ -527,9 +541,9 @@ channel_FVR_BUF2 63
 [v interleave_data@index index `uc  1 a 1 7 ]
 "605
 [v interleave_data@reg_addr reg_addr `*.4DCuc  1 a 1 wreg ]
-[v interleave_data@temp_buff temp_buff `*.4uc  1 p 1 3 ]
-[v interleave_data@reg_data reg_data `*.4DCuc  1 p 1 4 ]
-[v interleave_data@len len `uc  1 p 1 5 ]
+[v interleave_data@temp_buff temp_buff `*.4uc  1 p 1 0 ]
+[v interleave_data@reg_data reg_data `*.4DCuc  1 p 1 1 ]
+[v interleave_data@len len `uc  1 p 1 2 ]
 "609
 [v interleave_data@reg_addr reg_addr `*.4DCuc  1 a 1 6 ]
 "613
@@ -538,18 +552,18 @@ channel_FVR_BUF2 63
 [v _BMP280_SPI_bus_write BMP280_SPI_bus_write `(c  1 e 1 0 ]
 {
 "58
-[v BMP280_SPI_bus_write@iError iError `l  1 a 4 0 ]
+[v BMP280_SPI_bus_write@iError iError `l  1 a 4 4 ]
 "56
-[v BMP280_SPI_bus_write@dev_addr dev_addr `uc  1 p 1 3 ]
-[v BMP280_SPI_bus_write@reg_addr reg_addr `uc  1 p 1 4 ]
-[v BMP280_SPI_bus_write@reg_data reg_data `*.4uc  1 p 1 5 ]
-[v BMP280_SPI_bus_write@cnt cnt `uc  1 p 1 6 ]
+[v BMP280_SPI_bus_write@dev_addr dev_addr `uc  1 p 1 0 ]
+[v BMP280_SPI_bus_write@reg_addr reg_addr `uc  1 p 1 1 ]
+[v BMP280_SPI_bus_write@reg_data reg_data `*.4uc  1 p 1 2 ]
+[v BMP280_SPI_bus_write@cnt cnt `uc  1 p 1 3 ]
 "70
 } 0
 "30
 [v _BMP280_delay_msek BMP280_delay_msek `(v  1 e 1 0 ]
 {
-[v BMP280_delay_msek@msek msek `ul  1 p 4 3 ]
+[v BMP280_delay_msek@msek msek `ul  1 p 4 0 ]
 "33
 } 0
 "95 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
@@ -567,11 +581,11 @@ channel_FVR_BUF2 63
 {
 "93
 } 0
-"159
+"167
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 3 ]
-"161
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"169
 } 0
 "76 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
@@ -596,7 +610,7 @@ channel_FVR_BUF2 63
 "173
 [v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
+[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "175
 } 0
 "64 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
@@ -612,17 +626,35 @@ channel_FVR_BUF2 63
 "134 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
-"147
+"136
+[v TMR0_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"155
 } 0
-"149
+"157
 [v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
 {
-"157
+"165
 } 0
-"163
+"171
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"166
+"174
+} 0
+"72 C:\Users\russ\Desktop\flightsketch-firmware\main.c
+[v _tmr_fire tmr_fire `(v  1 e 1 0 ]
+{
+"73
+[v tmr_fire@a a `i  1 a 2 5 ]
+"78
+} 0
+"112 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(ui  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E6288  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E6288  1 a 1 wreg ]
+"115
+[v ADC_GetConversion@channel channel `E6288  1 a 1 3 ]
+"132
 } 0
 "149 C:\Users\russ\Desktop\flightsketch-firmware\mcc_generated_files/eusart1.c
 [v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]

@@ -70,7 +70,11 @@ int8_t  BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_da
 }
 
 void tmr_fire(void){
+    int a;
     RC5 = !RC5;
+    a = ADC_GetConversion(5);
+    EUSART1_Write(a>>8);
+    EUSART1_Write(a);
 }
 
 void main(void) {
@@ -78,7 +82,7 @@ void main(void) {
     SYSTEM_Initialize();
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1; // Enable peripheral interrupts
-//    TMR0_SetInterruptHandler(tmr_fire);
+    TMR0_SetInterruptHandler(tmr_fire);
     TMR0_StartTimer();
     int8_t rslt;
     bmp.dev_id  =  0;
