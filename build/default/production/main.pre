@@ -11156,6 +11156,9 @@ void PIN_MANAGER_IOC(void);
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 109 "mcc_generated_files/interrupt_manager.h"
+void interrupt INTERRUPT_InterruptManager(void);
+
 # 7 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdarg.h"
 typedef void * va_list[1];
 
@@ -11282,6 +11285,42 @@ adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 106 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
+
+# 135
+void TMR0_StartTimer(void);
+
+# 167
+void TMR0_StopTimer(void);
+
+# 203
+uint16_t TMR0_ReadTimer(void);
+
+# 242
+void TMR0_WriteTimer(uint16_t timerVal);
+
+# 278
+void TMR0_Reload(void);
+
+# 296
+void TMR0_ISR(void);
+
+# 314
+void TMR0_CallBack(void);
+
+# 332
+void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 350
+extern void (*TMR0_InterruptHandler)(void);
+
+# 368
+void TMR0_DefaultInterruptHandler(void);
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 97 "mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
 
@@ -11300,16 +11339,16 @@ uint8_t EUSART1_Read(void);
 # 280
 void EUSART1_Write(uint8_t txData);
 
-# 71 "mcc_generated_files/mcc.h"
+# 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 84
+# 86
 void OSCILLATOR_Initialize(void);
 
-# 97
+# 99
 void PMD_Initialize(void);
 
-# 24 "main.c"
+# 26 "main.c"
 void BMP280_delay_msek(uint32_t msek);
 
 struct bmp280_dev bmp;
@@ -11344,13 +11383,20 @@ int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_dat
 {
 int32_t iError=(0);
 
-# 67
+# 69
 return (int8_t)iError;
+}
+
+void tmr_fire(void){
+RC5 = !RC5;
 }
 
 void main(void) {
 
 SYSTEM_Initialize();
+INTCONbits.GIE = 1;
+TMR0_SetInterruptHandler(tmr_fire);
+TMR0_StartTimer();
 int8_t rslt;
 bmp.dev_id = 0;
 bmp.intf = (unsigned char) 0;
@@ -11359,6 +11405,9 @@ bmp.write = BMP280_SPI_bus_write;
 bmp.delay_ms = BMP280_delay_msek;
 
 rslt = bmp280_init(&bmp);
+
+while(1){
+}
 
 
 return;

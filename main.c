@@ -9,6 +9,8 @@
 
 #include <xc.h>
 #include "mcc_generated_files/mcc.h"
+#define FCY _XTAL_FREQ/2
+
 
 
 #define SPI_BUFFER_LEN 30
@@ -67,9 +69,16 @@ int8_t  BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_da
 	return (int8_t)iError;
 }
 
+void tmr_fire(void){
+    RC5 = !RC5;
+}
+
 void main(void) {
     
     SYSTEM_Initialize();
+    INTCONbits.GIE = 1;
+    TMR0_SetInterruptHandler(tmr_fire);
+    TMR0_StartTimer();
     int8_t rslt;
     bmp.dev_id  =  0;
     bmp.intf = BMP280_SPI_INTF;
@@ -78,6 +87,9 @@ void main(void) {
     bmp.delay_ms = BMP280_delay_msek;
 
     rslt = bmp280_init(&bmp);
+    
+    while(1){
+    }
     
     
     return;
