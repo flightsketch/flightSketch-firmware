@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F6425 `(v ~T0 @X0 0 tf ]
 "8087 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
 [s S390 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S390 . INTE . IOCIE TMR0IE ]
@@ -17,6 +18,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR0bits `VS372 ~T0 @X0 0 e@1804 ]
 "296 mcc_generated_files/tmr0.h
 [v _TMR0_ISR `(v ~T0 @X0 0 ef ]
+"419 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
+[s S26 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . INTEDG . PEIE GIE ]
+"418
+[u S25 `S26 1 ]
+[n S25 . . ]
+"426
+[v _INTCONbits `VS25 ~T0 @X0 0 e@11 ]
+"8186
+[s S396 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . SSP1IE BCL1IE . TX1IE RC1IE TX2IE RC2IE ]
+"8185
+[u S395 `S396 1 ]
+[n S395 . . ]
+"8196
+[v _PIE3bits `VS395 ~T0 @X0 0 e@1817 ]
+"7897
+[s S379 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S379 . SSP1IF BCL1IF . TX1IF RC1IF TX2IF RC2IF ]
+"7896
+[u S378 `S379 1 ]
+[n S378 . . ]
+"7907
+[v _PIR3bits `VS378 ~T0 @X0 0 e@1807 ]
 [; ;interrupt_manager.h: 109: void interrupt INTERRUPT_InterruptManager(void);
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
@@ -7289,12 +7314,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 350: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 368: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 97: void EUSART1_Initialize(void);
-[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
+[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
+"85 mcc_generated_files/eusart1.h
+[v _EUSART1_RxDefaultInterruptHandler `*F6425 ~T0 @X0 1 e ]
+[; ;eusart1.h: 85: void (*EUSART1_RxDefaultInterruptHandler)(void);
+[; ;eusart1.h: 107: void EUSART1_Initialize(void);
+[; ;eusart1.h: 155: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 207: uint8_t EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 274: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 294: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 316: void EUSART1_Receive_ISR(void);
+[; ;eusart1.h: 337: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 99: void PMD_Initialize(void);
@@ -7323,15 +7355,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 874  ]
 "59
 [e :U 873 ]
-[; ;interrupt_manager.c: 59: else
+[; ;interrupt_manager.c: 59: else if(INTCONbits.PEIE == 1)
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 875  ]
 [; ;interrupt_manager.c: 60: {
 "60
 {
+[; ;interrupt_manager.c: 61: if(PIE3bits.RC1IE == 1 && PIR3bits.RC1IF == 1)
+"61
+[e $ ! && == -> . . _PIE3bits 0 4 `i -> 1 `i == -> . . _PIR3bits 0 4 `i -> 1 `i 876  ]
+[; ;interrupt_manager.c: 62: {
 "62
-}
-[e :U 874 ]
-[; ;interrupt_manager.c: 62: }
-[; ;interrupt_manager.c: 63: }
+{
+[; ;interrupt_manager.c: 63: EUSART1_RxDefaultInterruptHandler();
 "63
+[e ( *U _EUSART1_RxDefaultInterruptHandler ..  ]
+"64
+}
+[; ;interrupt_manager.c: 64: }
+[e $U 877  ]
+"65
+[e :U 876 ]
+[; ;interrupt_manager.c: 65: else
+[; ;interrupt_manager.c: 66: {
+"66
+{
+"68
+}
+[e :U 877 ]
+"69
+}
+[; ;interrupt_manager.c: 68: }
+[; ;interrupt_manager.c: 69: }
+[e $U 878  ]
+"70
+[e :U 875 ]
+[; ;interrupt_manager.c: 70: else
+[; ;interrupt_manager.c: 71: {
+"71
+{
+"73
+}
+[e :U 878 ]
+[e :U 874 ]
+[; ;interrupt_manager.c: 73: }
+[; ;interrupt_manager.c: 74: }
+"74
 [e :UE 872 ]
 }

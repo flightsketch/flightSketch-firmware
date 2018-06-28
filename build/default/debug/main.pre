@@ -11147,10 +11147,10 @@ extern __bank0 __bit __timeout;
 int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt);
 int8_t BMP280_SPI_bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt);
 
-# 216 "mcc_generated_files/pin_manager.h"
+# 224 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 228
+# 236
 void PIN_MANAGER_IOC(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
@@ -11321,23 +11321,43 @@ void TMR0_DefaultInterruptHandler(void);
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 97 "mcc_generated_files/eusart1.h"
+# 78 "mcc_generated_files/eusart1.h"
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+# 85
+void (*EUSART1_TxDefaultInterruptHandler)(void);
+void (*EUSART1_RxDefaultInterruptHandler)(void);
+
+# 108
 void EUSART1_Initialize(void);
 
-# 145
-bool EUSART1_is_tx_ready(void);
+# 161
+uint8_t EUSART1_is_tx_ready(void);
 
-# 193
-bool EUSART1_is_rx_ready(void);
-
-# 240
-bool EUSART1_is_tx_done(void);
+# 213
+uint8_t EUSART1_is_rx_ready(void);
 
 # 260
-uint8_t EUSART1_Read(void);
+bool EUSART1_is_tx_done(void);
 
 # 280
+uint8_t EUSART1_Read(void);
+
+# 300
 void EUSART1_Write(uint8_t txData);
+
+# 321
+void EUSART1_Transmit_ISR(void);
+
+# 342
+void EUSART1_Receive_ISR(void);
+
+# 362
+void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
+
+# 382
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -11348,7 +11368,7 @@ void OSCILLATOR_Initialize(void);
 # 99
 void PMD_Initialize(void);
 
-# 24 "main.c"
+# 26 "main.c"
 void BMP280_delay_msek(uint32_t msek);
 
 struct bmp280_dev bmp;
@@ -11360,7 +11380,7 @@ void BMP280_delay_msek(uint32_t msek)
 
 int8_t BMP280_SPI_bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt)
 {
-_delay((unsigned long)((1)*(1000000/4000.0)));
+_delay((unsigned long)((1)*(4000000/4000.0)));
 int32_t iError=(0);
 int8_t array[30]={0xFF};
 uint8_t stringpos;
@@ -11383,7 +11403,7 @@ int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_dat
 {
 int32_t iError=(0);
 
-# 67
+# 69
 return (int8_t)iError;
 }
 
@@ -11394,7 +11414,7 @@ RC5 = !RC5;
 void main(void) {
 
 SYSTEM_Initialize();
-
+INTCONbits.GIE = 1;
 TMR0_SetInterruptHandler(tmr_fire);
 TMR0_StartTimer();
 int8_t rslt;
@@ -11405,6 +11425,9 @@ bmp.write = BMP280_SPI_bus_write;
 bmp.delay_ms = BMP280_delay_msek;
 
 rslt = bmp280_init(&bmp);
+
+while(1){
+}
 
 
 return;

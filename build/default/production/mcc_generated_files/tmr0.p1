@@ -7262,12 +7262,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.c: 71: T0CON1 = 0x50;
 "71
 [e = _T0CON1 -> -> 80 `i `uc ]
-[; ;tmr0.c: 74: TMR0H = 0x9E;
+[; ;tmr0.c: 74: TMR0H = 0x00;
 "74
-[e = _TMR0H -> -> 158 `i `uc ]
-[; ;tmr0.c: 77: TMR0L = 0x58;
+[e = _TMR0H -> -> 0 `i `uc ]
+[; ;tmr0.c: 77: TMR0L = 0x00;
 "77
-[e = _TMR0L -> -> 88 `i `uc ]
+[e = _TMR0L -> -> 0 `i `uc ]
 [; ;tmr0.c: 80: timer0ReloadVal16bit = (TMR0H << 8) | TMR0L;
 "80
 [e = _timer0ReloadVal16bit -> | << -> _TMR0H `i -> 8 `i -> _TMR0L `i `ui ]

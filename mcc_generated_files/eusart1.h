@@ -68,11 +68,21 @@
 
 #define EUSART1_DataReady  (EUSART1_is_rx_ready())
 
+/**
+  Section: Data Type Definitions
+*/
+
+/**
+ Section: Global variables
+ */
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
 
 /**
   Section: EUSART1 APIs
 */
 
+void (*EUSART1_RxDefaultInterruptHandler)(void);
 
 /**
   @Summary
@@ -146,11 +156,11 @@ bool EUSART1_is_tx_ready(void);
 
 /**
   @Summary
-    Checks if the EUSART1 receiver ready for reading
+    Checks if EUSART1 receiver is empty
 
   @Description
-    This routine checks if EUSART1 receiver has received data 
-    and ready to be read
+    This routine returns the available number of bytes to be read 
+    from EUSART1 receiver
 
   @Preconditions
     EUSART1_Initialize() function should be called
@@ -162,9 +172,7 @@ bool EUSART1_is_tx_ready(void);
     None
 
   @Returns
-    Status of EUSART1 receiver
-    TRUE: EUSART1 receiver is ready for reading
-    FALSE: EUSART1 receiver is not ready for reading
+    The number of bytes EUSART1 has available for reading
     
   @Example
     <code>
@@ -175,6 +183,12 @@ bool EUSART1_is_tx_ready(void);
         // Initialize the device
         SYSTEM_Initialize();
         
+        // Enable the Global Interrupts
+        INTERRUPT_GlobalInterruptEnable();
+        
+        // Enable the Peripheral Interrupts
+        INTERRUPT_PeripheralInterruptEnable();
+        
         while(1)
         {
             // Logic to echo received data
@@ -183,14 +197,14 @@ bool EUSART1_is_tx_ready(void);
                 rxData = UART1_Read();
                 if(EUSART1_is_tx_ready())
                 {
-                    EUSART1_Write(rxData);
+                    EUSART1T_Write(rxData);
                 }
             }
         }
     }
     </code>
 */
-bool EUSART1_is_rx_ready(void);
+uint8_t EUSART1_is_rx_ready(void);
 
 /**
   @Summary
@@ -280,8 +294,47 @@ uint8_t EUSART1_Read(void);
 void EUSART1_Write(uint8_t txData);
 
 
+/**
+  @Summary
+    Maintains the driver's receiver state machine and implements its ISR
+
+  @Description
+    This routine is used to maintain the driver's internal receiver state
+    machine.This interrupt service routine is called when the state of the
+    receiver needs to be maintained in a non polled manner.
+
+  @Preconditions
+    EUSART1_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void EUSART1_Receive_ISR(void);
 
 
+/**
+  @Summary
+    Sets the receive handler function to be called by the interrupt service
+
+  @Description
+    Calling this function will set a new custom function that will be 
+    called when the receive interrupt needs servicing.
+
+  @Preconditions
+    EUSART1_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    A pointer to the new function
+
+  @Returns
+    None
+*/
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

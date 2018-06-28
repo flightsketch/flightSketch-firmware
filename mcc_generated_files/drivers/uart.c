@@ -27,7 +27,7 @@
 #include "uart.h"   
 
 const uart_functions_t uart[] = {   
-    {EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
+    {EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_Receive_ISR, EUSART1_SetRxInterruptHandler, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
 };
 
 /**

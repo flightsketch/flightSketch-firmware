@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F6520 `(v ~T0 @X0 0 tf ]
 [v F32 `(c ~T0 @X0 0 tf4`uc`uc`*uc`ui ]
 [v F38 `(v ~T0 @X0 0 tf1`ul ]
 "292 bmp280_defs.h
@@ -27,10 +28,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S30 . . ]
 "426
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F6510 `(v ~T0 @X0 0 tf ]
-"332 mcc_generated_files/tmr0.h
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6510 ]
-"135
+"135 mcc_generated_files/tmr0.h
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
 "107 bmp280.h
 [v _bmp280_init `(c ~T0 @X0 0 ef1`*S5 ]
@@ -7365,12 +7363,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 350: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 368: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 97: void EUSART1_Initialize(void);
-[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
+[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
+"85 mcc_generated_files/eusart1.h
+[v _EUSART1_RxDefaultInterruptHandler `*F6520 ~T0 @X0 1 e ]
+[; ;eusart1.h: 85: void (*EUSART1_RxDefaultInterruptHandler)(void);
+[; ;eusart1.h: 107: void EUSART1_Initialize(void);
+[; ;eusart1.h: 155: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 207: uint8_t EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 274: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 294: void EUSART1_Write(uint8_t txData);
+[; ;eusart1.h: 316: void EUSART1_Receive_ISR(void);
+[; ;eusart1.h: 337: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 99: void PMD_Initialize(void);
@@ -7407,15 +7412,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _cnt `uc ~T0 @X0 1 r4 ]
 "36
 [f ]
-[; ;main.c: 37: _delay((unsigned long)((1)*(1000000/4000.0)));
+[; ;main.c: 37: _delay((unsigned long)((1)*(4000000/4000.0)));
 "37
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "38
 [v _iError `l ~T0 @X0 1 a ]
 [; ;main.c: 38: int32_t iError=(0);
 [e = _iError -> -> 0 `i `l ]
-[v F6546 `c ~T0 @X0 -> 30 `i s ]
-[i F6546
+[v F6557 `c ~T0 @X0 -> 30 `i s ]
+[i F6557
 :U ..
 "39
 -> -> 255 `i `c
@@ -7423,7 +7428,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [v _array `c ~T0 @X0 -> 30 `i a ]
 [; ;main.c: 39: int8_t array[30]={0xFF};
-[e = _array F6546 ]
+[e = _array F6557 ]
 "40
 [v _stringpos `uc ~T0 @X0 1 a ]
 [; ;main.c: 40: uint8_t stringpos;
@@ -7530,48 +7535,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 79: INTCONbits.GIE = 1;
 "79
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 80: TMR0_SetInterruptHandler(tmr_fire);
+[; ;main.c: 80: INTCONbits.PEIE = 1;
 "80
-[e ( _TMR0_SetInterruptHandler (1 &U _tmr_fire ]
-[; ;main.c: 81: TMR0_StartTimer();
-"81
-[e ( _TMR0_StartTimer ..  ]
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 82: TMR0_StartTimer();
 "82
-[v _rslt `c ~T0 @X0 1 a ]
-[; ;main.c: 82: int8_t rslt;
-[; ;main.c: 83: bmp.dev_id = 0;
+[e ( _TMR0_StartTimer ..  ]
 "83
-[e = . _bmp 1 -> -> 0 `i `uc ]
-[; ;main.c: 84: bmp.intf = (unsigned char) 0;
+[v _rslt `c ~T0 @X0 1 a ]
+[; ;main.c: 83: int8_t rslt;
+[; ;main.c: 84: bmp.dev_id = 0;
 "84
-[e = . _bmp 2 -> -> 0 `i `uc ]
-[; ;main.c: 85: bmp.read = BMP280_SPI_bus_read;
+[e = . _bmp 1 -> -> 0 `i `uc ]
+[; ;main.c: 85: bmp.intf = (unsigned char) 0;
 "85
-[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
-[; ;main.c: 86: bmp.write = BMP280_SPI_bus_write;
+[e = . _bmp 2 -> -> 0 `i `uc ]
+[; ;main.c: 86: bmp.read = BMP280_SPI_bus_read;
 "86
-[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
-[; ;main.c: 87: bmp.delay_ms = BMP280_delay_msek;
+[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
+[; ;main.c: 87: bmp.write = BMP280_SPI_bus_write;
 "87
+[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
+[; ;main.c: 88: bmp.delay_ms = BMP280_delay_msek;
+"88
 [e = . _bmp 5 &U _BMP280_delay_msek ]
-[; ;main.c: 89: rslt = bmp280_init(&bmp);
-"89
+[; ;main.c: 90: rslt = bmp280_init(&bmp);
+"90
 [e = _rslt ( _bmp280_init (1 &U _bmp ]
-[; ;main.c: 91: while(1){
-"91
+[; ;main.c: 92: while(1){
+"92
 [e :U 891 ]
 {
-"92
+"94
 }
 [e :U 890 ]
-"91
+"92
 [e $U 891  ]
 [e :U 892 ]
-[; ;main.c: 92: }
-[; ;main.c: 95: return;
-"95
+[; ;main.c: 94: }
+[; ;main.c: 97: return;
+"97
 [e $UE 889  ]
-[; ;main.c: 96: }
-"96
+[; ;main.c: 98: }
+"98
 [e :UE 889 ]
 }

@@ -77,7 +77,8 @@ void main(void) {
     
     SYSTEM_Initialize();
     INTCONbits.GIE = 1;
-    TMR0_SetInterruptHandler(tmr_fire);
+    INTCONbits.PEIE = 1; // Enable peripheral interrupts
+//    TMR0_SetInterruptHandler(tmr_fire);
     TMR0_StartTimer();
     int8_t rslt;
     bmp.dev_id  =  0;
@@ -89,6 +90,7 @@ void main(void) {
     rslt = bmp280_init(&bmp);
     
     while(1){
+        
     }
     
     

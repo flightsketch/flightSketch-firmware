@@ -33,7 +33,7 @@ typedef enum {
     Test0
 } uart_configurations_t;
 
-typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); bool (*TransmitDone)(void); uint8_t (*TransmitReady)(void); void (*Write)(uint8_t txdata);  } uart_functions_t;
+typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); void (*SetTxISR)(void (* interruptHandler)(void)); bool (*TransmitDone)(void); uint8_t (*TransmitReady)(void); void (*TxDefaultISR)(void); void (*Write)(uint8_t txdata);  } uart_functions_t;
 
 extern const uart_functions_t uart[];
 

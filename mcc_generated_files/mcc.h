@@ -56,7 +56,7 @@
 #include "tmr0.h"
 #include "eusart1.h"
 
-#define _XTAL_FREQ  1000000
+#define _XTAL_FREQ  4000000
 
 
 /**

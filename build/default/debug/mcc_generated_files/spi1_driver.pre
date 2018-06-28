@@ -11108,10 +11108,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 216 "mcc_generated_files/pin_manager.h"
+# 224 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 228
+# 236
 void PIN_MANAGER_IOC(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
@@ -11222,23 +11222,43 @@ void TMR0_DefaultInterruptHandler(void);
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 97 "mcc_generated_files/eusart1.h"
+# 78 "mcc_generated_files/eusart1.h"
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+# 85
+void (*EUSART1_TxDefaultInterruptHandler)(void);
+void (*EUSART1_RxDefaultInterruptHandler)(void);
+
+# 108
 void EUSART1_Initialize(void);
 
-# 145
-bool EUSART1_is_tx_ready(void);
+# 161
+uint8_t EUSART1_is_tx_ready(void);
 
-# 193
-bool EUSART1_is_rx_ready(void);
-
-# 240
-bool EUSART1_is_tx_done(void);
+# 213
+uint8_t EUSART1_is_rx_ready(void);
 
 # 260
-uint8_t EUSART1_Read(void);
+bool EUSART1_is_tx_done(void);
 
 # 280
+uint8_t EUSART1_Read(void);
+
+# 300
 void EUSART1_Write(uint8_t txData);
+
+# 321
+void EUSART1_Transmit_ISR(void);
+
+# 342
+void EUSART1_Receive_ISR(void);
+
+# 362
+void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
+
+# 382
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -11261,7 +11281,7 @@ SSP1CON1bits.SSPEN = 0;
 
 typedef struct { uint8_t con1; uint8_t stat; uint8_t add; } spi1_configuration_t;
 static const spi1_configuration_t spi1_configuration[] = {
-{0x10, 0x0, 0x1 }
+{0x10, 0x0, 0x7 }
 };
 
 

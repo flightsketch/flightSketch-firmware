@@ -11219,23 +11219,36 @@ void TMR0_DefaultInterruptHandler(void);
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 97 "mcc_generated_files/eusart1.h"
+# 78 "mcc_generated_files/eusart1.h"
+extern volatile uint8_t eusart1TxBufferRemaining;
+extern volatile uint8_t eusart1RxCount;
+
+# 85
+void (*EUSART1_RxDefaultInterruptHandler)(void);
+
+# 107
 void EUSART1_Initialize(void);
 
-# 145
+# 155
 bool EUSART1_is_tx_ready(void);
 
-# 193
-bool EUSART1_is_rx_ready(void);
+# 207
+uint8_t EUSART1_is_rx_ready(void);
 
-# 240
+# 254
 bool EUSART1_is_tx_done(void);
 
-# 260
+# 274
 uint8_t EUSART1_Read(void);
 
-# 280
+# 294
 void EUSART1_Write(uint8_t txData);
+
+# 316
+void EUSART1_Receive_ISR(void);
+
+# 337
+void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -11253,6 +11266,17 @@ void interrupt INTERRUPT_InterruptManager (void)
 if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
 {
 TMR0_ISR();
+}
+else if(INTCONbits.PEIE == 1)
+{
+if(PIE3bits.RC1IE == 1 && PIR3bits.RC1IF == 1)
+{
+EUSART1_RxDefaultInterruptHandler();
+}
+else
+{
+
+}
 }
 else
 {
