@@ -11045,48 +11045,35 @@ extern __bank0 __bit __timeout;
 # 13 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 78 "mcc_generated_files/drivers/../eusart1.h"
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 85
-void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 107
+# 97 "mcc_generated_files/drivers/../eusart1.h"
 void EUSART1_Initialize(void);
 
-# 155
+# 145
 bool EUSART1_is_tx_ready(void);
 
-# 207
-uint8_t EUSART1_is_rx_ready(void);
+# 193
+bool EUSART1_is_rx_ready(void);
 
-# 254
+# 240
 bool EUSART1_is_tx_done(void);
 
-# 274
+# 260
 uint8_t EUSART1_Read(void);
 
-# 294
+# 280
 void EUSART1_Write(uint8_t txData);
-
-# 316
-void EUSART1_Receive_ISR(void);
-
-# 337
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 32 "mcc_generated_files/drivers/uart.h"
 typedef enum {
 Test0
 } uart_configurations_t;
 
-typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); void (*SetTxISR)(void (* interruptHandler)(void)); bool (*TransmitDone)(void); uint8_t (*TransmitReady)(void); void (*TxDefaultISR)(void); void (*Write)(uint8_t txdata); } uart_functions_t;
+typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); bool (*TransmitDone)(void); uint8_t (*TransmitReady)(void); void (*Write)(uint8_t txdata); } uart_functions_t;
 
 extern const uart_functions_t uart[];
 
 # 29 "mcc_generated_files/drivers/uart.c"
 const uart_functions_t uart[] = {
-{EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_Receive_ISR, EUSART1_SetRxInterruptHandler, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
+{EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
 };
 

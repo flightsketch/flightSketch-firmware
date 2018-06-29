@@ -11045,49 +11045,27 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 78 "mcc_generated_files/eusart1.h"
-extern volatile uint8_t eusart1TxBufferRemaining;
-extern volatile uint8_t eusart1RxCount;
-
-# 85
-void (*EUSART1_RxDefaultInterruptHandler)(void);
-
-# 107
+# 97 "mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
 
-# 155
+# 145
 bool EUSART1_is_tx_ready(void);
 
-# 207
-uint8_t EUSART1_is_rx_ready(void);
+# 193
+bool EUSART1_is_rx_ready(void);
 
-# 254
+# 240
 bool EUSART1_is_tx_done(void);
 
-# 274
+# 260
 uint8_t EUSART1_Read(void);
 
-# 294
+# 280
 void EUSART1_Write(uint8_t txData);
 
-# 316
-void EUSART1_Receive_ISR(void);
-
-# 337
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-
-# 63 "mcc_generated_files/eusart1.c"
-volatile uint8_t eusart1RxHead = 0;
-volatile uint8_t eusart1RxTail = 0;
-volatile uint8_t eusart1RxBuffer[8];
-volatile uint8_t eusart1RxCount;
-
-# 71
+# 56 "mcc_generated_files/eusart1.c"
 void EUSART1_Initialize(void)
 {
-
-PIE3bits.RC1IE = 0;
-EUSART1_SetRxInterruptHandler(EUSART1_Receive_ISR);
 
 
 
@@ -11106,13 +11084,6 @@ SP1BRGL = 0x08;
 SP1BRGH = 0x00;
 
 
-
-eusart1RxHead = 0;
-eusart1RxTail = 0;
-eusart1RxCount = 0;
-
-
-PIE3bits.RC1IE = 1;
 }
 
 bool EUSART1_is_tx_ready(void)
@@ -11120,9 +11091,9 @@ bool EUSART1_is_tx_ready(void)
 return (bool)(PIR3bits.TX1IF && TX1STAbits.TXEN);
 }
 
-uint8_t EUSART1_is_rx_ready(void)
+bool EUSART1_is_rx_ready(void)
 {
-return eusart1RxCount;
+return PIR3bits.RC1IF;
 }
 
 bool EUSART1_is_tx_done(void)
@@ -11132,38 +11103,10 @@ return TX1STAbits.TRMT;
 
 uint8_t EUSART1_Read(void)
 {
-uint8_t readValue = 0;
-
-while(0 == eusart1RxCount)
+while(!PIR3bits.RC1IF)
 {
 }
 
-readValue = eusart1RxBuffer[eusart1RxTail++];
-if(sizeof(eusart1RxBuffer) <= eusart1RxTail)
-{
-eusart1RxTail = 0;
-}
-PIE3bits.RC1IE = 0;
-eusart1RxCount--;
-PIE3bits.RC1IE = 1;
-
-return readValue;
-}
-
-void EUSART1_Write(uint8_t txData)
-{
-while(0 == PIR3bits.TX1IF)
-{
-}
-
-TX1REG = txData;
-}
-
-
-
-void EUSART1_Receive_ISR(void)
-{
-char a;
 
 if(1 == RC1STAbits.OERR)
 {
@@ -11173,19 +11116,15 @@ RC1STAbits.CREN = 0;
 RC1STAbits.CREN = 1;
 }
 
+return RC1REG;
+}
 
-a = RC1REG;
-eusart1RxBuffer[eusart1RxHead++] = a;
-EUSART1_Write(a+1);
-if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
+void EUSART1_Write(uint8_t txData)
 {
-eusart1RxHead = 0;
-}
-eusart1RxCount++;
+while(0 == PIR3bits.TX1IF)
+{
 }
 
-
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
-EUSART1_RxDefaultInterruptHandler = interruptHandler;
+TX1REG = txData;
 }
 

@@ -59,6 +59,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set CS_BARO aliases
+#define CS_BARO_TRIS                 TRISAbits.TRISA2
+#define CS_BARO_LAT                  LATAbits.LATA2
+#define CS_BARO_PORT                 PORTAbits.RA2
+#define CS_BARO_WPU                  WPUAbits.WPUA2
+#define CS_BARO_OD                   ODCONAbits.ODCA2
+#define CS_BARO_ANS                  ANSELAbits.ANSA2
+#define CS_BARO_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define CS_BARO_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define CS_BARO_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define CS_BARO_GetValue()           PORTAbits.RA2
+#define CS_BARO_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define CS_BARO_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define CS_BARO_SetPullup()          do { WPUAbits.WPUA2 = 1; } while(0)
+#define CS_BARO_ResetPullup()        do { WPUAbits.WPUA2 = 0; } while(0)
+#define CS_BARO_SetPushPull()        do { ODCONAbits.ODCA2 = 0; } while(0)
+#define CS_BARO_SetOpenDrain()       do { ODCONAbits.ODCA2 = 1; } while(0)
+#define CS_BARO_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
+#define CS_BARO_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
+
 // get/set AN4 aliases
 #define AN4_TRIS                 TRISAbits.TRISA4
 #define AN4_LAT                  LATAbits.LATA4

@@ -1,5 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F6425 `(v ~T0 @X0 0 tf ]
 "883 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
 "954
@@ -7242,8 +7241,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc.h: 227: bool ADC_IsConversionDone();
 [; ;adc.h: 260: adc_result_t ADC_GetConversionResult(void);
 [; ;adc.h: 290: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[; ;pin_manager.h: 216: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 228: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 236: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 248: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;interrupt_manager.h: 109: void interrupt INTERRUPT_InterruptManager(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
@@ -7278,8 +7277,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 195: extern int printf(const char *, ...);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;spi1_types.h: 28: typedef enum {
-[; ;spi1_types.h: 29: CUSTOM0
-[; ;spi1_types.h: 30: } spi1_modes;
+[; ;spi1_types.h: 29: CUSTOM0,
+[; ;spi1_types.h: 30: CUSTOM1
+[; ;spi1_types.h: 31: } spi1_modes;
 [; ;spi1_driver.h: 35: inline void spi1_close(void);
 [; ;spi1_driver.h: 37: bit spi1_master_open(spi1_modes spiUniqueConfiguration);
 [; ;spi1_driver.h: 38: bit spi1_slave_open(spi1_modes spiUniqueConfiguration);
@@ -7300,19 +7300,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 350: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 368: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
-"85 mcc_generated_files/eusart1.h
-[v _EUSART1_RxDefaultInterruptHandler `*F6425 ~T0 @X0 1 e ]
-[; ;eusart1.h: 85: void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 107: void EUSART1_Initialize(void);
-[; ;eusart1.h: 155: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 207: uint8_t EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 274: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 294: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 316: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 337: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 97: void EUSART1_Initialize(void);
+[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 99: void PMD_Initialize(void);

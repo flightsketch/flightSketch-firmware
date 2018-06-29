@@ -26,7 +26,8 @@
 
 /* SPI interfaces */
 typedef enum { 
-    CUSTOM0
+    CUSTOM0,
+    CUSTOM1
 } spi1_modes;
 
 #endif	/* __SPI1_TYPES_H */

@@ -37,7 +37,8 @@ inline void spi1_close(void)
 //con1 == SSPxCON1, stat == SSPxSTAT, add == SSPxADD
 typedef struct { uint8_t con1; uint8_t stat; uint8_t add; } spi1_configuration_t;
 static const spi1_configuration_t spi1_configuration[] = {   
-    {0x10, 0x0, 0x7 }
+    {0x0, 0x40, 0x2 },
+    {0x0, 0x40, 0x9 }
 };
 
 //Setup SPI for Master Mode

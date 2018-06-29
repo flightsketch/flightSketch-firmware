@@ -1,6 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F6520 `(v ~T0 @X0 0 tf ]
-[v F6523 `(v ~T0 @X0 0 tf ]
 [v F32 `(c ~T0 @X0 0 tf4`uc`uc`*uc`ui ]
 [v F38 `(v ~T0 @X0 0 tf1`ul ]
 "292 bmp280_defs.h
@@ -16,8 +14,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 "92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
 [v __delay `JF6361 ~T0 @X0 0 e ]
 [p i __delay ]
-"21770 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
-[v _RC5 `Vb ~T0 @X0 0 e@117 ]
+"647 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
+"646
+[u S40 `S41 1 ]
+[n S40 . . ]
+"656
+[v _LATAbits `VS40 ~T0 @X0 0 e@24 ]
+"40 mcc_generated_files/spi1_driver.h
+[v _spi1_exchangeByte `(uc ~T0 @X0 0 ef1`uc ]
+"324 bmp280_defs.h
+[s S4 `ul 1 `ul 1 ]
+[n S4 bmp280_uncomp_data uncomp_temp uncomp_press ]
+"279 bmp280.h
+[v _bmp280_compute_meas_time `(uc ~T0 @X0 0 ef1`*CS5 ]
+"199
+[v _bmp280_get_uncomp_data `(c ~T0 @X0 0 ef2`*S4`*CS5 ]
+"212
+[v _bmp280_comp_temp_32bit `(l ~T0 @X0 0 ef2`ul`*S5 ]
+"224
+[v _bmp280_comp_pres_32bit `(ul ~T0 @X0 0 ef2`ul`*CS5 ]
+"280 mcc_generated_files/eusart1.h
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "73 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
@@ -29,13 +48,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S30 . . ]
 "426
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F6510 `(v ~T0 @X0 0 tf ]
+[v F6511 `(v ~T0 @X0 0 tf ]
 "332 mcc_generated_files/tmr0.h
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6510 ]
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6511 ]
 "135
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
+"130 main.c
+[c E6447 0 1 .. ]
+[n E6447 . CUSTOM0 CUSTOM1  ]
+"37 mcc_generated_files/spi1_driver.h
+[v _spi1_master_open `(b ~T0 @X0 0 ef1`E6447 ]
 "107 bmp280.h
 [v _bmp280_init `(c ~T0 @X0 0 ef1`*S5 ]
+"129
+[v _bmp280_get_config `(c ~T0 @X0 0 ef2`*S2`*S5 ]
+"150
+[v _bmp280_set_config `(c ~T0 @X0 0 ef2`*CS2`*S5 ]
+"187
+[v _bmp280_set_power_mode `(c ~T0 @X0 0 ef2`uc`*S5 ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef __int24 int24_t;
@@ -7287,8 +7317,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 139: extern __bank0 __bit __timeout;
 [; ;main.h: 79: int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt);
 [; ;main.h: 80: int8_t BMP280_SPI_bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt);
-[; ;pin_manager.h: 224: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 236: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 236: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 248: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;interrupt_manager.h: 109: void interrupt INTERRUPT_InterruptManager(void);
 [; ;stdarg.h: 7: typedef void * va_list[1];
@@ -7322,8 +7352,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 195: extern int printf(const char *, ...);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;spi1_types.h: 28: typedef enum {
-[; ;spi1_types.h: 29: CUSTOM0
-[; ;spi1_types.h: 30: } spi1_modes;
+[; ;spi1_types.h: 29: CUSTOM0,
+[; ;spi1_types.h: 30: CUSTOM1
+[; ;spi1_types.h: 31: } spi1_modes;
 [; ;spi1_driver.h: 35: inline void spi1_close(void);
 [; ;spi1_driver.h: 37: bit spi1_master_open(spi1_modes spiUniqueConfiguration);
 [; ;spi1_driver.h: 38: bit spi1_slave_open(spi1_modes spiUniqueConfiguration);
@@ -7367,24 +7398,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 350: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 368: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
-"85 mcc_generated_files/eusart1.h
-[v _EUSART1_TxDefaultInterruptHandler `*F6520 ~T0 @X0 1 e ]
-[; ;eusart1.h: 85: void (*EUSART1_TxDefaultInterruptHandler)(void);
-"86
-[v _EUSART1_RxDefaultInterruptHandler `*F6523 ~T0 @X0 1 e ]
-[; ;eusart1.h: 86: void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 108: void EUSART1_Initialize(void);
-[; ;eusart1.h: 161: uint8_t EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 213: uint8_t EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 260: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 280: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 300: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 321: void EUSART1_Transmit_ISR(void);
-[; ;eusart1.h: 342: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 362: void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-[; ;eusart1.h: 382: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 97: void EUSART1_Initialize(void);
+[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 99: void PMD_Initialize(void);
@@ -7403,189 +7422,413 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _msek `ul ~T0 @X0 1 r1 ]
 "31
 [f ]
-[; ;main.c: 33: }
-"33
+"32
+[v _i `ul ~T0 @X0 1 a ]
+[; ;main.c: 32: uint32_t i;
+[; ;main.c: 34: for (i=0; i<msek; i++){
+"34
+{
+[e = _i -> -> -> 0 `i `l `ul ]
+[e $U 881  ]
+[e :U 878 ]
+{
+[; ;main.c: 35: _delay((unsigned long)((1)*(4000000/4000.0)));
+"35
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"36
+}
+"34
+[e ++ _i -> -> -> 1 `i `l `ul ]
+[e :U 881 ]
+[e $ < _i _msek 878  ]
+[e :U 879 ]
+"36
+}
+[; ;main.c: 36: }
+[; ;main.c: 37: }
+"37
 [e :UE 877 ]
 }
-"35
+"39
 [v _BMP280_SPI_bus_read `(c ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
-"36
+"40
 {
-[; ;main.c: 35: int8_t BMP280_SPI_bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt)
-[; ;main.c: 36: {
+[; ;main.c: 39: int8_t BMP280_SPI_bus_read(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt)
+[; ;main.c: 40: {
 [e :U _BMP280_SPI_bus_read ]
-"35
+"39
 [v _dev_addr `uc ~T0 @X0 1 r1 ]
 [v _reg_addr `uc ~T0 @X0 1 r2 ]
 [v _reg_data `*uc ~T0 @X0 1 r3 ]
 [v _cnt `uc ~T0 @X0 1 r4 ]
-"36
+"40
 [f ]
-[; ;main.c: 37: _delay((unsigned long)((1)*(4000000/4000.0)));
-"37
+[; ;main.c: 41: _delay((unsigned long)((1)*(4000000/4000.0)));
+"41
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"38
+"42
 [v _iError `l ~T0 @X0 1 a ]
-[; ;main.c: 38: int32_t iError=(0);
+[; ;main.c: 42: int32_t iError=(0);
 [e = _iError -> -> 0 `i `l ]
-[v F6566 `c ~T0 @X0 -> 30 `i s ]
-[i F6566
+[v F6549 `c ~T0 @X0 -> 30 `i s ]
+[i F6549
 :U ..
-"39
+"43
 -> -> 255 `i `c
 ..
 ]
 [v _array `c ~T0 @X0 -> 30 `i a ]
-[; ;main.c: 39: int8_t array[30]={0xFF};
-[e = _array F6566 ]
-"40
+[; ;main.c: 43: int8_t array[30]={0xFF};
+[e = _array F6549 ]
+"44
 [v _stringpos `uc ~T0 @X0 1 a ]
-[; ;main.c: 40: uint8_t stringpos;
-[; ;main.c: 41: array[0] = reg_addr|0x80;
-"41
-[e = *U + &U _array * -> -> -> 0 `i `ui `ux -> -> # *U &U _array `ui `ux -> | -> _reg_addr `i -> 128 `i `c ]
-"43
-[v _i `uc ~T0 @X0 1 a ]
-[; ;main.c: 43: uint8_t i;
-[; ;main.c: 45: for (i=0; i<cnt+1; i++){
+[; ;main.c: 44: uint8_t stringpos;
+[; ;main.c: 45: array[0] = reg_addr|0x80;
 "45
+[e = *U + &U _array * -> -> -> 0 `i `ui `ux -> -> # *U &U _array `ui `ux -> | -> _reg_addr `i -> 128 `i `c ]
+"47
+[v _i `uc ~T0 @X0 1 a ]
+[; ;main.c: 47: uint8_t i;
+[; ;main.c: 48: do { LATAbits.LATA2 = 0; } while(0);
+"48
+[e :U 885 ]
+{
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 884 ]
+[; ;main.c: 49: for (i=0; i<cnt+1; i++){
+"49
 {
 [e = _i -> -> 0 `i `uc ]
-[e $U 882  ]
-[e :U 879 ]
+[e $U 889  ]
+[e :U 886 ]
 {
-"47
-}
-"45
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 882 ]
-[e $ < -> _i `i + -> _cnt `i -> 1 `i 879  ]
-[e :U 880 ]
-"47
-}
-[; ;main.c: 47: }
-[; ;main.c: 50: for (stringpos = 0; stringpos < cnt; stringpos++) {
+[; ;main.c: 50: array[i] = spi1_exchangeByte(array[i]);
 "50
+[e = *U + &U _array * -> _i `ux -> -> # *U &U _array `ui `ux -> ( _spi1_exchangeByte (1 -> *U + &U _array * -> _i `ux -> -> # *U &U _array `ui `ux `uc `c ]
+"51
+}
+"49
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 889 ]
+[e $ < -> _i `i + -> _cnt `i -> 1 `i 886  ]
+[e :U 887 ]
+"51
+}
+[; ;main.c: 51: }
+[; ;main.c: 53: _delay((unsigned long)((10)*(4000000/4000.0)));
+"53
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 54: do { LATAbits.LATA2 = 1; } while(0);
+"54
+[e :U 892 ]
+{
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 891 ]
+[; ;main.c: 56: for (stringpos = 0; stringpos < cnt; stringpos++) {
+"56
 {
 [e = _stringpos -> -> 0 `i `uc ]
-[e $U 886  ]
-[e :U 883 ]
+[e $U 896  ]
+[e :U 893 ]
 {
-[; ;main.c: 51: *(reg_data + stringpos) = array[stringpos+1];
-"51
-[e = *U + _reg_data * -> _stringpos `ux -> -> # *U _reg_data `ui `ux -> *U + &U _array * -> -> + -> _stringpos `i -> 1 `i `ui `ux -> -> # *U &U _array `ui `ux `uc ]
-"52
-}
-"50
-[e ++ _stringpos -> -> 1 `i `uc ]
-[e :U 886 ]
-[e $ < -> _stringpos `i -> _cnt `i 883  ]
-[e :U 884 ]
-"52
-}
-[; ;main.c: 52: }
-[; ;main.c: 53: return (int8_t)iError;
-"53
-[e ) -> _iError `c ]
-[e $UE 878  ]
-[; ;main.c: 54: }
-"54
-[e :UE 878 ]
-}
-"56
-[v _BMP280_SPI_bus_write `(c ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+[; ;main.c: 57: *(reg_data + stringpos) = array[stringpos+1];
 "57
-{
-[; ;main.c: 56: int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt)
-[; ;main.c: 57: {
-[e :U _BMP280_SPI_bus_write ]
+[e = *U + _reg_data * -> _stringpos `ux -> -> # *U _reg_data `ui `ux -> *U + &U _array * -> -> + -> _stringpos `i -> 1 `i `ui `ux -> -> # *U &U _array `ui `ux `uc ]
+"58
+}
 "56
+[e ++ _stringpos -> -> 1 `i `uc ]
+[e :U 896 ]
+[e $ < -> _stringpos `i -> _cnt `i 893  ]
+[e :U 894 ]
+"58
+}
+[; ;main.c: 58: }
+[; ;main.c: 59: return (int8_t)iError;
+"59
+[e ) -> _iError `c ]
+[e $UE 882  ]
+[; ;main.c: 60: }
+"60
+[e :UE 882 ]
+}
+"62
+[v _BMP280_SPI_bus_write `(c ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+"63
+{
+[; ;main.c: 62: int8_t BMP280_SPI_bus_write(uint8_t dev_addr, uint8_t reg_addr, uint8_t *reg_data, uint8_t cnt)
+[; ;main.c: 63: {
+[e :U _BMP280_SPI_bus_write ]
+"62
 [v _dev_addr `uc ~T0 @X0 1 r1 ]
 [v _reg_addr `uc ~T0 @X0 1 r2 ]
 [v _reg_data `*uc ~T0 @X0 1 r3 ]
 [v _cnt `uc ~T0 @X0 1 r4 ]
-"57
+"63
 [f ]
-"58
+"64
 [v _iError `l ~T0 @X0 1 a ]
-[; ;main.c: 58: int32_t iError=(0);
+[; ;main.c: 64: int32_t iError=(0);
 [e = _iError -> -> 0 `i `l ]
-[; ;main.c: 69: return (int8_t)iError;
-"69
-[e ) -> _iError `c ]
-[e $UE 887  ]
-[; ;main.c: 70: }
-"70
-[e :UE 887 ]
+"66
+[v _i `uc ~T0 @X0 1 a ]
+[; ;main.c: 66: uint8_t i;
+[; ;main.c: 68: do { LATAbits.LATA2 = 0; } while(0);
+"68
+[e :U 900 ]
+{
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
+[e :U 899 ]
+[; ;main.c: 69: spi1_exchangeByte(reg_addr);
+"69
+[e ( _spi1_exchangeByte (1 _reg_addr ]
+[; ;main.c: 70: for (i=0; i<cnt; i++){
+"70
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 904  ]
+[e :U 901 ]
+{
+[; ;main.c: 71: spi1_exchangeByte(*(reg_data + i));
+"71
+[e ( _spi1_exchangeByte (1 *U + _reg_data * -> _i `ux -> -> # *U _reg_data `ui `ux ]
 "72
+}
+"70
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 904 ]
+[e $ < -> _i `i -> _cnt `i 901  ]
+[e :U 902 ]
+"72
+}
+[; ;main.c: 72: }
+[; ;main.c: 74: _delay((unsigned long)((10)*(4000000/4000.0)));
+"74
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 75: do { LATAbits.LATA2 = 1; } while(0);
+"75
+[e :U 907 ]
+{
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 906 ]
+[; ;main.c: 76: return (int8_t)iError;
+"76
+[e ) -> _iError `c ]
+[e $UE 897  ]
+[; ;main.c: 77: }
+"77
+[e :UE 897 ]
+}
+"79
 [v _tmr_fire `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 72: void tmr_fire(void){
+[; ;main.c: 79: void tmr_fire(void){
 [e :U _tmr_fire ]
 [f ]
-[; ;main.c: 73: RC5 = !RC5;
-"73
-[e = _RC5 ! _RC5 ]
-[; ;main.c: 74: }
-"74
-[e :UE 888 ]
+"87
+[v _rslt `c ~T0 @X0 1 a ]
+"88
+[v _alt `ul ~T0 @X0 1 a ]
+"89
+[v _altf `f ~T0 @X0 1 a ]
+"91
+[v _ucomp_data `S4 ~T0 @X0 1 a ]
+"92
+[v _meas_dur `uc ~T0 @X0 1 a ]
+[; ;main.c: 87: int8_t rslt;
+[; ;main.c: 88: uint32_t alt;
+[; ;main.c: 89: float altf;
+[; ;main.c: 91: struct bmp280_uncomp_data ucomp_data;
+[; ;main.c: 92: uint8_t meas_dur = bmp280_compute_meas_time(&bmp);
+[e = _meas_dur ( _bmp280_compute_meas_time (1 -> &U _bmp `*CS5 ]
+[; ;main.c: 95: rslt = bmp280_get_uncomp_data(&ucomp_data, &bmp);
+"95
+[e = _rslt ( _bmp280_get_uncomp_data (2 , &U _ucomp_data -> &U _bmp `*CS5 ]
+"96
+[v _temp32 `l ~T0 @X0 1 a ]
+[; ;main.c: 96: int32_t temp32 = bmp280_comp_temp_32bit(ucomp_data.uncomp_temp, &bmp);
+[e = _temp32 ( _bmp280_comp_temp_32bit (2 , . _ucomp_data 0 &U _bmp ]
+"97
+[v _pres32 `ul ~T0 @X0 1 a ]
+[; ;main.c: 97: uint32_t pres32 = bmp280_comp_pres_32bit(ucomp_data.uncomp_press, &bmp);
+[e = _pres32 ( _bmp280_comp_pres_32bit (2 , . _ucomp_data 1 -> &U _bmp `*CS5 ]
+[; ;main.c: 99: EUSART1_Write(0x42);
+"99
+[e ( _EUSART1_Write (1 -> -> 66 `i `uc ]
+[; ;main.c: 100: _delay((unsigned long)((10)*(4000000/4000.0)));
+"100
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 101: EUSART1_Write(0x43);
+"101
+[e ( _EUSART1_Write (1 -> -> 67 `i `uc ]
+[; ;main.c: 102: _delay((unsigned long)((10)*(4000000/4000.0)));
+"102
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 104: EUSART1_Write((temp32 >> (0 * 8)) & 0xFF);
+"104
+[e ( _EUSART1_Write (1 -> & >> _temp32 * -> 0 `i -> 8 `i -> -> 255 `i `l `uc ]
+[; ;main.c: 105: _delay((unsigned long)((10)*(4000000/4000.0)));
+"105
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 106: EUSART1_Write((temp32 >> (1 * 8)) & 0xFF);
+"106
+[e ( _EUSART1_Write (1 -> & >> _temp32 * -> 1 `i -> 8 `i -> -> 255 `i `l `uc ]
+[; ;main.c: 107: _delay((unsigned long)((10)*(4000000/4000.0)));
+"107
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 108: EUSART1_Write((temp32 >> (2 * 8)) & 0xFF);
+"108
+[e ( _EUSART1_Write (1 -> & >> _temp32 * -> 2 `i -> 8 `i -> -> 255 `i `l `uc ]
+[; ;main.c: 109: _delay((unsigned long)((10)*(4000000/4000.0)));
+"109
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 110: EUSART1_Write((temp32 >> (3 * 8)) & 0xFF);
+"110
+[e ( _EUSART1_Write (1 -> & >> _temp32 * -> 3 `i -> 8 `i -> -> 255 `i `l `uc ]
+[; ;main.c: 112: EUSART1_Write((pres32 >> (0 * 8)) & 0xFF);
+"112
+[e ( _EUSART1_Write (1 -> & >> _pres32 * -> 0 `i -> 8 `i -> -> -> 255 `i `l `ul `uc ]
+[; ;main.c: 113: _delay((unsigned long)((10)*(4000000/4000.0)));
+"113
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 114: EUSART1_Write((pres32 >> (1 * 8)) & 0xFF);
+"114
+[e ( _EUSART1_Write (1 -> & >> _pres32 * -> 1 `i -> 8 `i -> -> -> 255 `i `l `ul `uc ]
+[; ;main.c: 115: _delay((unsigned long)((10)*(4000000/4000.0)));
+"115
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 116: EUSART1_Write((pres32 >> (2 * 8)) & 0xFF);
+"116
+[e ( _EUSART1_Write (1 -> & >> _pres32 * -> 2 `i -> 8 `i -> -> -> 255 `i `l `ul `uc ]
+[; ;main.c: 117: _delay((unsigned long)((10)*(4000000/4000.0)));
+"117
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 118: EUSART1_Write((pres32 >> (3 * 8)) & 0xFF);
+"118
+[e ( _EUSART1_Write (1 -> & >> _pres32 * -> 3 `i -> 8 `i -> -> -> 255 `i `l `ul `uc ]
+[; ;main.c: 121: }
+"121
+[e :UE 908 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"76
+"123
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 76: void main(void) {
+[; ;main.c: 123: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 78: SYSTEM_Initialize();
-"78
+[; ;main.c: 125: SYSTEM_Initialize();
+"125
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 79: INTCONbits.GIE = 1;
-"79
+[; ;main.c: 126: INTCONbits.GIE = 1;
+"126
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 80: TMR0_SetInterruptHandler(tmr_fire);
-"80
+[; ;main.c: 127: INTCONbits.PEIE = 1;
+"127
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 128: TMR0_SetInterruptHandler(tmr_fire);
+"128
 [e ( _TMR0_SetInterruptHandler (1 &U _tmr_fire ]
-[; ;main.c: 81: TMR0_StartTimer();
-"81
+[; ;main.c: 129: TMR0_StartTimer();
+"129
 [e ( _TMR0_StartTimer ..  ]
-"82
-[v _rslt `c ~T0 @X0 1 a ]
-[; ;main.c: 82: int8_t rslt;
-[; ;main.c: 83: bmp.dev_id = 0;
-"83
-[e = . _bmp 1 -> -> 0 `i `uc ]
-[; ;main.c: 84: bmp.intf = (unsigned char) 0;
-"84
-[e = . _bmp 2 -> -> 0 `i `uc ]
-[; ;main.c: 85: bmp.read = BMP280_SPI_bus_read;
-"85
-[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
-[; ;main.c: 86: bmp.write = BMP280_SPI_bus_write;
-"86
-[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
-[; ;main.c: 87: bmp.delay_ms = BMP280_delay_msek;
-"87
-[e = . _bmp 5 &U _BMP280_delay_msek ]
-[; ;main.c: 89: rslt = bmp280_init(&bmp);
-"89
-[e = _rslt ( _bmp280_init (1 &U _bmp ]
-[; ;main.c: 91: while(1){
-"91
-[e :U 891 ]
+[; ;main.c: 130: spi1_master_open(CUSTOM0);
+"130
+[e ( _spi1_master_open (1 . `E6447 0 ]
+[; ;main.c: 132: do { LATAbits.LATA2 = 1; } while(0);
+"132
+[e :U 912 ]
 {
-"92
+[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 890 ]
-"91
-[e $U 891  ]
-[e :U 892 ]
-[; ;main.c: 92: }
-[; ;main.c: 95: return;
-"95
-[e $UE 889  ]
-[; ;main.c: 96: }
-"96
-[e :UE 889 ]
+[e :U 911 ]
+[; ;main.c: 133: _delay((unsigned long)((10)*(4000000/4000.0)));
+"133
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[v F6584 `uc ~T0 @X0 -> 0 `x s ]
+[i F6584
+:U ..
+"134
+-> -> 96 `i `uc
+-> -> 182 `i `uc
+..
+]
+[v _tx `uc ~T0 @X0 2  a ]
+[; ;main.c: 134: char tx[] = {0x60, 0xB6};
+[e = _tx F6584 ]
+[; ;main.c: 135: BMP280_SPI_bus_write(0x00, 0x00, &tx, 2);
+"135
+[e ( _BMP280_SPI_bus_write (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc &U _tx -> -> 2 `i `uc ]
+"137
+[v _rslt `c ~T0 @X0 1 a ]
+[; ;main.c: 137: int8_t rslt;
+[; ;main.c: 138: bmp.dev_id = 0;
+"138
+[e = . _bmp 1 -> -> 0 `i `uc ]
+[; ;main.c: 139: bmp.intf = (unsigned char) 0;
+"139
+[e = . _bmp 2 -> -> 0 `i `uc ]
+[; ;main.c: 140: bmp.read = BMP280_SPI_bus_read;
+"140
+[e = . _bmp 3 -> &U _BMP280_SPI_bus_read `*F32 ]
+[; ;main.c: 141: bmp.write = BMP280_SPI_bus_write;
+"141
+[e = . _bmp 4 -> &U _BMP280_SPI_bus_write `*F32 ]
+[; ;main.c: 142: bmp.delay_ms = BMP280_delay_msek;
+"142
+[e = . _bmp 5 &U _BMP280_delay_msek ]
+[; ;main.c: 144: rslt = bmp280_init(&bmp);
+"144
+[e = _rslt ( _bmp280_init (1 &U _bmp ]
+"146
+[v _conf `S2 ~T0 @X0 1 a ]
+[; ;main.c: 146: struct bmp280_config conf;
+[; ;main.c: 148: rslt = bmp280_get_config(&conf, &bmp);
+"148
+[e = _rslt ( _bmp280_get_config (2 , &U _conf &U _bmp ]
+[; ;main.c: 150: conf.filter = (unsigned char) 0x01;
+"150
+[e = . _conf 3 -> -> 1 `i `uc ]
+[; ;main.c: 151: conf.os_pres = (unsigned char) 0x05;
+"151
+[e = . _conf 1 -> -> 5 `i `uc ]
+[; ;main.c: 152: conf.os_temp = (unsigned char) 0x01;
+"152
+[e = . _conf 0 -> -> 1 `i `uc ]
+[; ;main.c: 153: conf.odr = (unsigned char) 0x00;
+"153
+[e = . _conf 2 -> -> 0 `i `uc ]
+[; ;main.c: 155: rslt = bmp280_set_config(&conf, &bmp);
+"155
+[e = _rslt ( _bmp280_set_config (2 , -> &U _conf `*CS2 &U _bmp ]
+[; ;main.c: 157: rslt = bmp280_get_config(&conf, &bmp);
+"157
+[e = _rslt ( _bmp280_get_config (2 , &U _conf &U _bmp ]
+[; ;main.c: 159: rslt = bmp280_set_power_mode((unsigned char) 0x03, &bmp);
+"159
+[e = _rslt ( _bmp280_set_power_mode (2 , -> -> 3 `i `uc &U _bmp ]
+[; ;main.c: 161: rslt = bmp280_get_config(&conf, &bmp);
+"161
+[e = _rslt ( _bmp280_get_config (2 , &U _conf &U _bmp ]
+[; ;main.c: 163: while(1){
+"163
+[e :U 914 ]
+{
+"165
+}
+[e :U 913 ]
+"163
+[e $U 914  ]
+[e :U 915 ]
+[; ;main.c: 165: }
+[; ;main.c: 168: return;
+"168
+[e $UE 909  ]
+[; ;main.c: 169: }
+"169
+[e :UE 909 ]
 }

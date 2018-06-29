@@ -1,36 +1,24 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F6286 `(v ~T0 @X0 0 tf ]
-[v F6311 `(uc ~T0 @X0 0 tf ]
-[v F6314 `(v ~T0 @X0 0 tf ]
-[v F6317 `(uc ~T0 @X0 0 tf ]
-[v F6320 `(v ~T0 @X0 0 tf ]
-[v F6325 `(v ~T0 @X0 0 tf ]
-[v F6323 `(v ~T0 @X0 0 tf1`*F6325 ]
-[v F6330 `(v ~T0 @X0 0 tf ]
-[v F6328 `(v ~T0 @X0 0 tf1`*F6330 ]
-[v F6333 `(uc ~T0 @X0 0 tf ]
-[v F6336 `(uc ~T0 @X0 0 tf ]
-[v F6339 `(v ~T0 @X0 0 tf ]
-[v F6342 `(v ~T0 @X0 0 tf1`uc ]
+[v F6300 `(uc ~T0 @X0 0 tf ]
+[v F6303 `(v ~T0 @X0 0 tf ]
+[v F6306 `(uc ~T0 @X0 0 tf ]
+[v F6309 `(uc ~T0 @X0 0 tf ]
+[v F6312 `(uc ~T0 @X0 0 tf ]
+[v F6315 `(v ~T0 @X0 0 tf1`uc ]
 "36 mcc_generated_files/drivers/uart.h
-[s S870 `*F6311 1 `*F6314 1 `*F6317 1 `*F6320 1 `*F6323 1 `*F6328 1 `*F6333 1 `*F6336 1 `*F6339 1 `*F6342 1 ]
-[n S870 . DataReady Initialize Read RxDefaultISR SetRxISR SetTxISR TransmitDone TransmitReady TxDefaultISR Write ]
-"207 mcc_generated_files/drivers/../eusart1.h
+[s S870 `*F6300 1 `*F6303 1 `*F6306 1 `*F6309 1 `*F6312 1 `*F6315 1 ]
+[n S870 . DataReady Initialize Read TransmitDone TransmitReady Write ]
+"193 mcc_generated_files/drivers/../eusart1.h
 [v _EUSART1_is_rx_ready `(uc ~T0 @X0 0 ef ]
-"107
+"97
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"274
+"260
 [v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
-"316
-[v _EUSART1_Receive_ISR `(v ~T0 @X0 0 ef ]
-[v F6304 `(v ~T0 @X0 0 tf ]
-"337
-[v _EUSART1_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F6304 ]
-"254
+"240
 [v _EUSART1_is_tx_done `(uc ~T0 @X0 0 ef ]
-"155
+"145
 [v _EUSART1_is_tx_ready `(uc ~T0 @X0 0 ef ]
-"294
+"280
 [v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
@@ -7224,23 +7212,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 138: extern __bank0 __bit __powerdown;
 [; ;pic.h: 139: extern __bank0 __bit __timeout;
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
-"85 mcc_generated_files/drivers/../eusart1.h
-[v _EUSART1_RxDefaultInterruptHandler `*F6286 ~T0 @X0 1 e ]
-[; ;eusart1.h: 85: void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 107: void EUSART1_Initialize(void);
-[; ;eusart1.h: 155: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 207: uint8_t EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 274: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 294: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 316: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 337: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 97: void EUSART1_Initialize(void);
+[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
 [; ;uart.h: 32: typedef enum {
 [; ;uart.h: 33: Test0
 [; ;uart.h: 34: } uart_configurations_t;
-[; ;uart.h: 36: typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); void (*RxDefaultISR)(void); void (*SetRxISR)(void (* interruptHandler)(void)); void (*SetTxISR)(void (* interruptHandler)(void)); bool (*TransmitDone)(void)
+[; ;uart.h: 36: typedef struct { uint8_t (*DataReady)(void); void (*Initialize)(void); uint8_t (*Read)(void); bool (*TransmitDone)(void); uint8_t (*TransmitReady)(void); void (*Write)(uint8_t txdata); } uart_functions_t;
 [; ;uart.h: 38: extern const uart_functions_t uart[];
 "29 mcc_generated_files/drivers/uart.c
 [v _uart `CS870 ~T0 @X0 -> 0 `x e ]
@@ -7251,14 +7232,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 &U _EUSART1_is_rx_ready
 &U _EUSART1_Initialize
 &U _EUSART1_Read
-&U _EUSART1_Receive_ISR
-&U _EUSART1_SetRxInterruptHandler
--> &U _EUSART1_is_tx_done `*F6328
+&U _EUSART1_is_tx_done
 &U _EUSART1_is_tx_ready
--> &U _EUSART1_Write `*F6336
+&U _EUSART1_Write
 ..
 ..
 ]
 [; ;uart.c: 29: const uart_functions_t uart[] = {
-[; ;uart.c: 30: {EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_Receive_ISR, EUSART1_SetRxInterruptHandler, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
+[; ;uart.c: 30: {EUSART1_is_rx_ready, EUSART1_Initialize, EUSART1_Read, EUSART1_is_tx_done, EUSART1_is_tx_ready, EUSART1_Write }
 [; ;uart.c: 31: };

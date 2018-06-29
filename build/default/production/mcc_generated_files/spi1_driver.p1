@@ -1,5 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F6425 `(v ~T0 @X0 0 tf ]
 "2497 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
 [s S129 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S129 . SSPM CKP SSPEN SSPOV WCOL ]
@@ -17,9 +16,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "38 mcc_generated_files/spi1_driver.c
 [s S873 `uc 1 `uc 1 `uc 1 ]
 [n S873 . con1 stat add ]
-"45
-[c E6352 0 .. ]
-[n E6352 . CUSTOM0  ]
+"46
+[c E6352 0 1 .. ]
+[n E6352 . CUSTOM0 CUSTOM1  ]
 "2127 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f15325.h
 [v _SSP1STAT `Vuc ~T0 @X0 0 e@399 ]
 "2491
@@ -7268,14 +7267,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 137: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 138: extern __bank0 __bit __powerdown;
 [; ;pic.h: 139: extern __bank0 __bit __timeout;
-[; ;pin_manager.h: 216: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 228: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 236: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 248: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;interrupt_manager.h: 109: void interrupt INTERRUPT_InterruptManager(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
 [; ;spi1_types.h: 28: typedef enum {
-[; ;spi1_types.h: 29: CUSTOM0
-[; ;spi1_types.h: 30: } spi1_modes;
+[; ;spi1_types.h: 29: CUSTOM0,
+[; ;spi1_types.h: 30: CUSTOM1
+[; ;spi1_types.h: 31: } spi1_modes;
 [; ;spi1_driver.h: 35: inline void spi1_close(void);
 [; ;spi1_driver.h: 37: bit spi1_master_open(spi1_modes spiUniqueConfiguration);
 [; ;spi1_driver.h: 38: bit spi1_slave_open(spi1_modes spiUniqueConfiguration);
@@ -7319,27 +7319,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 350: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 368: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 13: typedef unsigned char bool;
-[; ;eusart1.h: 78: extern volatile uint8_t eusart1TxBufferRemaining;
-[; ;eusart1.h: 79: extern volatile uint8_t eusart1RxCount;
-"85 mcc_generated_files/eusart1.h
-[v _EUSART1_RxDefaultInterruptHandler `*F6425 ~T0 @X0 1 e ]
-[; ;eusart1.h: 85: void (*EUSART1_RxDefaultInterruptHandler)(void);
-[; ;eusart1.h: 107: void EUSART1_Initialize(void);
-[; ;eusart1.h: 155: bool EUSART1_is_tx_ready(void);
-[; ;eusart1.h: 207: uint8_t EUSART1_is_rx_ready(void);
-[; ;eusart1.h: 254: bool EUSART1_is_tx_done(void);
-[; ;eusart1.h: 274: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 294: void EUSART1_Write(uint8_t txData);
-[; ;eusart1.h: 316: void EUSART1_Receive_ISR(void);
-[; ;eusart1.h: 337: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[; ;eusart1.h: 97: void EUSART1_Initialize(void);
+[; ;eusart1.h: 145: bool EUSART1_is_tx_ready(void);
+[; ;eusart1.h: 193: bool EUSART1_is_rx_ready(void);
+[; ;eusart1.h: 240: bool EUSART1_is_tx_done(void);
+[; ;eusart1.h: 260: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 280: void EUSART1_Write(uint8_t txData);
 [; ;mcc.h: 73: void SYSTEM_Initialize(void);
 [; ;mcc.h: 86: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 99: void PMD_Initialize(void);
 "30 mcc_generated_files/spi1_driver.c
 [p n 520 ]
-[v F6357 `(v ~T0 @X0 1 tf ]
+[v F6358 `(v ~T0 @X0 1 tf ]
 "32
-[v _spi1_close `TF6357 ~T0 @X0 1 e ]
+[v _spi1_close `TF6358 ~T0 @X0 1 e ]
 "33
 {
 [; ;spi1_driver.c: 32: inline void spi1_close(void)
@@ -7360,254 +7353,261 @@ Version 3.2 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 "40
--> -> 16 `i `uc
 -> -> 0 `i `uc
--> -> 7 `i `uc
+-> -> 64 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+"41
+-> -> 0 `i `uc
+-> -> 64 `i `uc
+-> -> 9 `i `uc
 ..
 ..
 ]
 [; ;spi1_driver.c: 39: static const spi1_configuration_t spi1_configuration[] = {
-[; ;spi1_driver.c: 40: {0x10, 0x0, 0x7 }
-[; ;spi1_driver.c: 41: };
-"44
+[; ;spi1_driver.c: 40: {0x0, 0x40, 0x2 },
+[; ;spi1_driver.c: 41: {0x0, 0x40, 0x9 }
+[; ;spi1_driver.c: 42: };
+"45
 [v _spi1_master_open `(b ~T0 @X0 1 ef1`E6352 ]
-"45
-{
-[; ;spi1_driver.c: 44: bit spi1_master_open(spi1_modes spiUniqueConfiguration)
-[; ;spi1_driver.c: 45: {
-[e :U _spi1_master_open ]
-"44
-[v _spiUniqueConfiguration `E6352 ~T0 @X0 1 r1 ]
-"45
-[f ]
-[; ;spi1_driver.c: 46: if(!SSP1CON1bits.SSPEN)
 "46
-[e $ ! ! != -> . . _SSP1CON1bits 0 2 `i -> -> -> 0 `i `Vuc `i 875  ]
-[; ;spi1_driver.c: 47: {
-"47
 {
-[; ;spi1_driver.c: 48: SSP1STAT = spi1_configuration[spiUniqueConfiguration].stat;
+[; ;spi1_driver.c: 45: bit spi1_master_open(spi1_modes spiUniqueConfiguration)
+[; ;spi1_driver.c: 46: {
+[e :U _spi1_master_open ]
+"45
+[v _spiUniqueConfiguration `E6352 ~T0 @X0 1 r1 ]
+"46
+[f ]
+[; ;spi1_driver.c: 47: if(!SSP1CON1bits.SSPEN)
+"47
+[e $ ! ! != -> . . _SSP1CON1bits 0 2 `i -> -> -> 0 `i `Vuc `i 875  ]
+[; ;spi1_driver.c: 48: {
 "48
-[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
-[; ;spi1_driver.c: 49: SSP1CON1 = spi1_configuration[spiUniqueConfiguration].con1 | 0x2A;
+{
+[; ;spi1_driver.c: 49: SSP1STAT = spi1_configuration[spiUniqueConfiguration].stat;
 "49
-[e = _SSP1CON1 -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 0 `i -> 42 `i `uc ]
-[; ;spi1_driver.c: 50: SSP1CON2 = 0x00;
+[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
+[; ;spi1_driver.c: 50: SSP1CON1 = spi1_configuration[spiUniqueConfiguration].con1 | 0x2A;
 "50
-[e = _SSP1CON2 -> -> 0 `i `uc ]
-[; ;spi1_driver.c: 51: SSP1ADD = spi1_configuration[spiUniqueConfiguration].add | 0;
+[e = _SSP1CON1 -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 0 `i -> 42 `i `uc ]
+[; ;spi1_driver.c: 51: SSP1CON2 = 0x00;
 "51
+[e = _SSP1CON2 -> -> 0 `i `uc ]
+[; ;spi1_driver.c: 52: SSP1ADD = spi1_configuration[spiUniqueConfiguration].add | 0;
+"52
 [e = _SSP1ADD -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 2 `i -> 0 `i `uc ]
-[; ;spi1_driver.c: 53: TRISCbits.TRISC0 = 0;
-"53
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-[; ;spi1_driver.c: 54: return 1;
+[; ;spi1_driver.c: 54: TRISCbits.TRISC0 = 0;
 "54
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+[; ;spi1_driver.c: 55: return 1;
+"55
 [e ) -> -> 1 `i `b ]
 [e $UE 874  ]
-"55
+"56
 }
 [e :U 875 ]
-[; ;spi1_driver.c: 55: }
-[; ;spi1_driver.c: 56: return 0;
-"56
+[; ;spi1_driver.c: 56: }
+[; ;spi1_driver.c: 57: return 0;
+"57
 [e ) -> -> 0 `i `b ]
 [e $UE 874  ]
-[; ;spi1_driver.c: 57: }
-"57
+[; ;spi1_driver.c: 58: }
+"58
 [e :UE 874 ]
 }
-"60
+"61
 [v _spi1_slave_open `(b ~T0 @X0 1 ef1`E6352 ]
-"61
-{
-[; ;spi1_driver.c: 60: bit spi1_slave_open(spi1_modes spiUniqueConfiguration)
-[; ;spi1_driver.c: 61: {
-[e :U _spi1_slave_open ]
-"60
-[v _spiUniqueConfiguration `E6352 ~T0 @X0 1 r1 ]
-"61
-[f ]
-[; ;spi1_driver.c: 62: if(!SSP1CON1bits.SSPEN)
 "62
-[e $ ! ! != -> . . _SSP1CON1bits 0 2 `i -> -> -> 0 `i `Vuc `i 877  ]
-[; ;spi1_driver.c: 63: {
-"63
 {
-[; ;spi1_driver.c: 64: SSP1STAT = spi1_configuration[spiUniqueConfiguration].stat;
+[; ;spi1_driver.c: 61: bit spi1_slave_open(spi1_modes spiUniqueConfiguration)
+[; ;spi1_driver.c: 62: {
+[e :U _spi1_slave_open ]
+"61
+[v _spiUniqueConfiguration `E6352 ~T0 @X0 1 r1 ]
+"62
+[f ]
+[; ;spi1_driver.c: 63: if(!SSP1CON1bits.SSPEN)
+"63
+[e $ ! ! != -> . . _SSP1CON1bits 0 2 `i -> -> -> 0 `i `Vuc `i 877  ]
+[; ;spi1_driver.c: 64: {
 "64
-[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
-[; ;spi1_driver.c: 65: SSP1CON1 = spi1_configuration[spiUniqueConfiguration].con1 | 0x25;
+{
+[; ;spi1_driver.c: 65: SSP1STAT = spi1_configuration[spiUniqueConfiguration].stat;
 "65
-[e = _SSP1CON1 -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 0 `i -> 37 `i `uc ]
-[; ;spi1_driver.c: 66: SSP1CON2 = 0x00;
+[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
+[; ;spi1_driver.c: 66: SSP1CON1 = spi1_configuration[spiUniqueConfiguration].con1 | 0x25;
 "66
-[e = _SSP1CON2 -> -> 0 `i `uc ]
-[; ;spi1_driver.c: 67: SSP1ADD = spi1_configuration[spiUniqueConfiguration].add | 0;
+[e = _SSP1CON1 -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 0 `i -> 37 `i `uc ]
+[; ;spi1_driver.c: 67: SSP1CON2 = 0x00;
 "67
+[e = _SSP1CON2 -> -> 0 `i `uc ]
+[; ;spi1_driver.c: 68: SSP1ADD = spi1_configuration[spiUniqueConfiguration].add | 0;
+"68
 [e = _SSP1ADD -> | -> . *U + &U _spi1_configuration * -> _spiUniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 2 `i -> 0 `i `uc ]
-[; ;spi1_driver.c: 69: TRISCbits.TRISC0 = 1;
-"69
-[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
-[; ;spi1_driver.c: 70: return 1;
+[; ;spi1_driver.c: 70: TRISCbits.TRISC0 = 1;
 "70
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
+[; ;spi1_driver.c: 71: return 1;
+"71
 [e ) -> -> 1 `i `b ]
 [e $UE 876  ]
-"71
+"72
 }
 [e :U 877 ]
-[; ;spi1_driver.c: 71: }
-[; ;spi1_driver.c: 72: return 0;
-"72
+[; ;spi1_driver.c: 72: }
+[; ;spi1_driver.c: 73: return 0;
+"73
 [e ) -> -> 0 `i `b ]
 [e $UE 876  ]
-[; ;spi1_driver.c: 73: }
-"73
+[; ;spi1_driver.c: 74: }
+"74
 [e :UE 876 ]
 }
-"76
+"77
 [v _spi1_exchangeByte `(uc ~T0 @X0 1 ef1`uc ]
-"77
-{
-[; ;spi1_driver.c: 76: uint8_t spi1_exchangeByte(uint8_t b)
-[; ;spi1_driver.c: 77: {
-[e :U _spi1_exchangeByte ]
-"76
-[v _b `uc ~T0 @X0 1 r1 ]
-"77
-[f ]
-[; ;spi1_driver.c: 78: SSP1BUF = b;
 "78
-[e = _SSP1BUF _b ]
-[; ;spi1_driver.c: 79: while(!PIR3bits.SSP1IF);
+{
+[; ;spi1_driver.c: 77: uint8_t spi1_exchangeByte(uint8_t b)
+[; ;spi1_driver.c: 78: {
+[e :U _spi1_exchangeByte ]
+"77
+[v _b `uc ~T0 @X0 1 r1 ]
+"78
+[f ]
+[; ;spi1_driver.c: 79: SSP1BUF = b;
 "79
+[e = _SSP1BUF _b ]
+[; ;spi1_driver.c: 80: while(!PIR3bits.SSP1IF);
+"80
 [e $U 879  ]
 [e :U 880 ]
 [e :U 879 ]
 [e $ ! != -> . . _PIR3bits 0 0 `i -> -> -> 0 `i `Vuc `i 880  ]
 [e :U 881 ]
-[; ;spi1_driver.c: 80: PIR3bits.SSP1IF = 0;
-"80
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
-[; ;spi1_driver.c: 81: return SSP1BUF;
+[; ;spi1_driver.c: 81: PIR3bits.SSP1IF = 0;
 "81
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;spi1_driver.c: 82: return SSP1BUF;
+"82
 [e ) _SSP1BUF ]
 [e $UE 878  ]
-[; ;spi1_driver.c: 82: }
-"82
+[; ;spi1_driver.c: 83: }
+"83
 [e :UE 878 ]
 }
-"84
-[v _spi1_exchangeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
 "85
+[v _spi1_exchangeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"86
 {
-[; ;spi1_driver.c: 84: void spi1_exchangeBlock(void *block, size_t blockSize)
-[; ;spi1_driver.c: 85: {
+[; ;spi1_driver.c: 85: void spi1_exchangeBlock(void *block, size_t blockSize)
+[; ;spi1_driver.c: 86: {
 [e :U _spi1_exchangeBlock ]
-"84
+"85
 [v _block `*v ~T0 @X0 1 r1 ]
 [v _blockSize `ui ~T0 @X0 1 r2 ]
-"85
-[f ]
 "86
-[v _data `*uc ~T0 @X0 1 a ]
-[; ;spi1_driver.c: 86: uint8_t *data = block;
-[e = _data -> _block `*uc ]
-[; ;spi1_driver.c: 87: while(blockSize--)
+[f ]
 "87
+[v _data `*uc ~T0 @X0 1 a ]
+[; ;spi1_driver.c: 87: uint8_t *data = block;
+[e = _data -> _block `*uc ]
+[; ;spi1_driver.c: 88: while(blockSize--)
+"88
 [e $U 883  ]
 [e :U 884 ]
-[; ;spi1_driver.c: 88: {
-"88
-{
-[; ;spi1_driver.c: 89: *data = spi1_exchangeByte(*data );
+[; ;spi1_driver.c: 89: {
 "89
-[e = *U _data ( _spi1_exchangeByte (1 *U _data ]
-[; ;spi1_driver.c: 90: data++;
+{
+[; ;spi1_driver.c: 90: *data = spi1_exchangeByte(*data );
 "90
-[e ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+[e = *U _data ( _spi1_exchangeByte (1 *U _data ]
+[; ;spi1_driver.c: 91: data++;
 "91
+[e ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+"92
 }
 [e :U 883 ]
-"87
+"88
 [e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 884  ]
 [e :U 885 ]
-[; ;spi1_driver.c: 91: }
 [; ;spi1_driver.c: 92: }
-"92
+[; ;spi1_driver.c: 93: }
+"93
 [e :UE 882 ]
 }
-"95
-[v _spi1_writeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
 "96
+[v _spi1_writeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"97
 {
-[; ;spi1_driver.c: 95: void spi1_writeBlock(void *block, size_t blockSize)
-[; ;spi1_driver.c: 96: {
+[; ;spi1_driver.c: 96: void spi1_writeBlock(void *block, size_t blockSize)
+[; ;spi1_driver.c: 97: {
 [e :U _spi1_writeBlock ]
-"95
+"96
 [v _block `*v ~T0 @X0 1 r1 ]
 [v _blockSize `ui ~T0 @X0 1 r2 ]
-"96
-[f ]
 "97
-[v _data `*uc ~T0 @X0 1 a ]
-[; ;spi1_driver.c: 97: uint8_t *data = block;
-[e = _data -> _block `*uc ]
-[; ;spi1_driver.c: 98: while(blockSize--)
+[f ]
 "98
+[v _data `*uc ~T0 @X0 1 a ]
+[; ;spi1_driver.c: 98: uint8_t *data = block;
+[e = _data -> _block `*uc ]
+[; ;spi1_driver.c: 99: while(blockSize--)
+"99
 [e $U 887  ]
 [e :U 888 ]
-[; ;spi1_driver.c: 99: {
-"99
-{
-[; ;spi1_driver.c: 100: spi1_exchangeByte(*data++);
+[; ;spi1_driver.c: 100: {
 "100
-[e ( _spi1_exchangeByte (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+{
+[; ;spi1_driver.c: 101: spi1_exchangeByte(*data++);
 "101
+[e ( _spi1_exchangeByte (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+"102
 }
 [e :U 887 ]
-"98
+"99
 [e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 888  ]
 [e :U 889 ]
-[; ;spi1_driver.c: 101: }
 [; ;spi1_driver.c: 102: }
-"102
+[; ;spi1_driver.c: 103: }
+"103
 [e :UE 886 ]
 }
-"104
-[v _spi1_readBlock `(v ~T0 @X0 1 ef2`*v`ui ]
 "105
+[v _spi1_readBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"106
 {
-[; ;spi1_driver.c: 104: void spi1_readBlock(void *block, size_t blockSize)
-[; ;spi1_driver.c: 105: {
+[; ;spi1_driver.c: 105: void spi1_readBlock(void *block, size_t blockSize)
+[; ;spi1_driver.c: 106: {
 [e :U _spi1_readBlock ]
-"104
+"105
 [v _block `*v ~T0 @X0 1 r1 ]
 [v _blockSize `ui ~T0 @X0 1 r2 ]
-"105
-[f ]
 "106
-[v _data `*uc ~T0 @X0 1 a ]
-[; ;spi1_driver.c: 106: uint8_t *data = block;
-[e = _data -> _block `*uc ]
-[; ;spi1_driver.c: 107: while(blockSize--)
+[f ]
 "107
+[v _data `*uc ~T0 @X0 1 a ]
+[; ;spi1_driver.c: 107: uint8_t *data = block;
+[e = _data -> _block `*uc ]
+[; ;spi1_driver.c: 108: while(blockSize--)
+"108
 [e $U 891  ]
 [e :U 892 ]
-[; ;spi1_driver.c: 108: {
-"108
-{
-[; ;spi1_driver.c: 109: *data++ = spi1_exchangeByte(0);
+[; ;spi1_driver.c: 109: {
 "109
-[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ( _spi1_exchangeByte (1 -> -> 0 `i `uc ]
+{
+[; ;spi1_driver.c: 110: *data++ = spi1_exchangeByte(0);
 "110
+[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ( _spi1_exchangeByte (1 -> -> 0 `i `uc ]
+"111
 }
 [e :U 891 ]
-"107
+"108
 [e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 892  ]
 [e :U 893 ]
-[; ;spi1_driver.c: 110: }
 [; ;spi1_driver.c: 111: }
-"111
+[; ;spi1_driver.c: 112: }
+"112
 [e :UE 890 ]
 }

@@ -49,30 +49,12 @@
 */
 #include "eusart1.h"
 
-/**
-  Section: Macro Declarations
-*/
-
-#define EUSART1_TX_BUFFER_SIZE 8
-#define EUSART1_RX_BUFFER_SIZE 8
-
-/**
-  Section: Global Variables
-*/
-
-volatile uint8_t eusart1RxHead = 0;
-volatile uint8_t eusart1RxTail = 0;
-volatile uint8_t eusart1RxBuffer[EUSART1_RX_BUFFER_SIZE];
-volatile uint8_t eusart1RxCount;
 
 /**
   Section: EUSART1 APIs
 */
 void EUSART1_Initialize(void)
 {
-    // disable interrupts before changing states
-    PIE3bits.RC1IE = 0;
-    EUSART1_SetRxInterruptHandler(EUSART1_Receive_ISR);
     // Set the EUSART1 module to the options selected in the user interface.
 
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
@@ -91,13 +73,6 @@ void EUSART1_Initialize(void)
     SP1BRGH = 0x00;
 
 
-
-    eusart1RxHead = 0;
-    eusart1RxTail = 0;
-    eusart1RxCount = 0;
-
-    // enable receive interrupt
-    PIE3bits.RC1IE = 1;
 }
 
 bool EUSART1_is_tx_ready(void)
@@ -105,9 +80,9 @@ bool EUSART1_is_tx_ready(void)
     return (bool)(PIR3bits.TX1IF && TX1STAbits.TXEN);
 }
 
-uint8_t EUSART1_is_rx_ready(void)
+bool EUSART1_is_rx_ready(void)
 {
-    return eusart1RxCount;
+    return PIR3bits.RC1IF;
 }
 
 bool EUSART1_is_tx_done(void)
@@ -117,22 +92,20 @@ bool EUSART1_is_tx_done(void)
 
 uint8_t EUSART1_Read(void)
 {
-    uint8_t readValue  = 0;
+    while(!PIR3bits.RC1IF)
+    {
+    }
+
     
-    while(0 == eusart1RxCount)
+    if(1 == RC1STAbits.OERR)
     {
+        // EUSART1 error - restart
+
+        RC1STAbits.CREN = 0; 
+        RC1STAbits.CREN = 1; 
     }
 
-    readValue = eusart1RxBuffer[eusart1RxTail++];
-    if(sizeof(eusart1RxBuffer) <= eusart1RxTail)
-    {
-        eusart1RxTail = 0;
-    }
-    PIE3bits.RC1IE = 0;
-    eusart1RxCount--;
-    PIE3bits.RC1IE = 1;
-
-    return readValue;
+    return RC1REG;
 }
 
 void EUSART1_Write(uint8_t txData)
@@ -146,33 +119,8 @@ void EUSART1_Write(uint8_t txData)
 
 
 
-void EUSART1_Receive_ISR(void)
-{
-    char a;
-    
-    if(1 == RC1STAbits.OERR)
-    {
-        // EUSART1 error - restart
-
-        RC1STAbits.CREN = 0;
-        RC1STAbits.CREN = 1;
-    }
-
-    // buffer overruns are ignored
-    a = RC1REG;
-    eusart1RxBuffer[eusart1RxHead++] = a;
-    EUSART1_Write(a+1);
-    if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
-    {
-        eusart1RxHead = 0;
-    }
-    eusart1RxCount++;
-}
 
 
-void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
-    EUSART1_RxDefaultInterruptHandler = interruptHandler;
-}
 /**
   End of File
 */
